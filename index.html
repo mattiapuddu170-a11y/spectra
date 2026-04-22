@@ -1,3 +1,28 @@
+<?php
+// connessione DB
+$con = new mysqli("localhost", "root", "", "negozio_occhiali");
+
+if ($con->connect_error) {
+    die("Connessione fallita: " . $con->connect_error);
+}
+
+// variabile ricerca
+$ricerca = "";
+$ris = null;
+
+// se l'utente ha cercato qualcosa
+if (isset($_GET['q'])) {
+    $ricerca = $con->real_escape_string($_GET['q']);
+
+    $sql = "SELECT * FROM prodotti
+            WHERE nome LIKE '%$ricerca%'
+               OR descrizione LIKE '%$ricerca%'
+               OR marca LIKE '%$ricerca%'
+               OR categoria LIKE '%$ricerca%'";
+
+    $ris = $con->query($sql);
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
