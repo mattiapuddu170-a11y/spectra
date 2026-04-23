@@ -27,8 +27,8 @@ if (isset($_GET['q'])) {
 <html>
     <head>
         <title>Homepage</title>
-        <link rel="stylesheet" href="File CSS/stile.css">
-        <link rel="stylesheet" href="File CSS/index.css">
+        <link rel="stylesheet" href="File CSS\index.css">
+        <link rel="stylesheet" href="File CSS\stile.css">
     </head>
     <body>
         <header>
@@ -55,18 +55,18 @@ if (isset($_GET['q'])) {
                     <p>Offriamo esperienze indimenticabili in tutto il mondo.<br>Scegli il tuo prossimo viaggio con noi!</p>
                 </div>
                 <div class="mySlides fade">
-                  <img src="Immagini/citta.jpg" style="width:100%">
+                  <img src="Immagini/foto.jpeg" style="width:100%">
                 </div>
                 <div class="mySlides fade">
-                  <img src="Immagini/citta2.jpg" style="width:100%">
+                  <img src="Immagini/foto" style="width:100%">
                 </div>
                 <div class="mySlides fade">
-                  <img src="Immagini/citta3.jpg" style="width:100%">
+                  <img src="Immagini/foto" style="width:100%">
                 </div>
             </div>
             <section class="destinazioni">
                 <article class="dest">
-                    <img src="Immagini/barcellona.jpg" alt="Fotografia di Barcellona">
+                    <img src="Immagini/foto" alt="">
                     <div class="descdiv">
                         <h2>Barcellona</h2>
                         <h3>€ 1250,95</h3>
@@ -75,7 +75,7 @@ if (isset($_GET['q'])) {
                     <div class="linkdiv" onclick="window.location.href='conferma.html'">Prenota ora</div>
                 </article>
                 <article class="dest">
-                    <img src="Immagini/parigi.jpg" alt="FOtografia di Parigi">
+                    <img src="Immagini/foto" alt="">
                     <div class="descdiv">
                         <h2>Parigi</h2>
                         <h3>€ 1450,95</h3>
@@ -84,7 +84,7 @@ if (isset($_GET['q'])) {
                     <div class="linkdiv" onclick="window.location.href='conferma2.html'">Prenota ora</div>
                 </article>
                 <article class="dest">
-                    <img src="Immagini/sofia.jpg" alt="FOtografia di Sofia">
+                    <img src="Immagini/foto" alt="">
                     <div class="descdiv">
                         <h2>Sofia</h2>
                         <h3>€ 950,95</h3>
