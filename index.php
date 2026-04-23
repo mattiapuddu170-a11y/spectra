@@ -32,7 +32,7 @@ if (isset($_GET['q'])) {
     <body>
         <header>
             <nav>
-                <div>A</div>ciao
+                <div>A</div>
                 <div>B</div>
                 <div>C</div>
             </nav>
