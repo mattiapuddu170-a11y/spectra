@@ -1,0 +1,76 @@
+.mainindex {
+        padding-top: 0;
+        text-align: left;
+        width: 100%;
+        margin: auto;
+    }
+    
+.carosello {
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+    .carosello img{
+        width: 100%;
+    }    
+    .text {
+    color: white;
+    position: absolute;
+    top: 7%;
+    left: 8%;
+    width: min-content;
+    white-space: nowrap;
+    z-index: 10;
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 3.0s;
+  }
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+.destinazioni{
+    display: flex;
+    margin: auto;
+    width: 85%;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+    .dest{
+        width: 31%;
+        margin-top: 40px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding-bottom: 15px;
+    }
+        .dest img{
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .descdiv{
+            margin: auto;
+            padding: 10px;
+        }
+        .linkdiv{
+            background-color: #0864c7;
+            color:white;
+            text-align: center;
+            width: 90%;
+            padding: 8px;
+            margin: auto;
+            white-space: nowrap; /* Impedisce al testo di andare a capo */
+            border-radius: 8px;
+            transition: transform 0.1s ease;
+            transition: background-color 0.1s ease;
+        }
+            .linkdiv:hover{
+                background-color: #054d9a;
+                cursor: pointer;
+            }
+            .linkdiv:active{
+                transform: scale(0.95); /* diminuisce al 95% */
+            }

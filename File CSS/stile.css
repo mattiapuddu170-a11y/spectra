@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+h1 {
+    font-size: 54px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 0;
+}
+
+header {
+    display: flex; /* Usa flexbox per allineare gli elementi */
+    align-items: center; /* Allinea verticalmente gli elementi */
+    justify-content: space-between; /* Spazio tra il logo e la navigazione */
+    padding: 0;
+    margin: auto;
+    height: 78px;
+    width: 85%;
+}
+    #logo {
+        height: 90%;
+    }
+    nav {
+        display: flex; /* Allinea i link in orizzontale */
+        height: 100%;
+        align-items: center;
+    }
+    .menu-nav {
+        display: flex; /* Trasforma i link in elementi flex */
+        align-items: center; /* Centra verticalmente il testo */
+        justify-content: center; /* Centra orizzontalmente il testo */
+        height: 100%;
+        padding: 0 10px; /* Spaziatura interna orizzontale */
+        font-size: 16px;
+        color: #333;
+        text-align: center;
+        white-space: nowrap; /* Impedisce al testo di andare a capo */
+    }
+        .icons{
+            width: 30%;
+            height: 30%;
+            margin: 8px;
+        }
+
+hr {
+    margin: 0; /* Rimuove margini predefiniti */
+    border: none; /* Rimuove il bordo predefinito */
+    height: 0.5px;
+    background-color: gray;
+}
+
+main{
+    padding-top: 0;
+    text-align: left;
+    width: 85%;
+    margin: auto;
+    min-height: 100vh;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+    a:hover {
+        text-decoration: underline; 
+    }
+    a:active{
+        color:darkblue;
+    }
+
+footer {
+    text-align: center;
+    padding: 3vh;
+    background-color: white;
+    color: #333;
+    font-size: 14px;
+    margin-top: 40px;
+    border-top: solid gray 0.5px;
+}
