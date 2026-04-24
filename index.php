@@ -46,22 +46,22 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 <body>
 
 <header>
+    <div class="header-left">
+        <button class="hamburger-btn" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
     <img id="logo" src="Immagini/logo.png" alt="Logo">
 
-    <nav>
-        
-        <div class="menu-nav">
-            <img class="icons" src="Immagini/mail.png">
-            <a href="mailto:spectraocchiali@tiscali.it">spectraocchiali@tiscali.it</a>
-        </div>
+    <nav class="header-right">
 
         <div class="menu-nav">
-            SEGUICI SU
             <a href="login.php">
-                <img class="icons" src="Immagini/instagram.png">
+                <img class="icons" src="Immagini/user.png">
             </a>
-            <img class="icons" src="Immagini/facebook.png">
-            <img class="icons" src="Immagini/youtube.png">
         </div>
 
         <div class="menu-nav search-container">
@@ -75,6 +75,16 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
     </nav>
 </header>
+
+<aside class="sidebar" id="sidebar">
+    <a href="#home">Home</a>
+    <a href="#prodotti">Prodotti</a>
+    <a href="#categorie">Categorie</a>
+    <a href="#about">Chi Siamo</a>
+    <a href="#contatti">Contatti</a>
+</aside>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <main class="mainindex">
 
