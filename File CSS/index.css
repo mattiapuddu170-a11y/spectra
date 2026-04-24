@@ -74,3 +74,52 @@
             .linkdiv:active{
                 transform: scale(0.95); /* diminuisce al 95% */
             }
+            /* CONTENITORE RICERCA */
+.search-container {
+    position: relative;
+    width: 300px;
+}
+
+/* BOX RISULTATI */
+#risultati {
+    position: absolute;
+    top: 100%; /* sotto la barra */
+    left: 0;
+    width: 100%;
+
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+
+    max-height: 150px; /* altezza = circa 2-3 risultati */
+    overflow-y: auto; /* SCROLL */
+
+    z-index: 999;
+}
+
+/* CARD RISULTATI */
+#risultati .card {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+/* HOVER */
+#risultati .card:hover {
+    background-color: #f5f5f5;
+}
+
+/* PREZZO */
+.prezzo {
+    font-weight: bold;
+    color: green;
+}
+
+/* DISPONIBILITÀ */
+.disponibile {
+    color: green;
+}
+
+.esaurito {
+    color: red;
+}
