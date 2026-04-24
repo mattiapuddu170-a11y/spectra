@@ -79,13 +79,13 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
                     <p>Offriamo esperienze indimenticabili in tutto il mondo.<br>Scegli il tuo prossimo viaggio con noi!</p>
                 </div>
                 <div class="mySlides fade">
-                  <img src="Immagini/foto.jpeg" style="width:100%">
+                  <img src="Immagini/foto.png" style="width:100%">
                 </div>
                 <div class="mySlides fade">
-                  <img src="Immagini/foto.jpeg" style="width:100%">
+                  <img src="Immagini/foto.png" style="width:100%">
                 </div>
                 <div class="mySlides fade">
-                  <img src="Immagini/foto.jpeg" style="width:100%">
+                  <img src="Immagini/foto.png" style="width:100%">
                 </div>
             </div>
             <section class="destinazioni">
