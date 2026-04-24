@@ -13,7 +13,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
     if ($q == "") exit;
 
-    $sql = "SELECT id, nome, prezzo, stock, descrizione
+    $sql = "SELECT id, nome, prezzo, descrizione
             FROM prodotti
             WHERE nome LIKE '%$q%'
                OR descrizione LIKE '%$q%'
@@ -31,13 +31,6 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         echo "<h2>{$p['nome']}</h2>";
         echo "<p>{$p['descrizione']}</p>";
         echo "<p class='prezzo'>€ " . number_format($p['prezzo'], 2, ',', '.') . "</p>";
-
-        if ($p['stock'] > 0) {
-            echo "<p class='disponibile'>Disponibile: {$p['stock']}</p>";
-        } else {
-            echo "<p class='esaurito'>Esaurito</p>";
-        }
-
         echo "</div>";
     }
     exit;
@@ -64,7 +57,9 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
         <div class="menu-nav">
             SEGUICI SU
-            <img class="icons" src="Immagini/instagram.png">
+            <a href="login.php">
+                <img class="icons" src="Immagini/instagram.png">
+            </a>
             <img class="icons" src="Immagini/facebook.png">
             <img class="icons" src="Immagini/youtube.png">
         </div>
@@ -84,19 +79,15 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 <main class="mainindex">
 
     <div class="carosello">
-        <div class="text">
-            <h1>Un mondo di emozioni<br>ti aspetta</h1>
-            <p>Offriamo esperienze indimenticabili in tutto il mondo.<br>Scegli il tuo prossimo viaggio con noi!</p>
-        </div>
-
+   
         <div class="mySlides fade">
-            <img src="Immagini/barcellona.jpg" style="width:100%">
+            <img src="Immagini/logo.png" style="width:100%">
         </div>
         <div class="mySlides fade">
-            <img src="Immagini/barcellona.jpg" style="width:100%">
+            <img src="Immagini/logo.png" style="width:100%">
         </div>
         <div class="mySlides fade">
-            <img src="Immagini/barcellona.jpg" style="width:100%">
+            <img src="Immagini/logo.png" style="width:100%">
         </div>
     </div>
 
@@ -135,7 +126,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 </main>
 
 <footer>
-    <p>&copy; 2024 Agenzia Viaggi Puddu. Tutti i diritti riservati.</p>
+    <p>&copy; 2026 Occhiali spectra srl. Tutti i diritti riservati.</p>
 </footer>
 
 <script src="File JS/script.js"></script>
