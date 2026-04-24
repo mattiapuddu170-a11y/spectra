@@ -62,7 +62,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
                     <script src="File JS/ricerca.js"></script>
                 </div>
                 <div class="menu-nav">
-                    <img class="icons" src="Immagini/mail.png"><a href="mailto:info@pudduviaggi.com">info@pudduviaggi.com</a>
+                    <img class="icons" src="Immagini/mail.png"><a href="mailto:spectraocchiali@tiscali.it">spectraocchiali@tiscali.it</a>
                 </div>
                 <div class="menu-nav">
                     SEGUICI SU
@@ -82,10 +82,10 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
                   <img src="Immagini/foto.jpeg" style="width:100%">
                 </div>
                 <div class="mySlides fade">
-                  <img src="Immagini/foto" style="width:100%">
+                  <img src="Immagini/foto.jpeg" style="width:100%">
                 </div>
                 <div class="mySlides fade">
-                  <img src="Immagini/foto" style="width:100%">
+                  <img src="Immagini/foto.jpeg" style="width:100%">
                 </div>
             </div>
             <section class="destinazioni">
