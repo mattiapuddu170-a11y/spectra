@@ -1,26 +1,46 @@
 <?php
-// connessione DB
-$con = new mysqli("localhost", "root", "", "negozio_occhiali");
+$con = new mysqli("localhost", "root", "", "negozio_spectra");
 
 if ($con->connect_error) {
-    die("Connessione fallita: " . $con->connect_error);
+    die("Connessione fallita");
 }
 
-// variabile ricerca
-$ricerca = "";
-$ris = null;
+// se richiesta AJAX
+if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
-// se l'utente ha cercato qualcosa
-if (isset($_GET['q'])) {
-    $ricerca = $con->real_escape_string($_GET['q']);
+    $q = trim($_GET['q']);
+    $q = $con->real_escape_string($q);
 
-    $sql = "SELECT * FROM prodotti
-            WHERE nome LIKE '%$ricerca%'
-               OR descrizione LIKE '%$ricerca%'
-               OR marca LIKE '%$ricerca%'
-               OR categoria LIKE '%$ricerca%'";
+    if ($q == "") exit;
+
+    $sql = "SELECT id, nome, prezzo, stock, descrizione
+            FROM prodotti
+            WHERE nome LIKE '%$q%'
+               OR descrizione LIKE '%$q%'
+            ORDER BY nome";
 
     $ris = $con->query($sql);
+
+    if ($ris->num_rows == 0) {
+        echo "<div class='card'>Nessun prodotto trovato</div>";
+        exit;
+    }
+
+    while ($p = $ris->fetch_assoc()) {
+        echo "<div class='card'>";
+        echo "<h2>{$p['nome']}</h2>";
+        echo "<p>{$p['descrizione']}</p>";
+        echo "<p class='prezzo'>€ " . number_format($p['prezzo'], 2, ',', '.') . "</p>";
+
+        if ($p['stock'] > 0) {
+            echo "<p class='disponibile'>Disponibile: {$p['stock']}</p>";
+        } else {
+            echo "<p class='esaurito'>Esaurito</p>";
+        }
+
+        echo "</div>";
+    }
+    exit;
 }
 ?>
 <!DOCTYPE html>
@@ -35,7 +55,11 @@ if (isset($_GET['q'])) {
             <img id="logo" src="Immagini/logo.png" alt="Logo">
             <nav>
                 <div class="menu-nav">
-                    <img class="icons" src="Immagini/phone.png"><a href="tel: 373 171 4471">373 171 4471</a> 
+                        <div class="box">
+                            <input type="text" id="search" placeholder="Cerca prodotti...">
+                        </div>
+                    <div id="risultati"></div>
+                    <script src="File JS/ricerca.js"></script>
                 </div>
                 <div class="menu-nav">
                     <img class="icons" src="Immagini/mail.png"><a href="mailto:info@pudduviaggi.com">info@pudduviaggi.com</a>
