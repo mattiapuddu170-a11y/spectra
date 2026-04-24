@@ -16,13 +16,13 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     $sql = "SELECT id, nome, prezzo, stock, descrizione
             FROM prodotti
             WHERE nome LIKE '%$q%'
-               OR descrizione LIKE '%$q%'
-            ORDER BY nome";
+            OR descrizione LIKE '%$q%'
+            ORDER BY nome
+            LIMIT 3";
 
     $ris = $con->query($sql);
 
     if ($ris->num_rows == 0) {
-        echo "<div class='card'>Nessun prodotto trovato</div>";
         exit;
     }
 
@@ -47,20 +47,22 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 <html>
     <head>
         <title>Homepage</title>
-        <link rel="stylesheet" href="File CSS\index.css">
-        <link rel="stylesheet" href="File CSS\stile.css">
+        <link rel="stylesheet" href="File CSS/index.css">
+        <link rel="stylesheet" href="File CSS/stile.css">
     </head>
     <body>
         <header>
             <img id="logo" src="Immagini/logo.png" alt="Logo">
             <nav>
-                <div class="menu-nav">
-                        <div class="box">
-                            <input type="text" id="search" placeholder="Cerca prodotti...">
-                        </div>
+
+                <div class="menu-nav search-container">
+                    <div class="box">
+                        <input type="text" id="search" placeholder="Cerca prodotti...">
+                    </div>
                     <div id="risultati"></div>
-                    <script src="File JS/ricerca.js"></script>
                 </div>
+                <script src="File JS/ricerca.js"></script>
+
                 <div class="menu-nav">
                     <img class="icons" src="Immagini/mail.png"><a href="mailto:spectraocchiali@tiscali.it">spectraocchiali@tiscali.it</a>
                 </div>
