@@ -46,23 +46,17 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 <body>
 
 <header>
-    <div class="header-left">
         <button class="hamburger-btn" id="hamburgerBtn">
             <span></span>
             <span></span>
             <span></span>
         </button>
-    </div>
+        
+        <img id="logo" src="Immagini/logo.png" alt="Logo">
 
-    <img id="logo" src="Immagini/logo.png" alt="Logo">
-
-    <nav class="header-right">
-
-        <div class="menu-nav">
-            <a href="login.php">
-                <img class="icons" src="Immagini/user.png">
-            </a>
-        </div>
+        <a href="login.php">
+            <img class="icons" src="Immagini/user.png">
+        </a>
 
         <div class="menu-nav search-container">
             <div class="box">
@@ -73,7 +67,6 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
         <script src="File JS/ricerca.js"></script>
 
-    </nav>
 </header>
 
 <aside class="sidebar" id="sidebar">
@@ -91,13 +84,13 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     <div class="carosello">
    
         <div class="mySlides fade">
-            <img src="Immagini/logo.png" style="width:100%">
+            <img src="Immagini/foto.png" style="width:100%">
         </div>
         <div class="mySlides fade">
-            <img src="Immagini/logo.png" style="width:100%">
+            <img src="Immagini/foto.png" style="width:100%">
         </div>
         <div class="mySlides fade">
-            <img src="Immagini/logo.png" style="width:100%">
+            <img src="Immagini/foto.png" style="width:100%">
         </div>
     </div>
 
