@@ -30,7 +30,7 @@ header {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        height: 40%; 
+        height: 30%; 
     }
 
     .icons {
