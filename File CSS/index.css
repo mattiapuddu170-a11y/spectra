@@ -32,7 +32,7 @@
     to {opacity: 1}
   }
 
-.destinazioni{
+.prodotti{
     display: flex;
     margin: auto;
     width: 85%;
@@ -40,14 +40,14 @@
     justify-content: space-between;
     
 }
-    .dest{
+    .prod{
         width: 31%;
         margin-top: 40px;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         padding-bottom: 15px;
     }
-        .dest img{
+        .prod img{
             width: 100%;
             border-radius: 8px 8px 0 0;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
@@ -75,13 +75,6 @@
             .linkdiv:active{
                 transform: scale(0.95); /* diminuisce al 95% */
             }
-            .menu-nav.search-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                position: relative;
-            }
-
 
 
             

@@ -70,26 +70,40 @@ if (isset($_POST['login'])) {
 }
 ?>
 
-<!-- -------------------- FORM MINIMALE -------------------- -->
 
-<form method="post" action="">
-    <h3>LOGIN</h3>
 
-    <input type="email" name="email" placeholder="email" required><br>
-    <input type="password" name="password" placeholder="password" required><br>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accedi</title>
+    <link rel="stylesheet" href="File CSS/login.css">
+    <link rel="stylesheet" href="File CSS/stile.css">
+</head>
+<body>
+    <div class="login">
+        <form method="post" action="">
+            <h3>LOGIN</h3>
 
-    <button type="submit" name="login">Accedi</button>
-</form>
+            <input type="email" name="email" placeholder="email" required><br>
+            <input type="password" name="password" placeholder="password" required><br>
 
-<hr>
+            <button type="submit" name="login">Accedi</button>
+        </form>
 
-<form method="post" action="">
-    <h3>REGISTRAZIONE</h3>
+        <form method="post" action="">
+            <h3>REGISTRAZIONE</h3>
 
-    <input type="text" name="nome_new" placeholder="nome" required><br>
-    <input type="text" name="cognome_new" placeholder="cognome" required><br>
-    <input type="email" name="email_new" placeholder="email" required><br>
-    <input type="password" name="password_new" placeholder="password" required><br>
+            <input type="text" name="nome_new" placeholder="nome" required><br>
+            <input type="text" name="cognome_new" placeholder="cognome" required><br>
+            <input type="email" name="email_new" placeholder="email" required><br>
+            <input type="password" name="password_new" placeholder="password" required><br>
 
-    <button type="submit" name="invia2">Crea utente</button>
-</form>
+            <button type="submit" name="invia2">Crea utente</button>
+        </form>
+    </div>
+    <hr>
+
+
+
+</body>
+</html>

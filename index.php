@@ -99,8 +99,8 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         </div>
     </div>
 
-    <section class="destinazioni">
-        <article class="dest">
+    <section class="prodotti">
+        <article class="prod">
             <img src="Immagini/foto" alt="">
             <div class="descdiv">
                 <h2>Barcellona</h2>
@@ -110,7 +110,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
             <div class="linkdiv" onclick="window.location.href='conferma.html'">Prenota ora</div>
         </article>
 
-        <article class="dest">
+        <article class="prod">
             <img src="Immagini/foto" alt="">
             <div class="descdiv">
                 <h2>Parigi</h2>
@@ -120,7 +120,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
             <div class="linkdiv" onclick="window.location.href='conferma2.html'">Prenota ora</div>
         </article>
 
-        <article class="dest">
+        <article class="prod">
             <img src="Immagini/foto" alt="">
             <div class="descdiv">
                 <h2>Sofia</h2>
