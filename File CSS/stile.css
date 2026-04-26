@@ -44,6 +44,20 @@ header {
         margin-right: 10px; /* Spazio tra icona user e ricerca */
     }
 
+    .icons-group {
+        display: flex;
+        gap: 10px;
+        margin-left: auto;
+        align-items: center;
+    }
+
+    .icons-group a {
+        margin-left: 0;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+    }
+
 
     /* BOX RICERCA */
     .box {
@@ -139,10 +153,14 @@ header {
         width: 25%;
         height: 100vh;
         background-color: #000000e3;
-        padding: 20px 0;
+        padding: 40px 0 calc(100vh * 0.25 - 40px) 0;
+        box-sizing: border-box;
         z-index: 999;
         transition: left 0.3s ease;
         overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
         .sidebar.active {
@@ -152,16 +170,14 @@ header {
         .sidebar a {
             display: block;
             color: whitesmoke;
-            padding: 20px 25px;
             text-decoration: none;
-            font-size: 18px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            transition: background-color 0.2s ease;
+            font-size: 22px;
+            padding: 15px 25px;
+            text-align: center;
         }
 
         .sidebar a:hover {
-            background-color: rgba(5, 77, 154, 0.8);
-            text-decoration: none;
+            text-decoration: underline;
         }
 
         .sidebar-overlay {
@@ -215,7 +231,6 @@ a {
 footer {
     text-align: center;
     padding: 3vh;
-    background-color: rgba(0, 0, 0, 0.925);
     color: whitesmoke;
     font-size: 14px;
     margin-top: 40px;

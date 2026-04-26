@@ -54,9 +54,14 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         
         <img id="logo" src="Immagini/logo.png" alt="Logo">
 
-        <a href="login.php">
-            <img class="icons" src="Immagini/user.png">
-        </a>
+        <div class="icons-group">
+            <a href="login.php">
+                <img class="icons" src="Immagini/cart.png" alt="Carrello">
+            </a>
+            <a href="login.php">
+                <img class="icons" src="Immagini/user.png" alt="Utente">
+            </a>
+        </div>
 
         <div class="menu-nav search-container">
             <div class="box">
