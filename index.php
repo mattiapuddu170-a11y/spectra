@@ -1,4 +1,5 @@
 <?php
+session_start();
 $con = new mysqli("localhost", "root", "", "negozio_spectra");
 
 if ($con->connect_error) {
@@ -55,7 +56,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         <img id="logo" src="Immagini/logo.png" alt="Logo">
 
         <div class="icons-group">
-            <a href="login.php">
+            <a href="carrello.php">
                 <img class="icons" src="Immagini/cart.png" alt="Carrello">
             </a>
             <a href="login.php">

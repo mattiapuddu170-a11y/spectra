@@ -245,3 +245,128 @@ footer {
     border-top: solid gray 0.5px;
 }
 
+.carrello-container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 40px auto 80px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.carrello-box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.page-heading h1 {
+    font-size: 42px;
+    margin-bottom: 6px;
+}
+
+.page-heading p {
+    color: #d1d1d1;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.welcome-card {
+    padding: 18px 22px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #f7f7f7;
+    font-size: 16px;
+}
+
+.welcome-card.empty {
+    color: #cfcfcf;
+}
+
+.carrello-table-wrapper {
+    overflow-x: auto;
+}
+
+.carrello-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 420px;
+}
+
+.carrello-table th,
+.carrello-table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: left;
+}
+
+.carrello-table th {
+    color: #dcdcdc;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.carrello-table td {
+    color: #f4f4f4;
+}
+
+.carrello-table tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.carrello-empty {
+    padding: 28px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    color: #c7c7c7;
+    text-align: center;
+}
+
+.carrello-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.carrello-actions .linkdiv {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #0864c7;
+    color: white;
+    border-radius: 12px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.carrello-actions .linkdiv:hover {
+    background-color: #054d9a;
+    transform: translateY(-1px);
+}
+
+.carrello-actions .linkdiv:active {
+    transform: scale(0.98);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7.5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header #logo {
+    position: relative;
+    left: 0;
+    transform: none;
+    height: 36px;
+}
+
+.icons-group {
+    gap: 14px;
+}
+
