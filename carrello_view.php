@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>Carrello</title>
-    <link rel="stylesheet" href="File CSS/stile.css">
+    <link rel="stylesheet" href="File CSS/carrstyle.css">
 </head>
 <body>
 <header>

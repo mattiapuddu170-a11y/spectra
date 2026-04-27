@@ -57,11 +57,11 @@ if (isset($_POST['login'])) {
 
                 if ($row['email'] === 'admin') {
                     header("Location: admin.php");
+                    exit();
                 } else {
-                    // Rimani sulla pagina e mostra il messaggio
-                    $logged_in = true;
+                    header("Location: login.php");
+                    exit();
                 }
-                exit();
             } else {
                 echo "Email o password errati.";
             }
@@ -84,9 +84,14 @@ if (isset($_POST['login'])) {
 <body>
     <div class="login">
         <?php if (isset($_SESSION['nome'])): ?>
-            <h3>Benvenuto <?php echo htmlspecialchars($_SESSION['nome'] . (isset($_SESSION['cognome']) ? ' ' . $_SESSION['cognome'] : '')); ?>!</h3>
-            <p>Sei loggato con successo.</p>
-            <a href="logout.php">Logout</a> <!-- Aggiungi un link per il logout se necessario -->
+            <div class="login-success">
+                <h3>Utente riconosciuto</h3>
+                <p>Sei loggato con successo come <strong><?php echo htmlspecialchars($_SESSION['nome'] . (isset($_SESSION['cognome']) ? ' ' . $_SESSION['cognome'] : '')); ?></strong>.</p>
+                <div class="action-buttons">
+                    <a class="linkdiv" href="index.php">Torna alla home</a>
+                    <a class="linkdiv" href="logout.php">Logout</a>
+                </div>
+            </div>
         <?php else: ?>
         <form method="post" action="">
             <h3>LOGIN</h3>

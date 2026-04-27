@@ -11,3 +11,31 @@ input{
 button{
     padding: 5px;
 }
+
+.login-success {
+    max-width: 480px;
+    margin: 24px auto;
+    padding: 22px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #f9f9f9;
+    text-align: center;
+}
+
+.login-success h3 {
+    margin: 0 0 10px;
+    font-size: 26px;
+}
+
+.login-success p {
+    margin: 0 0 18px;
+    color: #dfe4ff;
+}
+
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
