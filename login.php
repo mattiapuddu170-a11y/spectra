@@ -52,12 +52,14 @@ if (isset($_POST['login'])) {
 
             if (password_verify($password, $row['password'])) {
                 $_SESSION['nome'] = $row['nome'];
+                $_SESSION['cognome'] = $row['cognome'];
                 $_SESSION['email'] = $row['email'];
 
                 if ($row['email'] === 'admin') {
                     header("Location: admin.php");
                 } else {
-                    header("Location: Accedi_dummy_aut.php");
+                    // Rimani sulla pagina e mostra il messaggio
+                    $logged_in = true;
                 }
                 exit();
             } else {
@@ -81,6 +83,11 @@ if (isset($_POST['login'])) {
 </head>
 <body>
     <div class="login">
+        <?php if (isset($_SESSION['nome'])): ?>
+            <h3>Benvenuto <?php echo htmlspecialchars($_SESSION['nome'] . (isset($_SESSION['cognome']) ? ' ' . $_SESSION['cognome'] : '')); ?>!</h3>
+            <p>Sei loggato con successo.</p>
+            <a href="logout.php">Logout</a> <!-- Aggiungi un link per il logout se necessario -->
+        <?php else: ?>
         <form method="post" action="">
             <h3>LOGIN</h3>
 
@@ -100,6 +107,7 @@ if (isset($_POST['login'])) {
 
             <button type="submit" name="invia2">Crea utente</button>
         </form>
+        <?php endif; ?>
     </div>
     <hr>
 
