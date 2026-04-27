@@ -128,6 +128,20 @@ header {
     background: rgba(255, 255, 255, 0.03);
 }
 
+.product-cell {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.product-image {
+    width: 68px;
+    height: 68px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
 .carrello-table td {
     color: #e5ecff;
     font-size: 0.98rem;

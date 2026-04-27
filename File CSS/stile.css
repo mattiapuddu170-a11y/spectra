@@ -350,3 +350,36 @@ footer {
     transform: scale(0.98);
 }
 
+.product-cell {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.product-image {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.remove-button {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: #d64545;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: 700;
+}
+
+.remove-button:hover {
+    background-color: #b23232;
+}
+
+.bottom-home {
+    margin-top: 28px;
+    text-align: center;
+}
+

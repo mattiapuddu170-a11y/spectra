@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>Carrello</title>
-    <link rel="stylesheet" href="File CSS/carrstyle.css">
+    <link rel="stylesheet" href="File CSS/stile.css">
 </head>
 <body>
 <header>
@@ -38,15 +38,24 @@ session_start();
                 <table class="carrello-table">
                     <thead>
                         <tr>
-                            <th>Prodotto ID</th>
+                            <th>Prodotto</th>
                             <th>Quantità</th>
+                            <th>Azione</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($_SESSION['carrello'] as $id => $qty): ?>
+                        <?php foreach ($_SESSION['carrello'] as $item): ?>
                             <tr>
-                                <td><?php echo htmlspecialchars($id); ?></td>
-                                <td><?php echo htmlspecialchars($qty); ?></td>
+                                <td>
+                                    <span><?php echo htmlspecialchars($item['name'] ?: 'Prodotto'); ?></span>
+                                </td>
+                                <td><?php echo htmlspecialchars($item['qty']); ?></td>
+                                <td>
+                                    <form method="post" action="carrello.php">
+                                        <input type="hidden" name="remove_id" value="<?php echo htmlspecialchars($item['id']); ?>">
+                                        <button class="linkdiv remove-button" type="submit">Rimuovi</button>
+                                    </form>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -60,9 +69,6 @@ session_start();
 
         <div class="carrello-actions">
             <a class="linkdiv" href="index.php">Torna alla home</a>
-            <?php if (isset($_SESSION['nome'])): ?>
-                <a class="linkdiv" href="logout.php">Logout</a>
-            <?php endif; ?>
         </div>
     </section>
 </main>
