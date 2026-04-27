@@ -76,15 +76,3 @@
                 transform: scale(0.95); /* diminuisce al 95% */
             }
 
-.carosello,
-.mySlides {
-    background-color: #000;
-}
-
-.carosello img {
-    display: block;
-    background-color: #000;
-}
-
-
-            

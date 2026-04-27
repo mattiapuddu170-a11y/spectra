@@ -350,23 +350,3 @@ footer {
     transform: scale(0.98);
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 7.5%;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-header #logo {
-    position: relative;
-    left: 0;
-    transform: none;
-    height: 36px;
-}
-
-.icons-group {
-    gap: 14px;
-}
-
