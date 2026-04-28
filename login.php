@@ -88,7 +88,7 @@ if (isset($_POST['login'])) {
         </a>
     </header>
 
-    <div class="login">
+    <main class="login">
         <?php if (isset($_SESSION['nome'])): ?>
             <div class="login-success">
                 <h3>Utente riconosciuto</h3>

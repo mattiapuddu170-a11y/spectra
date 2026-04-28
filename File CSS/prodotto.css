@@ -1,0 +1,23 @@
+.hero{
+    display: flex;
+}
+    .carosello{
+        width: 55%;
+    }
+        .carosello img{
+            width: 35%;
+            margin: auto;
+        }
+    .info{
+        width: 35%;
+    }
+
+.features{
+    width: 100%;
+    margin: auto;
+}
+    .features-row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }

@@ -2,9 +2,8 @@
 <html>
 <head>
     <title>Homepage</title>
-    <link rel="stylesheet" href="File CSS/index.css">
     <link rel="stylesheet" href="File CSS/stile.css">
-
+    <link rel="stylesheet" href="File CSS/prodotto.css">
 </head>
 <body>
 
@@ -52,7 +51,51 @@
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <main>
+    <section class="hero">
 
+        <div class="carosello">
+            <div class="mySlides fade">
+                <img src="Immagini/foto.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="Immagini/foto2.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="Immagini/foto3.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="Immagini/foto4.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="Immagini/foto5.png" style="width:100%">
+            </div>
+            <script src="File JS/carosello.js"></script>
+        </div>
+
+        <div class="info">
+            ciao
+        </div>
+
+    </section>
+
+    <section class="features">
+
+        <div class="features-row">
+            <article>
+                ciao
+            </article>
+            
+            <article>
+                ciao
+            </article>
+            
+            <article>
+                ciao
+            </article>   
+        </div>
+
+
+    </section>
 </main>
 
 <footer>

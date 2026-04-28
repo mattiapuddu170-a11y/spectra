@@ -37,6 +37,9 @@ a{
     color: inherit;
     }
 
+
+
+
 /* #region HEADER*/
 header {
     display: flex; /* Usa flexbox per allineare gli elementi */
@@ -56,6 +59,7 @@ header {
         display:flex;
         align-items:center;
         height: 35%;
+        display: block;
     }
         .logo img{
             height: 100%;

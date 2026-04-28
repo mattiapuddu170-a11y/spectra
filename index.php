@@ -43,8 +43,9 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 <html>
 <head>
     <title>Homepage</title>
-    <link rel="stylesheet" href="File CSS/index.css">
     <link rel="stylesheet" href="File CSS/stile.css">
+    <link rel="stylesheet" href="File CSS/index.css">
+    
 
 </head>
 <body>
