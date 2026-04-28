@@ -40,8 +40,20 @@ session_start();
         </div>
 
         <script src="File JS/ricerca.js"></script>
+        <script src="File JS/menu.js"></script>
 
 </header>
+
+<aside class="sidebar" id="sidebar">
+    <a href="index.php">Home</a>
+    <a href="prodotti.php">Prodotti</a>
+    <a href="#categorie">Categorie</a>
+    <a href="#about">Chi Siamo</a>
+    <a href="#contatti">Contatti</a>
+
+</aside>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <main class="carrello-container">
     <section class="carrello-box">

@@ -2,10 +2,7 @@
 <html>
 <head>
     <title>Prodotti</title>
-    <link rel="stylesheet" href="File CSS/prodotti.css">
     <link rel="stylesheet" href="File CSS/stile.css">
-    <script src="File JS/script.js"></script>
-    <script src="File JS/menu.js"></script>
 </head>
 <body>
 
@@ -38,6 +35,7 @@
         </div>
 
         <script src="File JS/ricerca.js"></script>
+        <script src="File JS/menu.js"></script>
 
 </header>
 
@@ -55,12 +53,10 @@
 
 <main>
 
-
-
     <section class="prodotti">
         
         <article class="prod">
-            <a href="#prodotto" class="prod-link">
+            <a href="occhiale.php" class="prod-link">
                 <img src="Immagini/foto5.png" alt="">
                 <div class="descdiv">
                     <h2>Spectra Mirage</h2>
@@ -119,7 +115,7 @@
     <section class="prodotti">
         
         <article class="prod">
-            <a href="#prodotto" class="prod-link">
+            <a href="occhiale.php" class="prod-link">
                 <img src="Immagini/foto5.png" alt="">
                 <div class="descdiv">
                     <h2>Spectra Mirage</h2>
@@ -178,8 +174,6 @@
 <footer>
     <p>&copy; 2026 Occhiali spectra srl. Tutti i diritti riservati.</p>
 </footer>
-
-<script src="File JS/script.js"></script>
 
 </body>
 </html>

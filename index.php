@@ -45,8 +45,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     <title>Homepage</title>
     <link rel="stylesheet" href="File CSS/index.css">
     <link rel="stylesheet" href="File CSS/stile.css">
-    <script src="File JS/menu.js"></script>
-    <script src="File JS/ricerca.js"></script>
+
 </head>
 <body>
 
@@ -79,6 +78,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         </div>
 
         <script src="File JS/ricerca.js"></script>
+        <script src="File JS/menu.js"></script>
 
 </header>
 
@@ -88,7 +88,6 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     <a href="#categorie">Categorie</a>
     <a href="#about">Chi Siamo</a>
     <a href="#contatti">Contatti</a>
-
 </aside>
 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
@@ -112,7 +111,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         <div class="mySlides fade">
             <img src="Immagini/foto5.png" style="width:100%">
         </div>
-        <script src="File JS/script.js"></script>
+        <script src="File JS/carosello.js"></script>
     </div>
 
     <section class="prodotti">
@@ -178,8 +177,6 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 <footer>
     <p>&copy; 2026 Occhiali spectra srl. Tutti i diritti riservati.</p>
 </footer>
-
-
 
 </body>
 </html>
