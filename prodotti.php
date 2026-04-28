@@ -1,47 +1,8 @@
-<?php
-session_start();
-$con = new mysqli("localhost", "root", "", "negozio_spectra");
-
-if ($con->connect_error) {
-    die("Connessione fallita");
-}
-
-// richiesta AJAX
-if (isset($_GET['ajax']) && isset($_GET['q'])) {
-
-    $q = trim($_GET['q']);
-    $q = $con->real_escape_string($q);
-
-    if ($q == "") exit;
-
-    $sql = "SELECT id, nome, prezzo, descrizione
-            FROM prodotti
-            WHERE nome LIKE '%$q%'
-               OR descrizione LIKE '%$q%'
-            ORDER BY nome
-            LIMIT 5";
-
-    $ris = $con->query($sql);
-
-    if ($ris->num_rows == 0) {
-        exit;
-    }
-
-    while ($p = $ris->fetch_assoc()) {
-        echo "<div class='card'>";
-        echo "<h2>{$p['nome']}</h2>";
-        echo "<p>{$p['descrizione']}</p>";
-        echo "<p class='prezzo'>€ " . number_format($p['prezzo'], 2, ',', '.') . "</p>";
-        echo "</div>";
-    }
-    exit;
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Homepage</title>
-    <link rel="stylesheet" href="File CSS/index.css">
+    <title>Prodotti</title>
+    <link rel="stylesheet" href="File CSS/prodotti.css">
     <link rel="stylesheet" href="File CSS/stile.css">
     <script src="File JS/script.js"></script>
     <script src="File JS/menu.js"></script>
@@ -80,37 +41,69 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
 </header>
 
+<hr>
+
 <aside class="sidebar" id="sidebar">
     <a href="index.php">Home</a>
     <a href="prodotti.php">Prodotti</a>
     <a href="#categorie">Categorie</a>
     <a href="#about">Chi Siamo</a>
     <a href="#contatti">Contatti</a>
-
 </aside>
 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <main>
 
-    <div class="carosello">
-   
-        <div class="mySlides fade">
-            <img src="Immagini/foto.png" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="Immagini/foto2.png" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="Immagini/foto3.png" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="Immagini/foto4.png" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="Immagini/foto5.png" style="width:100%">
-        </div>
-    </div>
+
+
+    <section class="prodotti">
+        <article class="prod">
+            <img src="Immagini/foto5.png" alt="">
+            <div class="descdiv">
+                <h2>Spectra Mirage</h2>
+                <h3>€ 450,00</h3>
+                <p>Acquista subito spectra Mirage</p>
+            </div>
+            <form method="post" action="carrello.php" class="product-form">
+                <input type="hidden" name="prodotto_id" value="1">
+                <input type="hidden" name="prodotto_name" value="Spectra Mirage">
+                <input type="hidden" name="prodotto_image" value="Immagini/foto5.png">
+                <button class="linkdiv" type="submit">Acquista ora</button>
+            </form>
+        </article>
+
+        <article class="prod">
+            <img src="Immagini/foto3.png" alt="">
+            <div class="descdiv">
+                <h2>Spectra Eclipse</h2>
+                <h3>€ 450,00</h3>
+                <p>Acquista subito spectra Eclipse</p>
+            </div>
+            <form method="post" action="carrello.php" class="product-form">
+                <input type="hidden" name="prodotto_id" value="2">
+                <input type="hidden" name="prodotto_name" value="Spectra Eclipse">
+                <input type="hidden" name="prodotto_image" value="Immagini/foto3.png">
+                <button class="linkdiv" type="submit">Acquista ora</button>
+            </form>
+        </article>
+
+        <article class="prod">
+            <img src="Immagini/foto4.png" alt="">
+            <div class="descdiv">
+                <h2>Spectra Vision</h2>
+                <h3>€ 450,00</h3>
+                <p>Acquista subito spectra Vision</p>
+            </div>
+            <form method="post" action="carrello.php" class="product-form">
+                <input type="hidden" name="prodotto_id" value="3">
+                <input type="hidden" name="prodotto_name" value="Spectra Vision">
+                <input type="hidden" name="prodotto_image" value="Immagini/foto4.png">
+                <button class="linkdiv" type="submit">Acquista ora</button>
+            </form>
+        </article>
+    </section>
+
 
     <section class="prodotti">
         <article class="prod">
@@ -165,7 +158,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     <p>&copy; 2026 Occhiali spectra srl. Tutti i diritti riservati.</p>
 </footer>
 
-
+<script src="File JS/script.js"></script>
 
 </body>
 </html>

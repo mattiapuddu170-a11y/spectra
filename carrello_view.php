@@ -9,13 +9,39 @@ session_start();
     <link rel="stylesheet" href="File CSS/stile.css">
 </head>
 <body>
+
 <header>
-    <img id="logo" src="Immagini/logo.png" alt="Logo">
-    <div class="icons-group">
-        <a href="index.php"><img class="icons" src="Immagini/cart.png" alt="Carrello"></a>
-        <a href="login.php"><img class="icons" src="Immagini/user.png" alt="Utente"></a>
-    </div>
+        <button class="hamburger-btn" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <a href="index.php" class="logo">
+            <img src="Immagini/logo.png" alt="Logo">
+        </a>
+        
+
+        <div class="icons-group">
+            <a href="carrello.php">
+                <img class="icons" src="Immagini/cart.png" alt="Carrello">
+            </a>
+            <a href="login.php">
+                <img class="icons" src="Immagini/user.png" alt="Utente">
+            </a>
+        </div>
+
+        <div class="menu-nav search-container">
+            <div class="box">
+                <input type="text" id="search" placeholder="Cerca prodotti...">
+            </div>
+            <div id="risultati"></div>
+        </div>
+
+        <script src="File JS/ricerca.js"></script>
+
 </header>
+
 <main class="carrello-container">
     <section class="carrello-box">
         <div class="page-heading">

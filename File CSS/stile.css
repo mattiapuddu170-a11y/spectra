@@ -26,12 +26,18 @@ header {
     position: relative;
 }
 
-    #logo {
+    .logo {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        height: 30%; 
+        display:flex;
+        align-items:center;
+        height: 35%;
     }
+        .logo img{
+            height: 100%;
+            display:block;
+        }
 
     .icons {
         height: 40px;
