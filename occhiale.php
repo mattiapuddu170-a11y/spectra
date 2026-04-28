@@ -52,27 +52,31 @@
 
 <main>
     <section class="hero">
+        <div class="sinistra">
 
-        <div class="carosello">
+           <div class="carosello">
             <div class="mySlides fade">
-                <img src="Immagini/foto.png" style="width:100%">
+                <img src="Immagini/foto.png">
             </div>
             <div class="mySlides fade">
-                <img src="Immagini/foto2.png" style="width:100%">
+                <img src="Immagini/foto2.png">
             </div>
             <div class="mySlides fade">
-                <img src="Immagini/foto3.png" style="width:100%">
+                <img src="Immagini/foto3.png">
             </div>
             <div class="mySlides fade">
-                <img src="Immagini/foto4.png" style="width:100%">
+                <img src="Immagini/foto4.png">
             </div>
             <div class="mySlides fade">
-                <img src="Immagini/foto5.png" style="width:100%">
+                <img src="Immagini/foto5.png">
             </div>
             <script src="File JS/carosello.js"></script>
-        </div>
+            </div>
 
-        <div class="info">
+        </div>
+     
+
+        <div class="destra">
             ciao
         </div>
 
@@ -81,18 +85,29 @@
     <section class="features">
 
         <div class="features-row">
-            <article>
-                ciao
+            <article class="features-box">
+                <h1>Tecnologia ..</h1>
             </article>
             
-            <article>
-                ciao
+            <article class="features-box">
+                <h1>Tecnologia ..</h1>
             </article>
-            
-            <article>
-                ciao
-            </article>   
+
+            <article class="features-box">
+                <h1>Tecnologia ..</h1>
+            </article> 
         </div>
+
+        <div class="features-row">
+            <article class="features-box">
+                <h1>Tecnologia ..</h1>
+            </article>
+            
+            <article class="features-box">
+                <h1>Tecnologia ..</h1>
+            </article>
+        </div>
+
 
 
     </section>
