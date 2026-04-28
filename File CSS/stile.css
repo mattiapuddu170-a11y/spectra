@@ -217,13 +217,7 @@ hr {
     background-color: gray;
 }
 
-main{
-    padding-top: 0;
-    text-align: left;
-    width: 85%;
-    margin: auto;
-    min-height: 100vh;
-}
+
 
 a {
     color: whitesmoke;
