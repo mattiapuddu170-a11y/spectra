@@ -82,6 +82,12 @@ if (isset($_POST['login'])) {
     <link rel="stylesheet" href="File CSS/stile.css">
 </head>
 <body>
+    <header>
+        <a href="index.php" class="logo">
+            <img src="Immagini/logo.png" alt="Logo">
+        </a>
+    </header>
+
     <div class="login">
         <?php if (isset($_SESSION['nome'])): ?>
             <div class="login-success">
@@ -102,6 +108,8 @@ if (isset($_POST['login'])) {
             <button type="submit" name="login">Accedi</button>
         </form>
 
+        <br><hr>
+
         <form method="post" action="">
             <h3>REGISTRAZIONE</h3>
 
@@ -114,9 +122,6 @@ if (isset($_POST['login'])) {
         </form>
         <?php endif; ?>
     </div>
-    <hr>
-
-
-
+    
 </body>
 </html>

@@ -1,103 +1,43 @@
-/* Stile dedicato per la pagina Carrello */
-body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    color: #f5f5f5;
-    background: radial-gradient(circle at top, rgba(30, 90, 200, 0.17), transparent 25%),
-                linear-gradient(180deg, #050607 0%, #0f1723 100%);
-}
-
-* {
-    box-sizing: border-box;
-}
-
-a {
-    color: #8fb6ff;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-
-header {
-    width: 100%;
-    padding: 22px 7.5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#logo {
-    height: 42px;
-}
-
-.icons-group {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-}
-
-.icons {
-    width: 38px;
-    height: auto;
-    transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-.icons:hover {
-    transform: translateY(-3px);
-    filter: brightness(1.1);
-}
-
+/* #region CARRELLO*/
 .carrello-container {
-    width: min(1080px, 92%);
-    margin: 0 auto 64px;
-    padding: 28px;
-    background: rgba(9, 16, 31, 0.92);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 28px;
-    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.32);
+    width: 85%;
+    max-width: 1100px;
+    margin: 40px auto 80px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
-.page-heading {
+.carrello-box {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 18px;
-    align-items: flex-end;
-    margin-bottom: 30px;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .page-heading h1 {
-    margin: 0;
-    font-size: clamp(2.4rem, 2.6vw, 3.4rem);
-    letter-spacing: -0.03em;
+    font-size: 42px;
+    margin-bottom: 6px;
 }
 
 .page-heading p {
-    margin: 0;
-    color: #c8d4ff;
-    font-size: 15px;
-    max-width: 520px;
+    color: #d1d1d1;
+    font-size: 16px;
+    margin-top: 0;
 }
 
 .welcome-card {
-    padding: 20px 22px;
-    border-radius: 22px;
-    background: rgba(56, 92, 194, 0.14);
-    border: 1px solid rgba(111, 156, 255, 0.18);
-    color: #e6ecff;
-    font-size: 15px;
-    margin-bottom: 24px;
-}
-
-.welcome-card strong {
-    color: #b7d1ff;
+    padding: 18px 22px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #f7f7f7;
+    font-size: 16px;
 }
 
 .welcome-card.empty {
-    background: rgba(255, 255, 255, 0.04);
-    border-color: rgba(255, 255, 255, 0.08);
+    color: #cfcfcf;
 }
 
 .carrello-table-wrapper {
@@ -107,25 +47,62 @@ header {
 .carrello-table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 480px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 18px;
-    overflow: hidden;
+    min-width: 420px;
 }
 
 .carrello-table th,
 .carrello-table td {
-    padding: 18px 20px;
-    text-align: left;
+    padding: 16px 18px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: left;
 }
 
 .carrello-table th {
-    color: #aac5ff;
+    color: #dcdcdc;
+    font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.88rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.05em;
+}
+
+.carrello-table td {
+    color: #f4f4f4;
+}
+
+.carrello-table tr:hover {
     background: rgba(255, 255, 255, 0.03);
+}
+
+.carrello-empty {
+    padding: 28px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    color: #c7c7c7;
+    text-align: center;
+}
+
+.carrello-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.carrello-actions .linkdiv {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #0864c7;
+    color: white;
+    border-radius: 12px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    text-decoration: none;
+}
+
+.carrello-actions .linkdiv:hover {
+    background-color: #054d9a;
+    transform: translateY(-1px);
+}
+
+.carrello-actions .linkdiv:active {
+    transform: scale(0.98);
 }
 
 .product-cell {
@@ -135,92 +112,29 @@ header {
 }
 
 .product-image {
-    width: 68px;
-    height: 68px;
+    width: 72px;
+    height: 72px;
     object-fit: cover;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.carrello-table td {
-    color: #e5ecff;
-    font-size: 0.98rem;
-}
-
-.carrello-table tr:last-child td {
-    border-bottom: none;
-}
-
-.carrello-table tbody tr:hover {
-    background: rgba(111, 156, 255, 0.08);
-}
-
-.carrello-empty {
-    padding: 32px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: #d3d9ff;
-    text-align: center;
-    font-size: 1rem;
-}
-
-.carrello-actions {
-    margin-top: 28px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 170px;
-    padding: 14px 24px;
-    border-radius: 14px;
-    text-transform: uppercase;
-    font-size: 0.95rem;
-    letter-spacing: 0.05em;
-    font-weight: 700;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, #4d7bff 0%, #2e5fe8 100%);
+.remove-button {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: #d64545;
+    border-radius: 10px;
+    border: none;
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    font-weight: 700;
 }
 
-.btn-secondary {
-    background: rgba(255, 255, 255, 0.06);
-    color: #d6deff;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+.remove-button:hover {
+    background-color: #b23232;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
+.bottom-home {
+    margin-top: 28px;
+    text-align: center;
 }
-
-.btn:active {
-    transform: scale(0.98);
-}
-
-@media (max-width: 760px) {
-    header {
-        padding: 20px 5%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
-    }
-
-    .page-heading {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .carrello-table th,
-    .carrello-table td {
-        padding: 14px 16px;
-    }
-}
+/* #endregion */

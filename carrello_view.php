@@ -7,6 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <title>Carrello</title>
     <link rel="stylesheet" href="File CSS/stile.css">
+    <link rel="stylesheet" href="File CSS/carrstyle.css">
 </head>
 <body>
 
@@ -51,7 +52,7 @@ session_start();
 
         <?php if (isset($_SESSION['nome'])): ?>
             <div class="welcome-card">
-                <strong>Benvenuto</strong> <?php echo htmlspecialchars($_SESSION['nome'] . (isset($_SESSION['cognome']) ? ' ' . $_SESSION['cognome'] : '')); ?>
+                Benvenuto <?php echo htmlspecialchars($_SESSION['nome'] . (isset($_SESSION['cognome']) ? ' ' . $_SESSION['cognome'] : '')); ?>
             </div>
         <?php else: ?>
             <div class="welcome-card empty">
