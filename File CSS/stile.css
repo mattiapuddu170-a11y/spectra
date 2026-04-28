@@ -225,16 +225,6 @@ hr {
 
 
 
-a {
-    color: whitesmoke;
-    text-decoration: none;
-}
-    a:hover {
-        text-decoration: underline; 
-    }
-    a:active{
-        color:darkblue;
-    }
 
 footer {
     text-align: center;
@@ -383,3 +373,132 @@ footer {
     text-align: center;
 }
 
+/* PRODOTTI */
+.prodotti{
+    display: flex;
+    margin: auto;
+    width: 85%;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+    .prod{
+        width: 31%;
+        margin-top: 40px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        transition: 0.2s ease;
+    }
+
+    .prod-link{
+        display:block;
+        text-decoration:none;
+        color:inherit;
+        transition: transform 0.2s ease
+    }
+
+        .prod img{
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .prod:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .descdiv{
+            padding: 20px 20px;
+        }
+
+    .product-form{
+        margin-top: auto;
+        padding: 0 20px 20px 20px;
+    }
+
+    .linkdiv{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #0864c7;
+        color: white;
+        text-align: center;
+        padding: 8px;
+        border-radius: 8px;
+        white-space: nowrap;
+        transition: transform 0.1s ease, background-color 0.1s ease;
+    }
+
+    .linkdiv:hover{
+        background-color: #054d9a;
+        cursor: pointer;
+    }
+
+    .linkdiv:active{
+        transform: scale(0.95);
+    }
+
+
+
+/* PRODOTTI */
+.prodotti{
+    display: flex;
+    margin: auto;
+    width: 85%;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+    .prod{
+        width: 31%;
+        margin-top: 40px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prod img{
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .descdiv{
+        padding: 20px 20px;
+    }
+
+    .product-form{
+        margin-top: auto;
+        padding: 0 20px 20px 20px;
+    }
+
+    .linkdiv{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #0864c7;
+        color: white;
+        text-align: center;
+        padding: 8px;
+        border-radius: 8px;
+        white-space: nowrap;
+        transition: transform 0.1s ease, background-color 0.1s ease;
+    }
+
+    .linkdiv:hover{
+        background-color: #054d9a;
+        cursor: pointer;
+    }
+
+    .linkdiv:active{
+        transform: scale(0.95);
+    }
+
+
+    

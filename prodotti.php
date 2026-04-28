@@ -44,11 +44,11 @@
 <hr>
 
 <aside class="sidebar" id="sidebar">
-    <a href="index.php">Home</a>
-    <a href="prodotti.php">Prodotti</a>
-    <a href="#categorie">Categorie</a>
-    <a href="#about">Chi Siamo</a>
-    <a href="#contatti">Contatti</a>
+    <a href="index.php" class="menu-link">Home</a>
+    <a href="prodotti.php" class="menu-link">Prodotti</a>
+    <a href="#categorie" class="menu-link">Categorie</a>
+    <a href="#about" class="menu-link">Chi Siamo</a>
+    <a href="#contatti" class="menu-link">Contatti</a>
 </aside>
 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
@@ -59,12 +59,15 @@
 
     <section class="prodotti">
         <article class="prod">
-            <img src="Immagini/foto5.png" alt="">
-            <div class="descdiv">
-                <h2>Spectra Mirage</h2>
-                <h3>€ 450,00</h3>
-                <p>Acquista subito spectra Mirage</p>
-            </div>
+            <a href="#prodotto" class="prod-link">
+                <img src="Immagini/foto5.png" alt="">
+                <div class="descdiv">
+                    <h2>Spectra Mirage</h2>
+                    <h3>€ 450,00</h3>
+                    <p>Acquista subito spectra Mirage</p>
+                </div>
+            </a>
+
             <form method="post" action="carrello.php" class="product-form">
                 <input type="hidden" name="prodotto_id" value="1">
                 <input type="hidden" name="prodotto_name" value="Spectra Mirage">
@@ -74,45 +77,55 @@
         </article>
 
         <article class="prod">
-            <img src="Immagini/foto3.png" alt="">
-            <div class="descdiv">
-                <h2>Spectra Eclipse</h2>
-                <h3>€ 450,00</h3>
-                <p>Acquista subito spectra Eclipse</p>
-            </div>
+            <a href="#prodotto" class="prod-link">
+                <img src="Immagini/foto5.png" alt="">
+                <div class="descdiv">
+                    <h2>Spectra Mirage</h2>
+                    <h3>€ 450,00</h3>
+                    <p>Acquista subito spectra Mirage</p>
+                </div>
+            </a>
+
             <form method="post" action="carrello.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="2">
-                <input type="hidden" name="prodotto_name" value="Spectra Eclipse">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto3.png">
+                <input type="hidden" name="prodotto_id" value="1">
+                <input type="hidden" name="prodotto_name" value="Spectra Mirage">
+                <input type="hidden" name="prodotto_image" value="Immagini/foto5.png">
                 <button class="linkdiv" type="submit">Acquista ora</button>
             </form>
         </article>
 
         <article class="prod">
-            <img src="Immagini/foto4.png" alt="">
-            <div class="descdiv">
-                <h2>Spectra Vision</h2>
-                <h3>€ 450,00</h3>
-                <p>Acquista subito spectra Vision</p>
-            </div>
+            <a href="#prodotto" class="prod-link">
+                <img src="Immagini/foto5.png" alt="">
+                <div class="descdiv">
+                    <h2>Spectra Mirage</h2>
+                    <h3>€ 450,00</h3>
+                    <p>Acquista subito spectra Mirage</p>
+                </div>
+            </a>
+
             <form method="post" action="carrello.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="3">
-                <input type="hidden" name="prodotto_name" value="Spectra Vision">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto4.png">
+                <input type="hidden" name="prodotto_id" value="1">
+                <input type="hidden" name="prodotto_name" value="Spectra Mirage">
+                <input type="hidden" name="prodotto_image" value="Immagini/foto5.png">
                 <button class="linkdiv" type="submit">Acquista ora</button>
             </form>
         </article>
+
     </section>
 
 
     <section class="prodotti">
         <article class="prod">
-            <img src="Immagini/foto5.png" alt="">
-            <div class="descdiv">
-                <h2>Spectra Mirage</h2>
-                <h3>€ 450,00</h3>
-                <p>Acquista subito spectra Mirage</p>
-            </div>
+            <a href="#prodotto" class="prod-link">
+                <img src="Immagini/foto5.png" alt="">
+                <div class="descdiv">
+                    <h2>Spectra Mirage</h2>
+                    <h3>€ 450,00</h3>
+                    <p>Acquista subito spectra Mirage</p>
+                </div>
+            </a>
+
             <form method="post" action="carrello.php" class="product-form">
                 <input type="hidden" name="prodotto_id" value="1">
                 <input type="hidden" name="prodotto_name" value="Spectra Mirage">
@@ -122,34 +135,41 @@
         </article>
 
         <article class="prod">
-            <img src="Immagini/foto3.png" alt="">
-            <div class="descdiv">
-                <h2>Spectra Eclipse</h2>
-                <h3>€ 450,00</h3>
-                <p>Acquista subito spectra Eclipse</p>
-            </div>
+            <a href="#prodotto" class="prod-link">
+                <img src="Immagini/foto5.png" alt="">
+                <div class="descdiv">
+                    <h2>Spectra Mirage</h2>
+                    <h3>€ 450,00</h3>
+                    <p>Acquista subito spectra Mirage</p>
+                </div>
+            </a>
+
             <form method="post" action="carrello.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="2">
-                <input type="hidden" name="prodotto_name" value="Spectra Eclipse">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto3.png">
+                <input type="hidden" name="prodotto_id" value="1">
+                <input type="hidden" name="prodotto_name" value="Spectra Mirage">
+                <input type="hidden" name="prodotto_image" value="Immagini/foto5.png">
                 <button class="linkdiv" type="submit">Acquista ora</button>
             </form>
         </article>
 
         <article class="prod">
-            <img src="Immagini/foto4.png" alt="">
-            <div class="descdiv">
-                <h2>Spectra Vision</h2>
-                <h3>€ 450,00</h3>
-                <p>Acquista subito spectra Vision</p>
-            </div>
+            <a href="#prodotto" class="prod-link">
+                <img src="Immagini/foto5.png" alt="">
+                <div class="descdiv">
+                    <h2>Spectra Mirage</h2>
+                    <h3>€ 450,00</h3>
+                    <p>Acquista subito spectra Mirage</p>
+                </div>
+            </a>
+
             <form method="post" action="carrello.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="3">
-                <input type="hidden" name="prodotto_name" value="Spectra Vision">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto4.png">
+                <input type="hidden" name="prodotto_id" value="1">
+                <input type="hidden" name="prodotto_name" value="Spectra Mirage">
+                <input type="hidden" name="prodotto_image" value="Immagini/foto5.png">
                 <button class="linkdiv" type="submit">Acquista ora</button>
             </form>
         </article>
+
     </section>
 
 </main>
