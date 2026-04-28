@@ -39,6 +39,9 @@
 .welcome-card.empty {
     color: #cfcfcf;
 }
+    .welcome-card.empty a{
+        color: #0864c7;
+    }
 
 .carrello-table-wrapper {
     overflow-x: auto;
@@ -93,7 +96,6 @@
     color: white;
     border-radius: 12px;
     transition: transform 0.2s ease, background-color 0.2s ease;
-    text-decoration: none;
 }
 
 .carrello-actions .linkdiv:hover {

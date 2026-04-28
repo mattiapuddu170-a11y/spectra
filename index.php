@@ -1,3 +1,4 @@
+<!-- #region PHP -->
 <?php
 session_start();
 $con = new mysqli("localhost", "root", "", "negozio_spectra");
@@ -37,6 +38,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     exit;
 }
 ?>
+<!-- #endregion -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -114,6 +116,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     </div>
 
     <section class="prodotti">
+        
         <article class="prod">
             <a href="#prodotto" class="prod-link">
                 <img src="Immagini/foto5.png" alt="">
@@ -124,7 +127,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
                 </div>
             </a>
 
-            <form method="post" action="carrello.php" class="product-form">
+            <form method="post" action="carrello_sessione.php" class="product-form">
                 <input type="hidden" name="prodotto_id" value="1">
                 <input type="hidden" name="prodotto_name" value="Spectra Mirage">
                 <input type="hidden" name="prodotto_image" value="Immagini/foto5.png">
@@ -142,7 +145,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
                 </div>
             </a>
 
-            <form method="post" action="carrello.php" class="product-form">
+            <form method="post" action="carrello_sessione.php" class="product-form">
                 <input type="hidden" name="prodotto_id" value="1">
                 <input type="hidden" name="prodotto_name" value="Spectra Mirage">
                 <input type="hidden" name="prodotto_image" value="Immagini/foto5.png">
@@ -160,7 +163,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
                 </div>
             </a>
 
-            <form method="post" action="carrello.php" class="product-form">
+            <form method="post" action="carrello_sessione.php" class="product-form">
                 <input type="hidden" name="prodotto_id" value="1">
                 <input type="hidden" name="prodotto_name" value="Spectra Mirage">
                 <input type="hidden" name="prodotto_image" value="Immagini/foto5.png">

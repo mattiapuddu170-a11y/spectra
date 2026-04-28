@@ -1,3 +1,4 @@
+<!-- #region PHP -->
 <?php
 session_start();
 
@@ -71,8 +72,7 @@ if (isset($_POST['login'])) {
     }
 }
 ?>
-
-
+<!-- #endregion -->
 
 <!DOCTYPE html>
 <html>
@@ -92,7 +92,7 @@ if (isset($_POST['login'])) {
         <?php if (isset($_SESSION['nome'])): ?>
             <div class="login-success">
                 <h3>Utente riconosciuto</h3>
-                <p>Sei loggato con successo come <strong><?php echo htmlspecialchars($_SESSION['nome'] . (isset($_SESSION['cognome']) ? ' ' . $_SESSION['cognome'] : '')); ?></strong>.</p>
+                <p>Sei loggato con successo come <b><?php echo htmlspecialchars($_SESSION['nome'] . (isset($_SESSION['cognome']) ? ' ' . $_SESSION['cognome'] : '')); ?></b>.</p>
                 <div class="action-buttons">
                     <a class="linkdiv" href="index.php">Torna alla home</a>
                     <a class="linkdiv" href="logout.php">Logout</a>
