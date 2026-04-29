@@ -98,7 +98,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     <div class="carosello">
    
         <div class="mySlides fade">
-            <img src="Immagini/foto.png" style="width:100%">
+            <img src="Immagini/foto1.png" style="width:100%">
         </div>
         <div class="mySlides fade">
             <img src="Immagini/foto2.png" style="width:100%">
@@ -112,43 +112,52 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         <div class="mySlides fade">
             <img src="Immagini/foto5.png" style="width:100%">
         </div>
+        <div class="mySlides fade">
+            <img src="Immagini/foto6.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Immagini/foto7.png" style="width:100%">
+        </div>
         <script src="File JS/carosello.js"></script>
     </div>
+    <br>
+    <br>
+    <h1 class="titolo" style="text-align: center;">BESTSELLER</h1>
 
     <section class="prodotti">
         
         <article class="prod">
             <a href="#prodotto" class="prod-link">
-                <img src="Immagini/foto5.png" alt="">
+                <img src="Immagini/foto3.png" alt="">
                 <div class="descdiv">
-                    <h2>Spectra Mirage</h2>
+                    <h2>Spectra Eclipse</h2>
                     <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Mirage</p>
+                    <p>Acquista subito spectra Eclipse</p>
                 </div>
             </a>
 
             <form method="post" action="carrello_sessione.php" class="product-form">
                 <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra Mirage">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto5.png">
+                <input type="hidden" name="prodotto_name" value="Spectra Eclipse">
+                <input type="hidden" name="prodotto_image" value="Immagini/foto3.png">
                 <button class="linkdiv" type="submit">Acquista ora</button>
             </form>
         </article>
 
         <article class="prod">
             <a href="#prodotto" class="prod-link">
-                <img src="Immagini/foto5.png" alt="">
+                <img src="Immagini/foto4.png" alt="">
                 <div class="descdiv">
-                    <h2>Spectra Mirage</h2>
+                    <h2>Spectra Vision</h2>
                     <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Mirage</p>
+                    <p>Acquista subito spectra Vision</p>
                 </div>
             </a>
 
             <form method="post" action="carrello_sessione.php" class="product-form">
                 <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra Mirage">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto5.png">
+                <input type="hidden" name="prodotto_name" value="Spectra Vision">
+                <input type="hidden" name="prodotto_image" value="Immagini/foto4.png">
                 <button class="linkdiv" type="submit">Acquista ora</button>
             </form>
         </article>

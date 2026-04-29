@@ -120,6 +120,9 @@ if (isset($_POST['login'])) {
 
             <button type="submit" name="invia2">Crea utente</button>
         </form>
+         <form method="post" action="index.php" class="product-form">
+            <button class="linkdiv" type="submit">Torna alla home</button>
+            </form>
         <?php endif; ?>
     </div>
     
