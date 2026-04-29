@@ -101,7 +101,10 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
             <img src="Immagini/foto1 Carosello.png" style="width:100%">
         </div>
         <div class="mySlides fade">
-            <img src="Immagini/foto2.png" style="width:100%">
+            <img src="Immagini/foto2 Carosello.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Immagini/foto2 Carosello (2).png" style="width:100%">
         </div>
         <div class="mySlides fade">
             <img src="Immagini/foto3 Carosello.png" style="width:100%">
@@ -110,7 +113,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
             <img src="Immagini/foto4.png" style="width:100%">
         </div>
         <div class="mySlides fade">
-            <img src="Immagini/foto5.png" style="width:100%">
+            <img src="Immagini/foto5 Carosello.png" style="width:100%">
         </div>
         <div class="mySlides fade">
             <img src="Immagini/foto6.png" style="width:100%">
