@@ -77,15 +77,15 @@
             <a href="#prodotto" class="prod-link">
                 <img src="Immagini/foto2.png" alt="">
                 <div class="descdiv">
-                    <h2>Spectra ?</h2>
+                    <h2>Spectra Nexus</h2>
                     <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra ?</p>
+                    <p>Acquista subito spectra Nexus?</p>
                 </div>
             </a>
 
             <form method="post" action="carrello_sessione.php" class="product-form">
                 <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra ?">
+                <input type="hidden" name="prodotto_name" value="Spectra Nexus">
                 <input type="hidden" name="prodotto_image" value="Immagini/foto2.png">
                 <button class="linkdiv" type="submit">Acquista ora</button>
             </form>
@@ -176,15 +176,15 @@
             <a href="#prodotto" class="prod-link">
                 <img src="Immagini/foto7.png" alt="">
                 <div class="descdiv">
-                    <h2>Spectra ?</h2>
+                    <h2>Spectra Axis</h2>
                     <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra ?</p>
+                    <p>Acquista subito spectra Axis</p>
                 </div>
             </a>
 
             <form method="post" action="carrello_sessione.php" class="product-form">
                 <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra ?">
+                <input type="hidden" name="prodotto_name" value="Spectra Axis">
                 <input type="hidden" name="prodotto_image" value="Immagini/foto7.png">
                 <button class="linkdiv" type="submit">Acquista ora</button>
             </form>
