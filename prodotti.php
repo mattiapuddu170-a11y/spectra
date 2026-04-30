@@ -45,7 +45,7 @@
     <a href="index.php" class="menu-link">Home</a>
     <a href="prodotti.php" class="menu-link">Prodotti</a>
     <a href="#categorie" class="menu-link">Categorie</a>
-    <a href="#about" class="menu-link">Chi Siamo</a>
+    <a href="chi_siamo.html">Chi Siamo</a>
     <a href="#contatti" class="menu-link">Contatti</a>
 </aside>
 
