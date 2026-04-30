@@ -107,6 +107,9 @@ session_start();
         <?php endif; ?>
 
         <div class="carrello-actions">
+            <?php if (!empty($_SESSION['carrello'])): ?>
+                <a class="linkdiv" style="background: #c41e3a; color: white; padding: 10px 20px; border-radius: 4px; display: inline-block;" href="pagamento.php">💳 Vai al Pagamento</a>
+            <?php endif; ?>
             <a class="linkdiv" href="index.php">Torna alla home</a>
         </div>
     </section>

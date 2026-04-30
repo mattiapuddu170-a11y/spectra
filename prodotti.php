@@ -154,15 +154,15 @@
             <a href="#prodotto" class="prod-link">
                 <img src="Immagini/foto6.png" alt="">
                 <div class="descdiv">
-                    <h2>Spectra ?</h2>
+                    <h2>Spectra Horizon</h2>
                     <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra ?</p>
+                    <p>Acquista subito spectra Horizon</p>
                 </div>
             </a>
 
             <form method="post" action="carrello_sessione.php" class="product-form">
                 <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra ?">
+                <input type="hidden" name="prodotto_name" value="Spectra Horizon">
                 <input type="hidden" name="prodotto_image" value="Immagini/foto6.png">
                 <button class="linkdiv" type="submit">Acquista ora</button>
             </form>
