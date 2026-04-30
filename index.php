@@ -81,51 +81,80 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         <script src="File JS/ricerca.js"></script>
         <script src="File JS/menu.js"></script>
 
-</header>
+</header><hr>
 
 <aside class="sidebar" id="sidebar">
     <a href="index.php">Home</a>
     <a href="prodotti.php">Prodotti</a>
     <a href="#categorie">Categorie</a>
-    <a href="chi_siamo.html">Chi Siamo</a>
+    <a href="chi_siamo.php">Chi Siamo</a>
     <a href="#contatti">Contatti</a>
 </aside>
 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <main>
+    <section class="hero">
+        <h1>SPECTRA</h1>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus impedit explicabo magnam eaque rem nam nostrum perspiciatis nulla consequuntur debitis.</h2>
+    </section>
 
-    <div class="carosello">
-   
-        <div class="mySlides fade">
-            <img src="Immagini/foto1 Carosello.png" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="Immagini/foto2 Carosello.png" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="Immagini/foto2 Carosello (2).png" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="Immagini/foto3 Carosello.png" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="Immagini/foto5 Carosello.png" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="Immagini/foto6.png" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="Immagini/foto7.png" style="width:100%">
-        </div>
-        <script src="File JS/carosello.js"></script>
-    </div>
-    <br>
-    <br>
-    <h1 class="titolo" style="text-align: center;">BESTSELLER</h1>
+    <section class="vetrina">
+        <div class="vetrina-div">
+            <div class="immagine">
+                <img src="Immagini/athletic.png">
+            </div>
 
+            <div class="info">
+                <h1>Spectra Athletic</h1>
+                <h2>€ 350,00</h2>
+                <p>La corsa, evoluta: informazioni essenziali davanti ai tuoi occhi, musica sempre con te e un’esperienza senza distrazioni che migliora ogni allenamento.</p>
+                <a href="occhiale.php" class="button">Acquista ora</a>
+            </div>
+        </div>
+
+
+    </section>
+
+    
     <section class="prodotti">
         
+        <article class="prod">
+            <a href="occhiale.php" class="prod-link">
+                <img src="Immagini/foto1.png" alt="">
+                <div class="descdiv">
+                    <h2>Spectra Athletic</h2>
+                    <h3>€ 450,00</h3>
+                    <p>Acquista subito spectra Athletic</p>
+                </div>
+            </a>
+
+            <form method="post" action="carrello_sessione.php" class="product-form">
+                <input type="hidden" name="prodotto_id" value="1">
+                <input type="hidden" name="prodotto_name" value="Spectra Athletic">
+                <input type="hidden" name="prodotto_image" value="Immagini/foto1.png">
+                <button class="linkdiv" type="submit">Acquista ora</button>
+            </form>
+        </article>
+
+        <article class="prod">
+            <a href="#prodotto" class="prod-link">
+                <img src="Immagini/foto2.png" alt="">
+                <div class="descdiv">
+                    <h2>Spectra Nexus</h2>
+                    <h3>€ 450,00</h3>
+                    <p>Acquista subito spectra Nexus</p>
+                </div>
+            </a>
+
+            <form method="post" action="carrello_sessione.php" class="product-form">
+                <input type="hidden" name="prodotto_id" value="1">
+                <input type="hidden" name="prodotto_name" value="Spectra Nexus">
+                <input type="hidden" name="prodotto_image" value="Immagini/foto2.png">
+                <button class="linkdiv" type="submit">Acquista ora</button>
+            </form>
+        </article>
+
         <article class="prod">
             <a href="#prodotto" class="prod-link">
                 <img src="Immagini/foto3.png" alt="">
@@ -140,42 +169,6 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
                 <input type="hidden" name="prodotto_id" value="1">
                 <input type="hidden" name="prodotto_name" value="Spectra Eclipse">
                 <input type="hidden" name="prodotto_image" value="Immagini/foto3.png">
-                <button class="linkdiv" type="submit">Acquista ora</button>
-            </form>
-        </article>
-
-        <article class="prod">
-            <a href="#prodotto" class="prod-link">
-                <img src="Immagini/foto4.png" alt="">
-                <div class="descdiv">
-                    <h2>Spectra Vision</h2>
-                    <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Vision</p>
-                </div>
-            </a>
-
-            <form method="post" action="carrello_sessione.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra Vision">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto4.png">
-                <button class="linkdiv" type="submit">Acquista ora</button>
-            </form>
-        </article>
-
-        <article class="prod">
-            <a href="#prodotto" class="prod-link">
-                <img src="Immagini/foto5.png" alt="">
-                <div class="descdiv">
-                    <h2>Spectra Mirage</h2>
-                    <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Mirage</p>
-                </div>
-            </a>
-
-            <form method="post" action="carrello_sessione.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra Mirage">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto5.png">
                 <button class="linkdiv" type="submit">Acquista ora</button>
             </form>
         </article>

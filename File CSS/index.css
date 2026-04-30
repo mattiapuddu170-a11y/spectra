@@ -4,30 +4,57 @@ main {
         width: 100%;
         margin: auto;
     }
-    
-.carosello {
-    width: 100%;
-    position: relative;
-    margin: auto;
-}
-    
-.carosello img{
-        width: 100%;
-}    
-    .text {
-    color: white;
-    position: absolute;
-    top: 7%;
-    left: 8%;
-    width: min-content;
-    white-space: nowrap;
-    z-index: 10;
-  }
-  .fade {
-    animation-name: fade;
-    animation-duration: 3.0s;
-  }
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
+
+    .hero{
+      width: 85%;
+      margin: auto;
+      margin-bottom: 400px;
+    }
+      .hero h1{
+        font-size: 100px;
+      }
+      .hero h2{
+        font-size: 40px;
+      }
+
+    .vetrina{
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.030);
+      margin-bottom: 400px;
+      padding: 80px 0;
+    }
+      .vetrina-div{
+        width: 85%;
+        display: flex;
+        margin: auto;
+        gap: 40px;
+      }    
+        .immagine{
+          width: 65%;
+        }
+          .immagine img{
+            width: 100%;
+            border-radius: 12px;
+          }
+        .info{
+          width: 35%;
+        }
+          .info h1{
+            font-size: 60px;
+            margin-top: 0
+          }
+          .info h2{
+            font-size: 38px;
+          }
+          .info p{
+            font-size: 20px;
+            margin-bottom: 80px;
+          }
+          .button{
+            padding: 15px;
+            background-color: #2563eb;
+            border-radius: 12px;
+          }
+            .button:hover{
+              background-color: #1d4ed8;
+            }
