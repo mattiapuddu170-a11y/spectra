@@ -79,7 +79,7 @@
                 <div class="descdiv">
                     <h2>Spectra Nexus</h2>
                     <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Nexus?</p>
+                    <p>Acquista subito spectra Nexus</p>
                 </div>
             </a>
 

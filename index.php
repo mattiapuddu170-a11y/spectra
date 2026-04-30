@@ -87,7 +87,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     <a href="index.php">Home</a>
     <a href="prodotti.php">Prodotti</a>
     <a href="#categorie">Categorie</a>
-    <a href="#about">Chi Siamo</a>
+    <a href="chi_siamo.html">Chi Siamo</a>
     <a href="#contatti">Contatti</a>
 </aside>
 
