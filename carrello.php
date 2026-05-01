@@ -106,7 +106,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
             </div>
         <?php else: ?>
             <div class="welcome-card empty">
-                Non sei loggato. <a href="login.php">Accedi</a> per salvare il carrello.
+                Non hai effettuato l'accesso. <a href="login.php">Accedi</a> per salvare il carrello.
             </div>
         <?php endif; ?>
 
