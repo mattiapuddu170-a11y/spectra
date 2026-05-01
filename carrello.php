@@ -63,10 +63,10 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
         <div class="icons-group">
             <a href="carrello.php">
-                <img class="icons" src="Immagini/cart.png" alt="Carrello">
+                <img class="icons" src="Immagini/icons/cart.png" alt="Carrello">
             </a>
             <a href="login.php">
-                <img class="icons" src="Immagini/user.png" alt="Utente">
+                <img class="icons" src="Immagini/icons/user.png" alt="Utente">
             </a>
         </div>
 
@@ -80,7 +80,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         <script src="File JS/ricerca.js"></script>
         <script src="File JS/menu.js"></script>
 
-</header>
+</header><hr>
 
 <aside class="sidebar" id="sidebar">
     <a href="index.php">Home</a>

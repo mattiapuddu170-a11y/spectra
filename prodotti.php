@@ -61,10 +61,10 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
         <div class="icons-group">
             <a href="carrello.php">
-                <img class="icons" src="Immagini/cart.png" alt="Carrello">
+                <img class="icons" src="Immagini/icons/cart.png" alt="Carrello">
             </a>
             <a href="login.php">
-                <img class="icons" src="Immagini/user.png" alt="Utente">
+                <img class="icons" src="Immagini/icons/user.png" alt="Utente">
             </a>
         </div>
 
@@ -155,7 +155,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         
         <article class="prod">
             <a href="occhiale.php" class="prod-link">
-                <img src="Immagini/foto4.png" alt="">
+                <img src="Immagini/vision.png" alt="">
                 <div class="descdiv">
                     <h2>Spectra Vision</h2>
                     <h3>€ 450,00</h3>

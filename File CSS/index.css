@@ -20,7 +20,7 @@ main {
     .vetrina{
       width: 100%;
       background-color: rgba(255, 255, 255, 0.030);
-      margin-bottom: 400px;
+      margin-bottom: 250px;
       padding: 80px 0;
     }
       .vetrina-div{
@@ -28,7 +28,10 @@ main {
         display: flex;
         margin: auto;
         gap: 40px;
-      }    
+      }
+      .vetrina.reverse .vetrina-div{
+        flex-direction: row-reverse;
+      }
         .immagine{
           width: 65%;
         }

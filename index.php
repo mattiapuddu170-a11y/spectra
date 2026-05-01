@@ -64,10 +64,10 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
         <div class="icons-group">
             <a href="carrello.php">
-                <img class="icons" src="Immagini/cart.png" alt="Carrello">
+                <img class="icons" src="Immagini/icons/cart.png" alt="Carrello">
             </a>
             <a href="login.php">
-                <img class="icons" src="Immagini/user.png" alt="Utente">
+                <img class="icons" src="Immagini/icons/user.png" alt="Utente">
             </a>
         </div>
 
@@ -100,9 +100,27 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     </section>
 
     <section class="vetrina">
+
         <div class="vetrina-div">
             <div class="immagine">
-                <img src="Immagini/athletic.png">
+                <img src="Immagini/!vision.png">
+            </div>
+
+            <div class="info">
+                <h1>Spectra Vision</h1>
+                <h2>€ 250,00</h2>
+                <p>Gli Spectra Vision sono occhiali smart dal design moderno e raffinato, pensati per chi vive la città in movimento, offrendoti un’esperienza connessa e intuitiva mentre hai sempre lo sguardo sul mondo che ti circonda.</p>
+                <a href="occhiale.php" class="button">Acquista ora</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="vetrina reverse">
+        
+        <div class="vetrina-div">
+            <div class="immagine">
+                <img src="Immagini/!athletic.png">
             </div>
 
             <div class="info">
@@ -113,19 +131,63 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
             </div>
         </div>
 
+    </section>
+
+    <section class="vetrina">
+
+        <div class="vetrina-div">
+            <div class="immagine">
+                <img src="Immagini/!nexus.png">
+            </div>
+
+            <div class="info">
+                <h1>Spectra Nexus</h1>
+                <h2>€ 300,00</h2>
+                <p>Spectra nexus sono occhiali smart dal design elegante e minimalista, con telecamera integrata, microfono, casse a conduzione ossea e lenti che mostrano informazioni direttamente nel campo visivo.</p>
+                <a href="occhiale.php" class="button">Acquista ora</a>
+            </div>
+        </div>
 
     </section>
 
     
+    <section class="features">
+
+        <div class="features-row">
+            <article class="features-box">
+                <h1>Tecnologia ..</h1>
+            </article>
+            
+            <article class="features-box">
+                <h1>Tecnologia ..</h1>
+            </article>
+
+            <article class="features-box">
+                <h1>Tecnologia ..</h1>
+            </article> 
+        </div>
+
+        <div class="features-row">
+            <article class="features-box">
+                <h1>Tecnologia ..</h1>
+            </article>
+            
+            <article class="features-box">
+                <h1>Tecnologia ..</h1>
+            </article>
+        </div>
+
+    </section>
+
     <section class="prodotti">
         
         <article class="prod">
             <a href="occhiale.php" class="prod-link">
-                <img src="Immagini/foto1.png" alt="">
+                <img src="Immagini/vision.png" alt="">
                 <div class="descdiv">
-                    <h2>Spectra Athletic</h2>
-                    <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Athletic</p>
+                    <h2>Spectra Vision</h2>
+                    <h3>€ 250,00</h3>
+                    <p>Acquista subito Spectra Vision</p>
                 </div>
             </a>
 
@@ -139,11 +201,11 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
         <article class="prod">
             <a href="#prodotto" class="prod-link">
-                <img src="Immagini/foto2.png" alt="">
+                <img src="Immagini/athletic.png" alt="">
                 <div class="descdiv">
-                    <h2>Spectra Nexus</h2>
+                    <h2>Spectra Athletic</h2>
                     <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Nexus</p>
+                    <p>Acquista subito Spectra Athletic</p>
                 </div>
             </a>
 
@@ -156,12 +218,12 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         </article>
 
         <article class="prod">
-            <a href="#prodotto" class="prod-link">
-                <img src="Immagini/foto3.png" alt="">
+            <a href="occhiale.php" class="prod-link">
+                <img src="Immagini/nexus.png" alt="">
                 <div class="descdiv">
-                    <h2>Spectra Eclipse</h2>
+                    <h2>Spectra Nexus</h2>
                     <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Eclipse</p>
+                    <p>Acquista subito Spectra Nexus</p>
                 </div>
             </a>
 

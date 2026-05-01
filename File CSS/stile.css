@@ -224,6 +224,36 @@ header {
         }
 /* #endregion */
 
+/* #region FEATURES*/
+.features{
+    width: 85%;
+    margin: auto;
+    margin-bottom: 250px;
+}
+    .features-row{
+        display: flex;
+        align-items: stretch;
+        gap: 12px;
+        overflow: hidden;
+    }
+        .features-box{
+            background-color: #3a3a3a6e;
+            flex: 1;
+            width: 25%;
+            margin-top: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 100px;
+            display: flex;
+            flex-direction: column;
+            transition: 0.2s ease;
+        }
+        .features-box:hover{
+            cursor: pointer;
+            transform: translateY(-5px) scale(1.02);    
+        }
+/* #endregion */
+
 /* #region PRODOTTI */
 .prodotti{
     display: flex;
@@ -282,6 +312,7 @@ header {
         border-radius: 8px;
         white-space: nowrap;
         transition: transform 0.1s ease, background-color 0.1s ease;
+        margin-top: 50px;
     }
 
     .linkdiv:hover{
