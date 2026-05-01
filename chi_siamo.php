@@ -44,12 +44,8 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 <head>
     <title>Homepage</title>
     <link rel="stylesheet" href="File CSS/stile.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="File CSS/index.css">
-=======
     <link rel="stylesheet" href="File CSS/about.css">
-    
->>>>>>> 7e4763b9a9721e439dec1cd5e49a7250deffa3bd
 
 </head>
 <body>
@@ -148,7 +144,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
            Partita IVA: IT00000000000
         </p>
     </div>
-</main>
+</main> 
 
 <footer>
     <p>&copy; 2026 Occhiali spectra srl. Tutti i diritti riservati.</p>
