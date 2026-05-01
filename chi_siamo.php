@@ -92,26 +92,64 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 </aside>
 
 <main>
+    <br>
+    <br>
     <div style="text-align: center;">
         <h2>Chi Siamo</h2>
         <p> Crediamo in un modo nuovo di vivere la tecnologia: più naturale, più umano, più vicino alle persone.<br>
             Spectra nasce con l’obiettivo di superare i limiti tra mondo reale e digitale, trasformando un oggetto<br>
             quotidiano in uno strumento capace di ampliare ciò che puoi vedere e fare.<br>
             Non creiamo solo prodotti.<br>
-            Creiamo esperienze pensate per accompagnarti ogni giorno.</p>
-            <br>
-            <br>
-            <img src="Immagini/chi_siamo.png" style="height: 700px;">
+            Creiamo esperienze pensate per accompagnarti ogni giorno.
+        </p>
+        <br>
+        <img src="Immagini/chi_siamo.png" style="height: 700px; border-radius: 5px;">
     </div>
+    <br>
+    <br>
     <div style="text-align: center;">
         <h2>Tecnologia per tutti</h2>
         <p> I nostri occhiali intelligenti integrano funzionalità avanzate in modo semplice e immediato.<br>
             Traduzione in tempo reale, navigazione aumentata e assistenza vocale lavorano insieme per offrirti supporto<br>
             continuo, senza distrazioni.<br>
             La tecnologia non deve complicare le cose.<br>
-            Deve funzionare, adattarsi e migliorare davvero la tua esperienza.</p>
-            <br>
-            <br>
-            <img src="Immagini/chi_siamo2.png" style="height: 700px;">
+            Deve funzionare, adattarsi e migliorare davvero la tua esperienza.
+        </p>
+        <br>
+        <img src="Immagini/chi_siamo2.png" style="height: 700px; border-radius: 5px;">
+    </div>
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <h2>Più sicurezza</h2>
+        <p>
+            Controllare continuamente lo smartphone è diventato un rischio quotidiano.<br>
+            Spectra nasce per cambiare questo.<br> 
+            Con informazioni sempre visibili e accessibili in modo immediato, puoi muoverti,<br>
+            orientarti e comunicare senza distogliere lo sguardo da ciò che conta davvero.<br>
+            La tecnologia deve aiutarti, non distrarti.<br>
+            E soprattutto, deve proteggerti.
+        </p>
+        <br>
+        <img src="Immagini/chi_siamo3.png" style="height: 700px; border-radius: 5px;">
+    </div>
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <h2>INFORMAZIONI LEGALI</h2>
+        <p>
+           Ragione sociale: Spectra Vision S.r.l.<br>
+           Sede legale: Via dell’Innovazione 1, Milano, Italia<br>
+           Email: spectraocchiali@tiscali.it<br>
+           Registro imprese: Camera di Commercio di Milano<br>
+           Numero di registrazione: : MI-0000000<br>
+           Partita IVA: IT00000000000
+        </p>
     </div>
 </main>
+
+<footer>
+    <p>&copy; 2026 Occhiali spectra srl. Tutti i diritti riservati.</p>
+</footer>
+</body>
+</html>
