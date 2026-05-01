@@ -6,13 +6,17 @@
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 170px;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .footer-section {
-  max-width: 300px;
+  max-width: 280px;
+  margin: 0;
   margin-bottom: 20px;
+  flex: 1 1 240px;
 }
 
 .footer-section h2,

@@ -46,6 +46,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     <link rel="stylesheet" href="File CSS/stile.css">
     <link rel="stylesheet" href="File CSS/index.css">
     <link rel="stylesheet" href="File CSS/about.css">
+    <link rel="stylesheet" href="File CSS/footer.css">
 
 </head>
 <body>
@@ -98,7 +99,8 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
     <div class="pres">
         <h2>Chi Siamo</h2>
-        <p> Crediamo in un modo nuovo di vivere la tecnologia: più naturale, più umano, più vicino alle persone.<br>
+        <p> 
+            Crediamo in un modo nuovo di vivere la tecnologia: più naturale, più umano, più vicino alle persone.<br>
             Spectra nasce con l’obiettivo di superare i limiti tra mondo reale e digitale, trasformando un oggetto<br>
             quotidiano in uno strumento capace di ampliare ciò che puoi vedere e fare.<br>
             Non creiamo solo prodotti.<br>
@@ -110,14 +112,13 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
     <div class="pres">
         <h2>Tecnologia per tutti</h2>
-        <p> I nostri occhiali intelligenti integrano funzionalità avanzate in modo semplice e immediato.<br>
-            Traduzione in tempo reale, navigazione aumentata e assistenza vocale lavorano insieme per offrirti supporto<br>
-            continuo, senza distrazioni.<br>
+        <p> 
+            I nostri occhiali intelligenti integrano funzionalità avanzate in modo semplice e immediato.<br>
+            Traduzione in tempo reale, navigazione aumentata e assistenza vocale lavorano insieme per offrirti 
+            supporto continuo, senza distrazioni.<br>
             La tecnologia non deve complicare le cose.<br>
             Deve funzionare, adattarsi e migliorare davvero la tua esperienza.
         </p>
-
-    
         <img src="Immagini/chi_siamo2.png">
     </div>
 
@@ -149,8 +150,41 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     </div>
 </main> 
 
-<footer>
-    <p>&copy; 2026 Occhiali spectra srl. Tutti i diritti riservati.</p>
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h2>Spectra</h2>
+      <p>Vedi il mondo con stile</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Link utili</h3>
+      <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="prodotti.php">Shop</a></li>
+        <li><a href="chi_siamo.php">Chi Siamo</a></li>
+        <li><a href="#">Contatti</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contatti</h3>
+      <p>Email: spectraocchiali@tiscali.it</p>
+      <p>Tel: +39 02 0000 0000</p>
+      <p>Tel: +39 320 000 0000</p>
+      <p>Facebook</p>
+      <p>Instagram</p>
+      <p>Twitter</p>
+      <p>Tik Tok</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Spectra - Tutti i diritti riservati</p>
+  </div>
 </footer>
+
 </body>
 </html>
