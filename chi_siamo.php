@@ -87,13 +87,16 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     <a href="index.php">Home</a>
     <a href="prodotti.php">Prodotti</a>
     <a href="#categorie">Categorie</a>
-    <a href="#about">Chi Siamo</a>
+    <a href="chi_siamo.php">Chi Siamo</a>
     <a href="#contatti">Contatti</a>
 </aside>
 
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
 <main>
 
-    <div>
+    <div class="pres">
         <h2>Chi Siamo</h2>
         <p> Crediamo in un modo nuovo di vivere la tecnologia: più naturale, più umano, più vicino alle persone.<br>
             Spectra nasce con l’obiettivo di superare i limiti tra mondo reale e digitale, trasformando un oggetto<br>
@@ -105,7 +108,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         <img src="Immagini/chi_siamo.png">
     </div>
 
-    <div>
+    <div class="pres">
         <h2>Tecnologia per tutti</h2>
         <p> I nostri occhiali intelligenti integrano funzionalità avanzate in modo semplice e immediato.<br>
             Traduzione in tempo reale, navigazione aumentata e assistenza vocale lavorano insieme per offrirti supporto<br>
@@ -118,7 +121,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         <img src="Immagini/chi_siamo2.png">
     </div>
 
-    <div>
+    <div class="pres">
         <h2>Più sicurezza</h2>
         <p>
             Controllare continuamente lo smartphone è diventato un rischio quotidiano.<br>
@@ -133,7 +136,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     </div>
     
 
-    <div>
+    <div class="pres">
         <h2>INFORMAZIONI LEGALI</h2>
         <p>
            Ragione sociale: Spectra Vision S.r.l.<br>
