@@ -1,3 +1,44 @@
+<!-- #region PHP -->
+<?php
+session_start();
+$con = new mysqli("localhost", "root", "", "negozio_spectra");
+
+if ($con->connect_error) {
+    die("Connessione fallita");
+}
+
+// richiesta AJAX
+if (isset($_GET['ajax']) && isset($_GET['q'])) {
+
+    $q = trim($_GET['q']);
+    $q = $con->real_escape_string($q);
+
+    if ($q == "") exit;
+
+    $sql = "SELECT id, nome, prezzo, descrizione
+            FROM prodotti
+            WHERE nome LIKE '%$q%'
+               OR descrizione LIKE '%$q%'
+            ORDER BY nome
+            LIMIT 5";
+
+    $ris = $con->query($sql);
+
+    if ($ris->num_rows == 0) {
+        exit;
+    }
+
+    while ($p = $ris->fetch_assoc()) {
+        echo "<div class='card'>";
+        echo "<h2>{$p['nome']}</h2>";
+        echo "<p>{$p['descrizione']}</p>";
+        echo "<p class='prezzo'>€ " . number_format($p['prezzo'], 2, ',', '.') . "</p>";
+        echo "</div>";
+    }
+    exit;
+}
+?>
+<!-- #endregion -->
 <!DOCTYPE html>
 <html>
 <head>

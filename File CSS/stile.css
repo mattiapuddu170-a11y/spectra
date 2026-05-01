@@ -62,12 +62,6 @@ header {
         width: auto;
     }
 
-    a[href="login.php"] {
-        margin-left: auto; /* Spinge tutto ciò che segue a destra */
-        display: flex;     /* Evita che il link sia più grande dell'immagine */
-        margin-right: 10px; /* Spazio tra icona user e ricerca */
-    }
-
     .icons-group {
         display: flex;
         gap: 10px;
@@ -81,7 +75,7 @@ header {
         display: flex;
         align-items: center;
     }
-/* #endregion */*/
+/* #endregion */
 
 /* #region BOX RICERCA */
 
@@ -111,8 +105,7 @@ header {
         #risultati {
             position: absolute;
             top: 100%; /* sotto la barra */
-            left: 50%;
-            transform: translateX(-50%);
+      
             width: 250px;
             background: white;
             border: 1px solid #000;

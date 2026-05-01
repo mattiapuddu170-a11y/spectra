@@ -1,42 +1,100 @@
-.login{
-    margin: auto;
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    color: #000000e8;
+    flex-wrap: nowrap;
+
+}
+
+form, .login-success {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      max-width: 340px;
+    width: 100%;
     text-align: center;
+    }
+
+h3 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
     width: 100%;
 }
 
-input{
+input {
+    width: 100%;
     padding: 10px;
-    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
 }
 
-button{
-    padding: 5px;
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
 }
 
-.login-success {
-    max-width: 480px;
-    margin: 24px auto;
-    padding: 22px;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    color: #f9f9f9;
+button {
+    width: 100%;
+    padding: 10px;
+    background: #282a2e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #282a2e;
+}
+
+p {
     text-align: center;
+    margin-top: 15px;
 }
 
-.login-success h3 {
-    margin: 0 0 10px;
-    font-size: 26px;
+.qui {
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.login-success p {
-    margin: 0 0 18px;
-    color: #dfe4ff;
+.qui:hover {
+    text-decoration: underline;
 }
 
 .action-buttons {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 10px;
-    justify-content: center;
+    margin-top: 15px;
+    color: whitesmoke;
+    
+}
+
+.linkdiv {
+    display: block;
+    padding: 10px;
+    background: #282a2e;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.linkdiv:hover {
+    background: #282a2e;
+    text-decoration: none;
 }
