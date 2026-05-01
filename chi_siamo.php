@@ -44,7 +44,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 <head>
     <title>Homepage</title>
     <link rel="stylesheet" href="File CSS/stile.css">
-    <link rel="stylesheet" href="File CSS/index.css">
+    <link rel="stylesheet" href="File CSS/about.css">
     
 
 </head>
@@ -92,9 +92,8 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 </aside>
 
 <main>
-    <br>
-    <br>
-    <div style="text-align: center;">
+
+    <div>
         <h2>Chi Siamo</h2>
         <p> Crediamo in un modo nuovo di vivere la tecnologia: più naturale, più umano, più vicino alle persone.<br>
             Spectra nasce con l’obiettivo di superare i limiti tra mondo reale e digitale, trasformando un oggetto<br>
@@ -102,12 +101,11 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
             Non creiamo solo prodotti.<br>
             Creiamo esperienze pensate per accompagnarti ogni giorno.
         </p>
-        <br>
-        <img src="Immagini/chi_siamo.png" style="height: 700px; border-radius: 5px;">
+
+        <img src="Immagini/chi_siamo.png">
     </div>
-    <br>
-    <br>
-    <div style="text-align: center;">
+
+    <div>
         <h2>Tecnologia per tutti</h2>
         <p> I nostri occhiali intelligenti integrano funzionalità avanzate in modo semplice e immediato.<br>
             Traduzione in tempo reale, navigazione aumentata e assistenza vocale lavorano insieme per offrirti supporto<br>
@@ -115,12 +113,12 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
             La tecnologia non deve complicare le cose.<br>
             Deve funzionare, adattarsi e migliorare davvero la tua esperienza.
         </p>
-        <br>
-        <img src="Immagini/chi_siamo2.png" style="height: 700px; border-radius: 5px;">
+
+    
+        <img src="Immagini/chi_siamo2.png">
     </div>
-    <br>
-    <br>
-    <div style="text-align: center;">
+
+    <div>
         <h2>Più sicurezza</h2>
         <p>
             Controllare continuamente lo smartphone è diventato un rischio quotidiano.<br>
@@ -130,12 +128,12 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
             La tecnologia deve aiutarti, non distrarti.<br>
             E soprattutto, deve proteggerti.
         </p>
-        <br>
-        <img src="Immagini/chi_siamo3.png" style="height: 700px; border-radius: 5px;">
+
+        <img src="Immagini/chi_siamo3.png">
     </div>
-    <br>
-    <br>
-    <div style="text-align: center;">
+    
+
+    <div>
         <h2>INFORMAZIONI LEGALI</h2>
         <p>
            Ragione sociale: Spectra Vision S.r.l.<br>
