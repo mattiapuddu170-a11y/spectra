@@ -1,0 +1,55 @@
+main{
+    width: 100%;
+    margin: 0;
+}
+
+.hero{
+    display: flex;
+    width: 100%;
+    margin-bottom: 60px;
+    background-color: whitesmoke;
+    color: black;
+    padding: 5% 0 5% 0;
+    align-items: center;
+    justify-content: space-between;
+}
+    .sinistra{
+        width: 60%;
+    }
+        .carosello{
+            width: 50%;
+            margin: auto;
+            border: solid black 3px;
+            position: relative;
+            padding: 100px 60px;
+            background-color: white;
+        }
+            .carosello img{
+                width: 100%;
+            }
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                color: black;
+            }
+            .prev{
+                left: 0;
+            }
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+
+    .destra{
+        width: 35%;
+    }

@@ -46,7 +46,6 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     <title>Carrello</title>
     <link rel="stylesheet" href="File CSS/stile.css">
     <link rel="stylesheet" href="File CSS/carrstyle.css">
-    <link rel="stylesheet" href="File CSS/footer.css">
 </head>
 <body>
 
@@ -154,7 +153,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     </section>
 </main>
 
-<footer class="footer">
+<footer>
   <div class="footer-container">
 
     <div class="footer-section">
@@ -184,7 +183,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     </div>
 
   </div>
-
+  <hr>
   <div class="footer-bottom">
     <p>© 2026 Spectra - Tutti i diritti riservati</p>
   </div>

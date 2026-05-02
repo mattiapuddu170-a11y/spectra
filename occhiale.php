@@ -44,8 +44,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 <head>
     <title>Homepage</title>
     <link rel="stylesheet" href="File CSS/stile.css">
-    <link rel="stylesheet" href="File CSS/prodotto.css">
-    <link rel="stylesheet" href="File CSS/footer.css">
+    <link rel="stylesheet" href="File CSS/occhiale.css">
 </head>
 <body>
 
@@ -97,24 +96,23 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         <div class="sinistra">
 
            <div class="carosello">
-            <div class="mySlides fade">
-                <img src="Immagini/foto.png">
-            </div>
-            <div class="mySlides fade">
-                <img src="Immagini/foto2.png">
-            </div>
-            <div class="mySlides fade">
-                <img src="Immagini/foto3.png">
-            </div>
-            <div class="mySlides fade">
-                <img src="Immagini/foto4.png">
-            </div>
-            <div class="mySlides fade">
-                <img src="Immagini/foto5.png">
-            </div>
-            <script src="File JS/carosello.js"></script>
-            </div>
+                <div class="mySlides fade">
+                    <img src="Immagini/vision.png">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Immagini/nexus.png">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Immagini/athletic.png">
+                </div>
 
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <script src="File JS/carosello.js"></script>
+
+            </div>
+            
         </div>
      
 
@@ -123,6 +121,10 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         </div>
 
     </section>
+
+    <div style="width:100%; height:800px; overflow:hidden;">
+        <img src="Immagini/!athletic.png" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
+    </div>
 
     <section class="features">
 
@@ -154,7 +156,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     
 </main>
 
-<footer class="footer">
+<footer>
   <div class="footer-container">
 
     <div class="footer-section">
@@ -184,12 +186,11 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     </div>
 
   </div>
-
+  <hr>
   <div class="footer-bottom">
     <p>© 2026 Spectra - Tutti i diritti riservati</p>
   </div>
 </footer>
-
 
 
 </body>

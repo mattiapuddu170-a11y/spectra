@@ -45,7 +45,6 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     <title>Homepage</title>
     <link rel="stylesheet" href="File CSS/stile.css">
     <link rel="stylesheet" href="File CSS/index.css">
-    <link rel="stylesheet" href="File CSS/footer.css">
 
 </head>
 <body>
@@ -169,7 +168,8 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
         <div class="features-row">
             <article class="features-box">
-                <h1>Tecnologia ..</h1>
+                <h1>Fino a 24 ore di riproduzione continua con la ricarica rapida</h1>
+                <p>Risparmio energetico intelligente per una durata superiore della batteria</p>
             </article>
             
             <article class="features-box">
@@ -239,7 +239,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
 </main>
 
-<footer class="footer">
+<footer>
   <div class="footer-container">
 
     <div class="footer-section">
@@ -269,7 +269,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     </div>
 
   </div>
-
+  <hr>
   <div class="footer-bottom">
     <p>© 2026 Spectra - Tutti i diritti riservati</p>
   </div>
