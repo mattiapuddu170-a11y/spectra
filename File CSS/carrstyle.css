@@ -2,9 +2,9 @@
 .carrello-container {
     width: 80%;
     max-width: 1100px;
-    margin: 40px auto 80px;
+    margin: 110px auto 110px;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(209, 177, 177, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
@@ -51,6 +51,7 @@
     width: 100%;
     border-collapse: collapse;
     min-width: 420px;
+    align-items: center;
 }
 
 .carrello-table th,
@@ -86,16 +87,17 @@
 .carrello-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
+    margin-top: 30px;
 }
 
 .carrello-actions .linkdiv {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 13px 24px;
     background-color: #0864c7;
     color: white;
     border-radius: 12px;
     transition: transform 0.2s ease, background-color 0.2s ease;
+    margin-top: 20px;
 }
 
 .carrello-actions .linkdiv:hover {
@@ -124,11 +126,12 @@
 .remove-button {
     width: 100%;
     padding: 8px 12px;
-    background-color: #d64545;
+    background-color: #c41e3a;
     border-radius: 10px;
     border: none;
     color: white;
     font-weight: 700;
+    margin: auto;
 }
 
 .remove-button:hover {

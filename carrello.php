@@ -86,7 +86,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     <a href="index.php">Home</a>
     <a href="prodotti.php">Prodotti</a>
     <a href="#categorie">Categorie</a>
-    <a href="chi_siamo.html">Chi Siamo</a>
+    <a href="chi_siamo.php">Chi Siamo</a>
     <a href="#contatti">Contatti</a>
 
 </aside>
@@ -146,7 +146,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
         <div class="carrello-actions">
             <?php if (!empty($_SESSION['carrello'])): ?>
-                <a class="linkdiv" style="background: #c41e3a; color: white; padding: 10px 20px; border-radius: 4px; display: inline-block;" href="pagamento.php">💳 Vai al Pagamento</a>
+                <a class="linkdiv" style="background: #c41e3a; color: white;" href="pagamento.php">💳 Vai al Pagamento</a>
             <?php endif; ?>
             <a class="linkdiv" href="index.php">Torna alla home</a>
         </div>
