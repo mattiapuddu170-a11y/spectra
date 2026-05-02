@@ -122,7 +122,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
     </section>
 
-    <div style="width:100%; height:800px; overflow:hidden;">
+    <div style="width:100%; height:800px; overflow:hidden; margin-bottom: 60px;">
         <img src="Immagini/!athletic.png" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
     </div>
 

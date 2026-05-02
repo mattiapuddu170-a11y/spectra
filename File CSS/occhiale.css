@@ -19,7 +19,6 @@ main{
         .carosello{
             width: 50%;
             margin: auto;
-            border: solid black 3px;
             position: relative;
             padding: 100px 60px;
             background-color: white;

@@ -93,66 +93,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 <main>
 
     <section class="prodotti">
-        
-        <article class="prod">
-            <a href="occhiale.php" class="prod-link">
-                <img src="Immagini/foto1.png" alt="">
-                <div class="descdiv">
-                    <h2>Spectra Athletic</h2>
-                    <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Athletic</p>
-                </div>
-            </a>
 
-            <form method="post" action="carrello_sessione.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra Athletic">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto1.png">
-                <button class="linkdiv" type="submit">Acquista ora</button>
-            </form>
-        </article>
-
-        <article class="prod">
-            <a href="#prodotto" class="prod-link">
-                <img src="Immagini/foto2.png" alt="">
-                <div class="descdiv">
-                    <h2>Spectra Nexus</h2>
-                    <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Nexus</p>
-                </div>
-            </a>
-
-            <form method="post" action="carrello_sessione.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra Nexus">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto2.png">
-                <button class="linkdiv" type="submit">Acquista ora</button>
-            </form>
-        </article>
-
-        <article class="prod">
-            <a href="#prodotto" class="prod-link">
-                <img src="Immagini/foto3.png" alt="">
-                <div class="descdiv">
-                    <h2>Spectra Eclipse</h2>
-                    <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Eclipse</p>
-                </div>
-            </a>
-
-            <form method="post" action="carrello_sessione.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra Eclipse">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto3.png">
-                <button class="linkdiv" type="submit">Acquista ora</button>
-            </form>
-        </article>
-
-    </section>
-
-
-    <section class="prodotti">
-        
         <article class="prod">
             <a href="occhiale.php" class="prod-link">
                 <img src="Immagini/vision.png" alt="">
@@ -172,8 +113,48 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         </article>
 
         <article class="prod">
+            <a href="occhiale.php" class="prod-link">
+                <img src="Immagini/athletic.png" alt="">
+                <div class="descdiv">
+                    <h2>Spectra Athletic</h2>
+                    <h3>€ 450,00</h3>
+                    <p>Acquista subito spectra Athletic</p>
+                </div>
+            </a>
+
+            <form method="post" action="carrello_sessione.php" class="product-form">
+                <input type="hidden" name="prodotto_id" value="1">
+                <input type="hidden" name="prodotto_name" value="Spectra Athletic">
+                <input type="hidden" name="prodotto_image" value="Immagini/foto1.png">
+                <button class="linkdiv" type="submit">Acquista ora</button>
+            </form>
+        </article>
+
+        <article class="prod">
             <a href="#prodotto" class="prod-link">
-                <img src="Immagini/foto5.png" alt="">
+                <img src="Immagini/nexus.png" alt="">
+                <div class="descdiv">
+                    <h2>Spectra Nexus</h2>
+                    <h3>€ 450,00</h3>
+                    <p>Acquista subito spectra Nexus</p>
+                </div>
+            </a>
+
+            <form method="post" action="carrello_sessione.php" class="product-form">
+                <input type="hidden" name="prodotto_id" value="1">
+                <input type="hidden" name="prodotto_name" value="Spectra Nexus">
+                <input type="hidden" name="prodotto_image" value="Immagini/foto2.png">
+                <button class="linkdiv" type="submit">Acquista ora</button>
+            </form>
+        </article>
+
+    </section>
+
+    <section class="prodotti">
+
+        <article class="prod">
+            <a href="#prodotto" class="prod-link">
+                <img src="Immagini/mirage.png" alt="">
                 <div class="descdiv">
                     <h2>Spectra Mirage</h2>
                     <h3>€ 450,00</h3>
@@ -191,7 +172,25 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
         <article class="prod">
             <a href="#prodotto" class="prod-link">
-                <img src="Immagini/foto6.png" alt="">
+                <img src="Immagini/eclipse.png" alt="">
+                <div class="descdiv">
+                    <h2>Spectra Eclipse</h2>
+                    <h3>€ 450,00</h3>
+                    <p>Acquista subito spectra Eclipse</p>
+                </div>
+            </a>
+
+            <form method="post" action="carrello_sessione.php" class="product-form">
+                <input type="hidden" name="prodotto_id" value="1">
+                <input type="hidden" name="prodotto_name" value="Spectra Eclipse">
+                <input type="hidden" name="prodotto_image" value="Immagini/foto3.png">
+                <button class="linkdiv" type="submit">Acquista ora</button>
+            </form>
+        </article>
+
+        <article class="prod">
+            <a href="#prodotto" class="prod-link">
+                <img src="Immagini/horizon.png" alt="">
                 <div class="descdiv">
                     <h2>Spectra Horizon</h2>
                     <h3>€ 450,00</h3>
@@ -213,7 +212,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
         <article class="prod">
             <a href="#prodotto" class="prod-link">
-                <img src="Immagini/foto7.png" alt="">
+                <img src="Immagini/axis.png" alt="">
                 <div class="descdiv">
                     <h2>Spectra Axis</h2>
                     <h3>€ 450,00</h3>

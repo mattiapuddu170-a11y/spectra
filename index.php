@@ -94,7 +94,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
 <main>
     <section class="hero">
-        <h1>SPECTRA</h1>
+        <img src="Immagini/logo.png">
         <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus impedit explicabo magnam eaque rem nam nostrum perspiciatis nulla consequuntur debitis.</h2>
     </section>
 

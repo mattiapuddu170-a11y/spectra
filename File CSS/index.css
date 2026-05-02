@@ -8,10 +8,11 @@ main {
     .hero{
       width: 85%;
       margin: auto;
+      margin-top: 120px;
       margin-bottom: 400px;
     }
-      .hero h1{
-        font-size: 100px;
+      .hero img{
+        width: 40%;
       }
       .hero h2{
         font-size: 40px;
