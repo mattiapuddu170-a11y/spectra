@@ -95,7 +95,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     <section class="prodotti">
 
         <article class="prod">
-            <a href="occhiale.php" class="prod-link">
+            <a href="occhiale.php?id=vision" class="prod-link">
                 <img src="Immagini/vision.png" alt="">
                 <div class="descdiv">
                     <h2>Spectra Vision</h2>
@@ -113,7 +113,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         </article>
 
         <article class="prod">
-            <a href="occhiale.php" class="prod-link">
+            <a href="occhiale.php?id=athletic" class="prod-link">
                 <img src="Immagini/athletic.png" alt="">
                 <div class="descdiv">
                     <h2>Spectra Athletic</h2>
@@ -131,7 +131,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         </article>
 
         <article class="prod">
-            <a href="#prodotto" class="prod-link">
+            <a href="occhiale.php?id=nexus" class="prod-link">
                 <img src="Immagini/nexus.png" alt="">
                 <div class="descdiv">
                     <h2>Spectra Nexus</h2>
@@ -153,7 +153,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     <section class="prodotti">
 
         <article class="prod">
-            <a href="#prodotto" class="prod-link">
+            <a href="occhiale.php?id=mirage" class="prod-link">
                 <img src="Immagini/mirage.png" alt="">
                 <div class="descdiv">
                     <h2>Spectra Mirage</h2>
@@ -171,7 +171,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         </article>
 
         <article class="prod">
-            <a href="#prodotto" class="prod-link">
+            <a href="occhiale.php?id=eclipse" class="prod-link">
                 <img src="Immagini/eclipse.png" alt="">
                 <div class="descdiv">
                     <h2>Spectra Eclipse</h2>
@@ -189,7 +189,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         </article>
 
         <article class="prod">
-            <a href="#prodotto" class="prod-link">
+            <a href="occhiale.php?id=horizon" class="prod-link">
                 <img src="Immagini/horizon.png" alt="">
                 <div class="descdiv">
                     <h2>Spectra Horizon</h2>
@@ -211,7 +211,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     <section class="prodotti">
 
         <article class="prod">
-            <a href="#prodotto" class="prod-link">
+            <a href="occhiale.php?id=axis" class="prod-link">
                 <img src="Immagini/axis.png" alt="">
                 <div class="descdiv">
                     <h2>Spectra Axis</h2>
