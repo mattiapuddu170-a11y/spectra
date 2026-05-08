@@ -229,6 +229,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         </article>
 
     </section>
+    
 </main>
 
 <footer>

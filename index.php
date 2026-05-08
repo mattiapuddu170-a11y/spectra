@@ -180,14 +180,32 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     </section>
 
     <section class="prodotti">
-        
+
         <article class="prod">
-            <a href="occhiale.php" class="prod-link">
+            <a href="occhiale.php?id=vision" class="prod-link">
                 <img src="Immagini/vision.png" alt="">
                 <div class="descdiv">
                     <h2>Spectra Vision</h2>
-                    <h3>€ 250,00</h3>
-                    <p>Acquista subito Spectra Vision</p>
+                    <h3>€ 450,00</h3>
+                    <p>Acquista subito spectra Vision</p>
+                </div>
+            </a>
+
+            <form method="post" action="carrello_sessione.php" class="product-form">
+                <input type="hidden" name="prodotto_id" value="1">
+                <input type="hidden" name="prodotto_name" value="Spectra Vision">
+                <input type="hidden" name="prodotto_image" value="Immagini/foto4.png">
+                <button class="linkdiv" type="submit">Acquista ora</button>
+            </form>
+        </article>
+
+        <article class="prod">
+            <a href="occhiale.php?id=athletic" class="prod-link">
+                <img src="Immagini/athletic.png" alt="">
+                <div class="descdiv">
+                    <h2>Spectra Athletic</h2>
+                    <h3>€ 450,00</h3>
+                    <p>Acquista subito spectra Athletic</p>
                 </div>
             </a>
 
@@ -200,12 +218,12 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
         </article>
 
         <article class="prod">
-            <a href="#prodotto" class="prod-link">
-                <img src="Immagini/athletic.png" alt="">
+            <a href="occhiale.php?id=nexus" class="prod-link">
+                <img src="Immagini/nexus.png" alt="">
                 <div class="descdiv">
-                    <h2>Spectra Athletic</h2>
+                    <h2>Spectra Nexus</h2>
                     <h3>€ 450,00</h3>
-                    <p>Acquista subito Spectra Athletic</p>
+                    <p>Acquista subito spectra Nexus</p>
                 </div>
             </a>
 
@@ -213,24 +231,6 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
                 <input type="hidden" name="prodotto_id" value="1">
                 <input type="hidden" name="prodotto_name" value="Spectra Nexus">
                 <input type="hidden" name="prodotto_image" value="Immagini/foto2.png">
-                <button class="linkdiv" type="submit">Acquista ora</button>
-            </form>
-        </article>
-
-        <article class="prod">
-            <a href="occhiale.php" class="prod-link">
-                <img src="Immagini/nexus.png" alt="">
-                <div class="descdiv">
-                    <h2>Spectra Nexus</h2>
-                    <h3>€ 450,00</h3>
-                    <p>Acquista subito Spectra Nexus</p>
-                </div>
-            </a>
-
-            <form method="post" action="carrello_sessione.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra Eclipse">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto3.png">
                 <button class="linkdiv" type="submit">Acquista ora</button>
             </form>
         </article>
