@@ -1,11 +1,8 @@
 <!-- #region PHP -->
 <?php
 session_start();
-$con = new mysqli("localhost", "root", "", "negozio_spectra");
 
-if ($con->connect_error) {
-    die("Connessione fallita");
-}
+include "config.php";
 
 // richiesta AJAX
 if (isset($_GET['ajax']) && isset($_GET['q'])) {

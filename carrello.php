@@ -1,11 +1,8 @@
 <!-- #region PHP -->
 <?php
 session_start();
-$con = new mysqli("localhost", "root", "", "negozio_spectra");
 
-if ($con->connect_error) {
-    die("Connessione fallita");
-}
+include "config.php";
 
 // richiesta AJAX
 if (isset($_GET['ajax']) && isset($_GET['q'])) {
@@ -40,7 +37,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 ?>
 <!-- #endregion -->
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Carrello</title>

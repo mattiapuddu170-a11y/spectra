@@ -2,11 +2,7 @@
 <?php
 session_start();
 
-$con = new mysqli("localhost", "root", "", "negozio_spectra");
-
-if ($con->connect_error) {
-    die("Connessione fallita");
-}
+include "config.php";
 
 // -------------------- LOGIN --------------------
 if (isset($_POST['login'])) {
