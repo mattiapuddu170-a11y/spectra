@@ -41,11 +41,7 @@ $email = strtolower(trim($_POST['email_new'] ?? ''));    $password = trim($_POST
     <link rel="stylesheet" href="File CSS/login.css">
 </head>
 <body>
-    <header>
-        <a href="index.php" class="logo">
-            <img src="Immagini/logo.png" alt="Logo">
-        </a>
-    </header>
+
 
     <main class="login">
         <form method="post" action="">
@@ -60,6 +56,7 @@ $email = strtolower(trim($_POST['email_new'] ?? ''));    $password = trim($_POST
             </div>
             <button type="submit" name="invia2">Registrati</button>
             <p style="white-space: nowrap;">Hai già un account? Accedi <a href="login.php" class="qui">qui</a></p>
+            <a href="index.php">Indietro</a>
         </form>
 
     

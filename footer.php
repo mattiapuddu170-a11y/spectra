@@ -37,4 +37,3 @@
 <script src="File JS/menu.js" defer></script>
 <script src="File JS/ricerca.js" defer></script>
 <script src="File JS/carosello.js" defer></script>
-

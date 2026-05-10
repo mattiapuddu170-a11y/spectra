@@ -49,11 +49,6 @@ if (isset($_POST['login'])) {
     <link rel="stylesheet" href="File CSS/login.css">
 </head>
 <body>
-    <header>
-        <a href="index.php" class="logo">
-            <img src="Immagini/logo.png" alt="Logo">
-        </a>
-    </header>
 
     <main class="login">
         <?php if (isset($_SESSION['nome'])): ?>
@@ -76,6 +71,7 @@ if (isset($_POST['login'])) {
             </div>
             <button type="submit" name="login">Accedi</button>
             <p>Non hai un account? Registrati <a href="registrazione.php" class="qui">qui</a></p>
+            <a href="index.php">Indietro</a>
         </form>
 
         <?php endif; ?>
