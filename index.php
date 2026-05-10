@@ -46,48 +46,55 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 </head>
 <body>
 
-<header>
-        <button class="hamburger-btn" id="hamburgerBtn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        
-        <a href="index.php" class="logo">
-            <img src="Immagini/logo.png" alt="Logo">
-        </a>
-        
+<!-- #region HEADER -->
+<header class="header">
 
-        <div class="icons-group">
+    <button class="hamburger-btn" id="hamburgerBtn">
+        <span></span><span></span><span></span>
+    </button>
+
+    <a href="index.php" class="logo">
+        <img src="Immagini/logo.png" alt="Logo">
+    </a>
+
+    <div class="right-side">
             <a href="carrello.php">
-                <img class="icons" src="Immagini/icons/cart.png" alt="Carrello">
+                <img class="icons" src="Immagini/icons/cart.png">
             </a>
             <a href="login.php">
-                <img class="icons" src="Immagini/icons/user.png" alt="Utente">
+                <img class="icons" src="Immagini/icons/user.png">
             </a>
-        </div>
+    </div>
 
-        <div class="menu-nav search-container">
-            <div class="box">
-                <input type="text" id="search" placeholder="Cerca prodotti...">
-            </div>
-            <div id="risultati"></div>
-        </div>
-
-        <script src="File JS/ricerca.js"></script>
-        <script src="File JS/menu.js"></script>
-
-</header><hr>
+</header>
 
 <aside class="sidebar" id="sidebar">
+
+  <div class="sidebar-header">
+    <img src="Immagini/logo.png" alt="Logo">
+    <button class="close-btn" id="closeSidebar">✕</button>
+  </div>
+
+  <div class="sidebar-search">
+    <input type="text" id="searchSidebar" placeholder="Cerca prodotti...">
+    <div id="risultatiSidebar"></div>
+  </div>
+
+  <nav class="sidebar-links">
     <a href="index.php">Home</a>
     <a href="prodotti.php">Prodotti</a>
     <a href="#categorie">Categorie</a>
     <a href="chi_siamo.php">Chi Siamo</a>
     <a href="#contatti">Contatti</a>
+  </nav>
+
 </aside>
 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<script src="File JS/ricerca.js"></script>
+<script src="File JS/menu.js"></script>
+<!-- #endregion -->
 
 <main>
     <section class="hero">
