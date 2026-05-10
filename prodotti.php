@@ -44,48 +44,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 </head>
 <body>
 
-<header>
-        <button class="hamburger-btn" id="hamburgerBtn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        
-        <a href="index.php" class="logo">
-            <img src="Immagini/logo.png" alt="Logo">
-        </a>
-        
-
-        <div class="icons-group">
-            <a href="carrello.php">
-                <img class="icons" src="Immagini/icons/cart.png" alt="Carrello">
-            </a>
-            <a href="login.php">
-                <img class="icons" src="Immagini/icons/user.png" alt="Utente">
-            </a>
-        </div>
-
-        <div class="menu-nav search-container">
-            <div class="box">
-                <input type="text" id="search" placeholder="Cerca prodotti...">
-            </div>
-            <div id="risultati"></div>
-        </div>
-
-        <script src="File JS/ricerca.js"></script>
-        <script src="File JS/menu.js"></script>
-
-</header><hr>
-
-<aside class="sidebar" id="sidebar">
-    <a href="index.php">Home</a>
-    <a href="prodotti.php">Prodotti</a>
-    <a href="#categorie">Categorie</a>
-    <a href="chi_siamo.php">Chi Siamo</a>
-    <a href="#contatti">Contatti</a>
-</aside>
-
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<?php include "header.php"; ?>
 
 <main>
 
@@ -229,42 +188,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     
 </main>
 
-<footer>
-  <div class="footer-container">
-
-    <div class="footer-section">
-      <h2>Spectra</h2>
-      <p>Vedi il mondo con stile</p>
-    </div>
-
-    <div class="footer-section">
-      <h3>Link utili</h3>
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="prodotti.php">Shop</a></li>
-        <li><a href="chi_siamo.php">Chi Siamo</a></li>
-        <li><a href="#">Contatti</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h3>Contatti</h3>
-      <p>Email: spectraocchiali@tiscali.it</p>
-      <p>Tel: +39 02 0000 0000</p>
-      <p>Tel: +39 320 000 0000</p>
-      <p>Facebook</p>
-      <p>Instagram</p>
-      <p>Twitter</p>
-      <p>Tik Tok</p>
-    </div>
-
-  </div>
-  <hr>
-  <div class="footer-bottom">
-    <p>© 2026 Spectra - Tutti i diritti riservati</p>
-  </div>
-</footer>
-
+<?php include "footer.php"; ?>
 
 </body>
 </html>

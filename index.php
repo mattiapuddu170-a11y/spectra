@@ -42,59 +42,11 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     <title>Homepage</title>
     <link rel="stylesheet" href="File CSS/stile.css">
     <link rel="stylesheet" href="File CSS/index.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
-<!-- #region HEADER -->
-<header class="header">
-
-    <button class="hamburger-btn" id="hamburgerBtn">
-        <span></span><span></span><span></span>
-    </button>
-
-    <a href="index.php" class="logo">
-        <img src="Immagini/logo.png" alt="Logo">
-    </a>
-
-    <div class="right-side">
-            <a href="carrello.php">
-                <img class="icons" src="Immagini/icons/cart.png">
-            </a>
-            <a href="login.php">
-                <img class="icons" src="Immagini/icons/user.png">
-            </a>
-    </div>
-
-</header>
-
-<aside class="sidebar" id="sidebar">
-
-  <div class="sidebar-header">
-    <img src="Immagini/logo.png" alt="Logo">
-    <button class="close-btn" id="closeSidebar">✕</button>
-  </div>
-
-  <div class="sidebar-search">
-    <input type="text" id="searchSidebar" placeholder="Cerca prodotti...">
-    <div id="risultatiSidebar"></div>
-  </div>
-
-  <nav class="sidebar-links">
-    <a href="index.php">Home</a>
-    <a href="prodotti.php">Prodotti</a>
-    <a href="#categorie">Categorie</a>
-    <a href="chi_siamo.php">Chi Siamo</a>
-    <a href="#contatti">Contatti</a>
-  </nav>
-
-</aside>
-
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-<script src="File JS/ricerca.js"></script>
-<script src="File JS/menu.js"></script>
-<!-- #endregion -->
+<?php include "header.php"; ?>
 
 <main>
     <section class="hero">
@@ -243,41 +195,7 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
 </main>
 
-<footer>
-  <div class="footer-container">
-
-    <div class="footer-section">
-      <h2>Spectra</h2>
-      <p>Vedi il mondo con stile</p>
-    </div>
-
-    <div class="footer-section">
-      <h3>Link utili</h3>
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="prodotti.php">Shop</a></li>
-        <li><a href="chi_siamo.php">Chi Siamo</a></li>
-        <li><a href="#">Contatti</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h3>Contatti</h3>
-      <p>Email: spectraocchiali@tiscali.it</p>
-      <p>Tel: +39 02 0000 0000</p>
-      <p>Tel: +39 320 000 0000</p>
-      <p>Facebook</p>
-      <p>Instagram</p>
-      <p>Twitter</p>
-      <p>Tik Tok</p>
-    </div>
-
-  </div>
-  <hr>
-  <div class="footer-bottom">
-    <p>© 2026 Spectra - Tutti i diritti riservati</p>
-  </div>
-</footer>
+<?php include "footer.php"; ?>
 
 </body>
 </html>
