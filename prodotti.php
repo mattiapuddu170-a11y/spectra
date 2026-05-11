@@ -1,10 +1,9 @@
 <!-- #region PHP -->
 <?php
 session_start();
-
 include "config.php";
 
-// richiesta AJAX
+// AJAX (INVARIATO)
 if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
     $q = trim($_GET['q']);
@@ -21,10 +20,6 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
     $ris = $con->query($sql);
 
-    if ($ris->num_rows == 0) {
-        exit;
-    }
-
     while ($p = $ris->fetch_assoc()) {
         echo "<div class='card'>";
         echo "<h2>{$p['nome']}</h2>";
@@ -36,156 +31,63 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 }
 ?>
 <!-- #endregion -->
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Prodotti</title>
     <link rel="stylesheet" href="File CSS/stile.css">
 </head>
+
 <body>
 
 <?php include "header.php"; ?>
 
 <main>
 
-    <section class="prodotti">
+<section class="prodotti">
 
-        <article class="prod">
-            <a href="occhiale.php?id=vision" class="prod-link">
-                <img src="Immagini/vision.png" alt="">
-                <div class="descdiv">
-                    <h2>Spectra Vision</h2>
-                    <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Vision</p>
-                </div>
-            </a>
+<?php
+$sql = "SELECT p.id, p.nome, p.prezzo, p.descrizione, i.percorso
+        FROM prodotti p
+        LEFT JOIN immagini i ON p.id = i.prodotto_id
+        GROUP BY p.id";
 
-            <form method="post" action="carrello_sessione.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra Vision">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto4.png">
-                <button class="linkdiv" type="submit">Acquista ora</button>
-            </form>
-        </article>
+$ris = $con->query($sql);
 
-        <article class="prod">
-            <a href="occhiale.php?id=athletic" class="prod-link">
-                <img src="Immagini/athletic.png" alt="">
-                <div class="descdiv">
-                    <h2>Spectra Athletic</h2>
-                    <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Athletic</p>
-                </div>
-            </a>
+while ($p = $ris->fetch_assoc()) {
+?>
 
-            <form method="post" action="carrello_sessione.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra Athletic">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto1.png">
-                <button class="linkdiv" type="submit">Acquista ora</button>
-            </form>
-        </article>
+<article class="prod">
 
-        <article class="prod">
-            <a href="occhiale.php?id=nexus" class="prod-link">
-                <img src="Immagini/nexus.png" alt="">
-                <div class="descdiv">
-                    <h2>Spectra Nexus</h2>
-                    <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Nexus</p>
-                </div>
-            </a>
+    <a href="occhiale.php?id=<?php echo $p['id']; ?>" class="prod-link">
 
-            <form method="post" action="carrello_sessione.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra Nexus">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto2.png">
-                <button class="linkdiv" type="submit">Acquista ora</button>
-            </form>
-        </article>
+        <img src="Immagini/<?php echo $p['percorso']; ?>" alt="">
 
-    </section>
+        <div class="descdiv">
+            <h2><?php echo $p['nome']; ?></h2>
+            <h3>€ <?php echo number_format($p['prezzo'], 2, ',', '.'); ?></h3>
+            <p><?php echo $p['descrizione']; ?></p>
+        </div>
 
-    <section class="prodotti">
+    </a>
 
-        <article class="prod">
-            <a href="occhiale.php?id=mirage" class="prod-link">
-                <img src="Immagini/mirage.png" alt="">
-                <div class="descdiv">
-                    <h2>Spectra Mirage</h2>
-                    <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Mirage</p>
-                </div>
-            </a>
+    <form method="post" action="carrello_sessione.php" class="product-form">
 
-            <form method="post" action="carrello_sessione.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra Mirage">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto5.png">
-                <button class="linkdiv" type="submit">Acquista ora</button>
-            </form>
-        </article>
+        <input type="hidden" name="prodotto_id" value="<?php echo $p['id']; ?>">
+        <input type="hidden" name="prodotto_name" value="<?php echo $p['nome']; ?>">
+        <input type="hidden" name="prodotto_image" value="Immagini/<?php echo $p['percorso']; ?>">
 
-        <article class="prod">
-            <a href="occhiale.php?id=eclipse" class="prod-link">
-                <img src="Immagini/eclipse.png" alt="">
-                <div class="descdiv">
-                    <h2>Spectra Eclipse</h2>
-                    <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Eclipse</p>
-                </div>
-            </a>
+        <button class="linkdiv" type="submit">Acquista ora</button>
 
-            <form method="post" action="carrello_sessione.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra Eclipse">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto3.png">
-                <button class="linkdiv" type="submit">Acquista ora</button>
-            </form>
-        </article>
+    </form>
 
-        <article class="prod">
-            <a href="occhiale.php?id=horizon" class="prod-link">
-                <img src="Immagini/horizon.png" alt="">
-                <div class="descdiv">
-                    <h2>Spectra Horizon</h2>
-                    <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Horizon</p>
-                </div>
-            </a>
+</article>
 
-            <form method="post" action="carrello_sessione.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra Horizon">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto6.png">
-                <button class="linkdiv" type="submit">Acquista ora</button>
-            </form>
-        </article>
-        
-    </section>
+<?php } ?>
 
-    <section class="prodotti">
+</section>
 
-        <article class="prod">
-            <a href="occhiale.php?id=axis" class="prod-link">
-                <img src="Immagini/axis.png" alt="">
-                <div class="descdiv">
-                    <h2>Spectra Axis</h2>
-                    <h3>€ 450,00</h3>
-                    <p>Acquista subito spectra Axis</p>
-                </div>
-            </a>
-
-            <form method="post" action="carrello_sessione.php" class="product-form">
-                <input type="hidden" name="prodotto_id" value="1">
-                <input type="hidden" name="prodotto_name" value="Spectra Axis">
-                <input type="hidden" name="prodotto_image" value="Immagini/foto7.png">
-                <button class="linkdiv" type="submit">Acquista ora</button>
-            </form>
-        </article>
-
-    </section>
-    
 </main>
 
 <?php include "footer.php"; ?>
