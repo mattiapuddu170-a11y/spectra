@@ -3,7 +3,7 @@
 session_start();
 include "config.php";
 
-// AJAX (INVARIATO)
+// AJAX (invariato)
 if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
     $q = trim($_GET['q']);
@@ -29,6 +29,23 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
     }
     exit;
 }
+
+// ID prodotto
+$id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+
+// PRODOTTO
+$sql = "SELECT * FROM prodotti WHERE id = $id LIMIT 1";
+$res = $con->query($sql);
+$product = $res->fetch_assoc();
+
+// IMMAGINI CAROSELLO
+$sqlImg = "SELECT percorso FROM immagini WHERE prodotto_id = $id";
+$resImg = $con->query($sqlImg);
+
+$images = [];
+while ($row = $resImg->fetch_assoc()) {
+    $images[] = $row['percorso'];
+}
 ?>
 <!-- #endregion -->
 
@@ -44,26 +61,6 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
 <?php include "header.php"; ?>
 
-<?php
-$id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
-
-/* prodotto dal DB */
-$sql = "SELECT * FROM prodotti WHERE id = $id LIMIT 1";
-$res = $con->query($sql);
-$product = $res->fetch_assoc();
-
-/* immagini carosello dal DB */
-$sqlImg = "SELECT percorso FROM immagini WHERE prodotto_id = $id";
-$resImg = $con->query($sqlImg);
-
-$images = [];
-while ($row = $resImg->fetch_assoc()) {
-    if (!empty($row['percorso'])) {
-        $images[] = $row['percorso'];
-    }
-}
-?>
-
 <main>
 
 <section class="hero">
@@ -72,32 +69,27 @@ while ($row = $resImg->fetch_assoc()) {
 
         <?php if ($product): ?>
 
-        <!-- CAROSELLO (STRUTTURA IDENTICA) -->
-        <?php
-$sqlImg = "SELECT percorso FROM immagini WHERE prodotto_id = $id";
-$resImg = $con->query($sqlImg);
+        <!-- CAROSELLO IDENTICO -->
+        <div class="carosello">
 
-$images = [];
-while ($row = $resImg->fetch_assoc()) {
-    $images[] = $row['percorso'];
-}
-?>
+            <?php foreach ($images as $img) { ?>
+                <div class="mySlides fade">
+                    <img src="Immagini/<?php echo htmlspecialchars($img); ?>"
+                         alt="<?php echo htmlspecialchars($product['nome']); ?>">
+                </div>
+            <?php } ?>
 
-<?php if ($product): ?>
-<div class="carosello">
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
 
-    <?php foreach ($images as $img) { ?>
-        <div class="mySlides fade">
-            <img src="Immagini/<?php echo htmlspecialchars($img); ?>" 
-                 alt="<?php echo htmlspecialchars($product['nome']); ?>">
         </div>
-    <?php } ?>
 
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
+        <?php else: ?>
 
-</div>
-<?php endif; ?>
+        <div class="prodotto-non-trovato">
+            <h1>Prodotto non trovato</h1>
+            <p>Torna alla pagina prodotti</p>
+        </div>
 
         <?php endif; ?>
 
@@ -106,9 +98,16 @@ while ($row = $resImg->fetch_assoc()) {
     <div class="destra">
 
         <div class="info-prodotto">
-            <h1><?php echo $product['nome']; ?></h1>
-            <p class="prezzo">€ <?php echo number_format($product['prezzo'], 2, ',', '.'); ?></p>
-            <p><?php echo $product['descrizione']; ?></p>
+            <h1><?php echo htmlspecialchars($product['nome']); ?></h1>
+
+            <p class="prezzo">
+                € <?php echo number_format($product['prezzo'], 2, ',', '.'); ?>
+            </p>
+
+            <p>
+                <?php echo nl2br(htmlspecialchars($product['descrizione'])); ?>
+            </p>
+
             <button>Acquista ora</button>
         </div>
 
@@ -116,13 +115,10 @@ while ($row = $resImg->fetch_assoc()) {
 
 </section>
 
-<!-- IMMAGINE GRANDE (UGUALE, MA DINAMICA DAL DB) -->
 <div style="width:100%; height:800px; overflow:hidden; margin-bottom: 60px;">
 
-    <?php if (!empty($images[0])) { ?>
-        <img src="Immagini/<?php echo $images[0]; ?>"
-             style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
-    <?php } ?>
+    <img src="Immagini/!vision.png"
+         style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
 
 </div>
 
