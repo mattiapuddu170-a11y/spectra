@@ -45,8 +45,6 @@ if (isset($_GET['ajax']) && isset($_GET['q'])) {
 
 <main>
 
-<section class="prodotti">
-
 <?php
 $sql = "SELECT p.id, p.nome, p.prezzo, p.descrizione, i.percorso
         FROM prodotti p
@@ -55,7 +53,13 @@ $sql = "SELECT p.id, p.nome, p.prezzo, p.descrizione, i.percorso
 
 $ris = $con->query($sql);
 
+$i = 0;
+
 while ($p = $ris->fetch_assoc()) {
+
+if ($i % 3 == 0) {
+    echo '<section class="prodotti">';
+}
 ?>
 
 <article class="prod">
@@ -84,9 +88,18 @@ while ($p = $ris->fetch_assoc()) {
 
 </article>
 
-<?php } ?>
+<?php 
+    $i++;
 
-</section>
+    if ($i % 3 == 0) {
+        echo '</section>';
+    }
+}
+
+if ($i % 3 != 0) {
+    echo '</section>';
+}
+?>
 
 </main>
 
