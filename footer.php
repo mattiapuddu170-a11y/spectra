@@ -30,7 +30,7 @@
   </div>
   <hr>
   <div class="footer-bottom">
-    <p>© 2026 Spectra - Tutti i diritti riservati</p>
+    <p>© 2026 Spectra s.r.l. - Tutti i diritti riservati</p>
   </div>
 </footer>
 
