@@ -39,13 +39,20 @@ $res = $con->query($sql);
 $product = $res->fetch_assoc();
 
 // IMMAGINI CAROSELLO
-$sqlImg = "SELECT percorso FROM immagini WHERE prodotto_id = $id";
+$sqlImg = "SELECT percorso, is_hero FROM immagini WHERE prodotto_id = $id";
 $resImg = $con->query($sqlImg);
 
 $images = [];
 while ($row = $resImg->fetch_assoc()) {
     $images[] = $row['percorso'];
 }
+
+// IMMAGINE HERO (NUOVO SISTEMA)
+$sqlHero = "SELECT percorso FROM immagini WHERE prodotto_id = $id AND is_hero = 1 LIMIT 1";
+$resHero = $con->query($sqlHero);
+$heroRow = $resHero->fetch_assoc();
+$heroImage = $heroRow['percorso'] ?? null;
+
 ?>
 <!-- #endregion -->
 
@@ -115,12 +122,15 @@ while ($row = $resImg->fetch_assoc()) {
 
 </section>
 
+<!-- IMMAGINE GRANDE (HERO DAL DB) -->
+<?php if ($heroImage): ?>
 <div style="width:100%; height:800px; overflow:hidden; margin-bottom: 60px;">
 
-    <img src="Immagini/!vision.png"
+    <img src="Immagini/<?php echo htmlspecialchars($heroImage); ?>"
          style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
 
 </div>
+<?php endif; ?>
 
 </main>
 
