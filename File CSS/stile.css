@@ -22,12 +22,19 @@ a{
     }
 
 /* #region HEADER*/
-.header {
+header {
+    width: 100%;
+    background-color: #00000023;
+    padding: 15px;
+    position: relative;
+}
+.nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  position: relative;
+  width: 85%;
+  margin: auto;
+
 }
 
 .logo {
@@ -41,12 +48,16 @@ a{
   width: auto;
   display: block;
 }
+.icons {
+    height: 40px;
+}
 
 .right-side {
   display: flex;
   align-items: center;
   gap: 15px;
   margin-left: auto;
+  height: 100%;
 }
 /* #endregion */
  
@@ -319,23 +330,3 @@ footer {
     }
 /* #endregion */
 
-@media (min-width: 768px) {
-
-    /* #region HEADER */
-    .header {
-        width: 85%;
-        margin: auto;
-    }
-    .search-container input {
-        width: 200px;
-    }
-
-      .logo img {
-    height: 28px;
-    }
-    .icons {
-        height: 35px;
-    }
-    /* #endregion */
-
-}

@@ -1,5 +1,5 @@
-<header class="header">
-
+<header>
+  <nav class="nav">
     <button class="hamburger-btn" id="hamburgerBtn">
         <span></span><span></span><span></span>
     </button>
@@ -16,7 +16,7 @@
                 <img class="icons" src="Immagini/icons/user.png">
             </a>
     </div>
-
+  </nav>
 </header>
 
 <aside class="sidebar" id="sidebar">

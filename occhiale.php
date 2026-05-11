@@ -177,6 +177,7 @@ $product = $products[$id] ?? null;
                 <h1><?php echo htmlspecialchars($product['nome']); ?></h1>
                 <p class="prezzo">€ <?php echo number_format($product['prezzo'], 2, ',', '.'); ?></p>
                 <p><?php echo nl2br(htmlspecialchars($product['descrizione'])); ?></p>
+                <button>Acquista ora</button>
             </div>
 
         </div>

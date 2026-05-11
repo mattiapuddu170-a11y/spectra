@@ -7,21 +7,21 @@ main{
     display: flex;
     width: 100%;
     margin-bottom: 60px;
-    background-color: whitesmoke;
+    background-color: white;
     color: black;
-    padding: 5% 0 5% 0;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
+    min-height: 800px;
 }
     .sinistra{
-        width: 60%;
+        width: 55%;
     }
         .carosello{
-            width: 50%;
-            margin: auto;
+            width: 65%;
             position: relative;
-            padding: 100px 60px;
+            padding: 200px 80px;
             background-color: white;
+            margin: auto;
         }
             .carosello img{
                 width: 100%;
@@ -50,5 +50,12 @@ main{
 
 
     .destra{
-        width: 35%;
+        width: 40%;
+        background: whitesmoke;
+        padding-left: 40px;
     }
+        .prezzo{
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(255, 60, 0);
+        }
