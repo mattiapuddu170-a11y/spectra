@@ -44,10 +44,10 @@ while ($row = $res->fetch_assoc()) {
     $products[$row['id']] = $row;
 }
 
-/* immagini principali vetrina (senza !) */
-$visionImg = "vision.png";
-$athleticImg = "athletic.png";
-$nexusImg = "nexus.png";
+/* immagini principali vetrina (CON !) */
+$visionImg = "!eclipse.png";
+$athleticImg = "!athletic.png";
+$nexusImg = "!nexus.png";
 ?>
 <!-- #endregion -->
 
