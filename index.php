@@ -78,10 +78,10 @@ $nexusImg = "!nexus.png";
             </div>
 
             <div class="info">
-                <h1><?php echo $products[2]['nome']; ?></h1>
-                <h2>€ <?php echo number_format($products[2]['prezzo'], 2, ',', '.'); ?></h2>
-                <p>Gli Spectra Vision sono occhiali smart dal design moderno e raffinato, pensati per chi vive la città in movimento, offrendoti un’esperienza connessa e intuitiva mentre hai sempre lo sguardo sul mondo che ti circonda.</p>
-                <a href="occhiale.php?id=2" class="button">Acquista ora</a>
+                <h1><?php echo $products[1]['nome']; ?></h1>
+                <h2>€ <?php echo number_format($products[1]['prezzo'], 2, ',', '.'); ?></h2>
+                <p>Gli Spectra Eclipse sono occhiali smart dal design moderno e raffinato, pensati per chi vive la città in movimento, offrendoti un’esperienza connessa e intuitiva mentre hai sempre lo sguardo sul mondo che ti circonda.</p>
+                <a href="occhiale.php?id=1" class="button">Acquista ora</a>
             </div>
         </div>
 
