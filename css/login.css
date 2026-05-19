@@ -44,6 +44,16 @@ input {
     cursor: pointer;
     font-size: 18px;
     user-select: none;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    color: #282a2e;
+}
+
+.toggle-password:hover {
+    background: transparent;
 }
 
 button {
@@ -97,4 +107,39 @@ p {
 .linkdiv:hover {
     background: #282a2e;
     text-decoration: none;
+}
+
+.form-message {
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.form-message.error {
+    background: #fde8e8;
+    color: #8a1f1f;
+}
+
+.form-message.success {
+    background: #e8f7ed;
+    color: #1f6f3a;
+}
+
+.login-note {
+    white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+    .login {
+        padding: 20px;
+    }
+
+    form,
+    .login-success {
+        max-width: 100%;
+    }
+
+    .login-note {
+        white-space: normal;
+    }
 }

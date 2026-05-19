@@ -18,3 +18,17 @@ main{
     .text{
         font-size: 23px;
     }
+
+@media (max-width: 800px) {
+    main {
+        width: 88%;
+    }
+
+    .pres h2 {
+        font-size: 46px;
+    }
+
+    .pres p {
+        font-size: 19px;
+    }
+}

@@ -62,3 +62,47 @@ main {
             .button:hover{
               background-color: #1d4ed8;
             }
+
+@media (max-width: 900px) {
+  .hero {
+    width: 90%;
+    margin-top: 80px;
+    margin-bottom: 180px;
+  }
+
+  .hero img {
+    width: 70%;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .vetrina {
+    margin-bottom: 140px;
+    padding: 50px 0;
+  }
+
+  .vetrina-div,
+  .vetrina.reverse .vetrina-div {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .immagine,
+  .info {
+    width: 100%;
+  }
+
+  .info h1 {
+    font-size: 42px;
+  }
+
+  .info h2 {
+    font-size: 30px;
+  }
+
+  .info p {
+    margin-bottom: 45px;
+  }
+}

@@ -330,3 +330,58 @@ footer {
     }
 /* #endregion */
 
+@media (max-width: 900px) {
+    header {
+        box-sizing: border-box;
+    }
+
+    .nav,
+    .prodotti,
+    .features,
+    .footer-bottom {
+        width: 90%;
+    }
+
+    .sidebar {
+        width: min(300px, calc(100vw - 40px));
+        box-sizing: border-box;
+    }
+
+    .footer-container {
+        width: 85%;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 40px;
+    }
+
+    .features {
+        margin-bottom: 120px;
+    }
+
+    .features-row {
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    .features-box {
+        width: auto;
+        padding: 40px;
+    }
+
+    .prodotti {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .prod {
+        width: 100%;
+    }
+
+    .prod:hover {
+        transform: none;
+    }
+
+    .linkdiv {
+        white-space: normal;
+    }
+}
