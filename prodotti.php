@@ -71,7 +71,6 @@ if ($i % 3 == 0) {
         <div class="descdiv">
             <h2><?php echo $p['nome']; ?></h2>
             <h3>€ <?php echo number_format($p['prezzo'], 2, ',', '.'); ?></h3>
-            <p><?php echo $p['descrizione']; ?></p>
         </div>
 
     </a>
