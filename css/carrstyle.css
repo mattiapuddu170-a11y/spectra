@@ -1,9 +1,8 @@
 /* #region CARRELLO*/
 .carrello-container {
-    width: 80%;
-    max-width: 1100px;
-    margin: 110px auto 110px;
-    padding: 30px;
+    width: min(90%, 1100px);
+    margin: clamp(4rem, 10vw, 7rem) auto;
+    padding: clamp(1.25rem, 4vw, 2rem);
     background: rgba(209, 177, 177, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 20px;
@@ -13,27 +12,27 @@
 .carrello-box {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: clamp(1.1rem, 3vw, 1.6rem);
 }
 
 .page-heading h1 {
-    font-size: 42px;
-    margin-bottom: 6px;
+    font-size: clamp(2rem, 5vw, 2.7rem);
+    margin-bottom: 0.4rem;
 }
 
 .page-heading p {
     color: #d1d1d1;
-    font-size: 16px;
+    font-size: clamp(0.95rem, 1.8vw, 1rem);
     margin-top: 0;
 }
 
 .welcome-card {
-    padding: 18px 22px;
+    padding: clamp(1rem, 3vw, 1.3rem);
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.14);
     color: #f7f7f7;
-    font-size: 16px;
+    font-size: clamp(0.95rem, 1.8vw, 1rem);
 }
 
 .welcome-card.empty {
@@ -50,13 +49,13 @@
 .carrello-table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 420px;
+    min-width: min(100%, 420px);
     align-items: center;
 }
 
 .carrello-table th,
 .carrello-table td {
-    padding: 16px 18px;
+    padding: clamp(0.8rem, 2.5vw, 1rem);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     text-align: left;
 }
@@ -77,7 +76,7 @@
 }
 
 .carrello-empty {
-    padding: 28px;
+    padding: clamp(1.3rem, 4vw, 1.8rem);
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.04);
     color: #c7c7c7;
@@ -87,17 +86,19 @@
 .carrello-actions {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 30px;
+    gap: clamp(0.8rem, 2vw, 1rem);
+    margin-top: clamp(1.5rem, 4vw, 2rem);
 }
 
 .carrello-actions .linkdiv {
     display: inline-block;
-    padding: 13px 24px;
+    width: auto;
+    padding: clamp(0.75rem, 2vw, 0.9rem) clamp(1.2rem, 3vw, 1.6rem);
     background-color: #0864c7;
     color: white;
     border-radius: 12px;
     transition: transform 0.2s ease, background-color 0.2s ease;
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .carrello-actions .linkdiv:hover {
@@ -112,12 +113,12 @@
 .product-cell {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: clamp(0.75rem, 2vw, 1rem);
 }
 
 .product-image {
-    width: 72px;
-    height: 72px;
+    width: clamp(3.5rem, 8vw, 4.5rem);
+    height: clamp(3.5rem, 8vw, 4.5rem);
     object-fit: cover;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -125,7 +126,7 @@
 
 .remove-button {
     width: 100%;
-    padding: 8px 12px;
+    padding: 0.55rem 0.8rem;
     background-color: #c41e3a;
     border-radius: 10px;
     border: none;
@@ -139,7 +140,7 @@
 }
 
 .bottom-home {
-    margin-top: 28px;
+    margin-top: clamp(1.4rem, 4vw, 1.8rem);
     text-align: center;
 }
 /* #endregion */
@@ -151,17 +152,15 @@
 
 @media (max-width: 700px) {
     .carrello-container {
-        width: 88%;
-        margin: 70px auto;
-        padding: 20px;
+        width: 90%;
         border-radius: 16px;
-    }
-
-    .page-heading h1 {
-        font-size: 34px;
     }
 
     .carrello-actions {
         flex-direction: column;
+    }
+
+    .carrello-actions .linkdiv {
+        width: 100%;
     }
 }

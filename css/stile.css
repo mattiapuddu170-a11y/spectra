@@ -6,6 +6,15 @@ body {
     width: 100%;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 hr {
     margin: 0;
@@ -25,7 +34,7 @@ a{
 header {
     width: 100%;
     background-color: #00000023;
-    padding: 15px;
+    padding: clamp(0.7rem, 1.4vw, 1rem);
     position: relative;
 }
 .nav{
@@ -44,18 +53,18 @@ header {
 }
 
 .logo img {
-  height: 35px;
+  height: clamp(1.55rem, 3.2vw, 2.2rem);
   width: auto;
   display: block;
 }
 .icons {
-    height: 40px;
+    height: clamp(1.8rem, 3.5vw, 2.5rem);
 }
 
 .right-side {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: clamp(0.65rem, 1.8vw, 1rem);
   margin-left: auto;
   height: 100%;
 }
@@ -69,8 +78,8 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        width: 30px;
-        height: 24px;
+        width: clamp(1.7rem, 3vw, 1.9rem);
+        height: clamp(1.3rem, 2.4vw, 1.5rem);
         padding: 0;
     }
 
@@ -88,14 +97,14 @@ header {
     position: fixed;
     top: 0;
     left: -100%;
-    width: 300px;
-    height: 100vh;
+    width: min(82vw, 320px);
+    height: 100dvh;
     background: #0b0b0b;
     z-index: 1000;
-    padding: 20px;
+    padding: clamp(1rem, 3vw, 1.35rem);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: clamp(1rem, 3vw, 1.35rem);
     transition: left 0.35s ease;
     box-shadow: 5px 0 20px rgba(0,0,0,0.5);
     }
@@ -109,7 +118,7 @@ header {
     color: white;
     }
         .sidebar-header img{
-        height: 20px;
+        height: clamp(1rem, 2.4vw, 1.25rem);
         width: auto;
         display: block;
         }
@@ -118,39 +127,39 @@ header {
     background: none;
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: clamp(1.1rem, 2.8vw, 1.3rem);
     cursor: pointer;
     }
 
     .sidebar-search {
-    padding: 15px 20px;
+    padding: clamp(0.8rem, 2vw, 1rem) 0;
     }
 
     .sidebar-search input {
     width: 100%;
     display: block;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 0.7rem;
     border-radius: 8px;
     border: none;
     }
 
     #risultatiSidebar {
     margin-top: 10px;
-    max-height: 200px;
+    max-height: min(40vh, 14rem);
     overflow-y: auto;
     }
     .sidebar-links {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: clamp(0.6rem, 2vw, 1rem);
     }
 
     .sidebar-links a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
+    font-size: clamp(1rem, 2.4vw, 1.15rem);
+    padding: 0.7rem;
     border-radius: 8px;
     transition: background 0.2s;
     }
@@ -178,9 +187,9 @@ header {
 footer {
   background: rgba(255, 255, 255, 0.030);
   color: whitesmoke;
-  padding: 40px 0;
+  padding: clamp(2rem, 5vw, 3rem) 0;
   width: 100%;
-  margin-top: 100px;
+  margin-top: clamp(4rem, 10vw, 7rem);
   position: relative;
   clear: both;
 }
@@ -190,7 +199,8 @@ footer {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 80px;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  margin-bottom: clamp(2rem, 6vw, 5rem);
 }
 
 .footer-section {
@@ -207,7 +217,7 @@ footer {
 }
 
 .footer-section ul li {
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .footer-section a {
@@ -224,7 +234,7 @@ footer {
   width: 85%;
   margin: auto;
   text-align: center;
-  padding-top: 20px;
+  padding-top: clamp(1rem, 3vw, 1.4rem);
 }
 /* #endregion */
 
@@ -232,22 +242,21 @@ footer {
 .features{
     width: 85%;
     margin: auto;
-    margin-bottom: 250px;
+    margin-bottom: clamp(7rem, 16vw, 15rem);
 }
     .features-row{
         display: flex;
         align-items: stretch;
-        gap: 12px;
-        overflow: hidden;
+        gap: clamp(0.75rem, 2vw, 1.2rem);
+        flex-wrap: wrap;
     }
         .features-box{
             background-color: #3a3a3a6e;
-            flex: 1;
-            width: 25%;
-            margin-top: 10px;
+            flex: 1 1 min(100%, 18rem);
+            margin-top: clamp(0.6rem, 2vw, 1rem);
             border-radius: 12px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 90px;
+            padding: clamp(2rem, 6vw, 5.5rem);
             display: flex;
             flex-direction: column;
             transition: 0.2s ease;
@@ -266,14 +275,17 @@ footer {
     width: 85%;
     align-items: stretch;
     justify-content: space-between;
+    gap: 0;
+    flex-wrap: wrap;
 }
 
     .prod{
-        width: 31%;
-        margin-top: 40px;
+        flex: 0 1 31%;
+        max-width: none;
+        margin-top: clamp(1.5rem, 4vw, 2.5rem);
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        padding-bottom: 15px;
+        padding-bottom: clamp(0.8rem, 2vw, 1rem);
         display: flex;
         flex-direction: column;
         transition: 0.2s ease;
@@ -298,12 +310,12 @@ footer {
         }
 
         .descdiv{
-            padding: 20px 20px;
+            padding: clamp(1rem, 2.4vw, 1.3rem);
         }
 
     .product-form{
         margin-top: auto;
-        padding: 0 20px 20px 20px;
+        padding: 0 clamp(1rem, 2.4vw, 1.3rem) clamp(1rem, 2.4vw, 1.3rem);
     }
 
     .linkdiv{
@@ -313,11 +325,11 @@ footer {
         background-color: #0864c7;
         color: white;
         text-align: center;
-        padding: 8px;
+        padding: clamp(0.55rem, 1.6vw, 0.75rem);
         border-radius: 8px;
         white-space: nowrap;
         transition: transform 0.1s ease, background-color 0.1s ease;
-        margin-top: 50px;
+        margin-top: clamp(1.5rem, 4vw, 3rem);
     }
 
     .linkdiv:hover{
@@ -331,10 +343,6 @@ footer {
 /* #endregion */
 
 @media (max-width: 900px) {
-    header {
-        box-sizing: border-box;
-    }
-
     .nav,
     .prodotti,
     .features,
@@ -342,20 +350,12 @@ footer {
         width: 90%;
     }
 
-    .sidebar {
-        width: min(300px, calc(100vw - 40px));
-        box-sizing: border-box;
-    }
-
     .footer-container {
-        width: 85%;
         flex-direction: column;
-        gap: 24px;
-        margin-bottom: 40px;
     }
 
     .features {
-        margin-bottom: 120px;
+        margin-bottom: clamp(5rem, 14vw, 7.5rem);
     }
 
     .features-row {
@@ -364,17 +364,18 @@ footer {
     }
 
     .features-box {
-        width: auto;
-        padding: 40px;
+        padding: clamp(2rem, 8vw, 3.5rem);
     }
 
     .prodotti {
         flex-direction: column;
-        gap: 24px;
+        gap: clamp(1rem, 4vw, 1.6rem);
     }
 
     .prod {
         width: 100%;
+        flex-basis: auto;
+        max-width: none;
     }
 
     .prod:hover {

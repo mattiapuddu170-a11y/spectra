@@ -34,7 +34,16 @@ function get_all_products_with_main_image(mysqli $con)
             FROM prodotti p
             LEFT JOIN immagini i ON p.id = i.prodotto_id
             GROUP BY p.id, p.nome, p.prezzo, p.descrizione
-            ORDER BY p.id";
+            ORDER BY FIELD(
+                p.nome,
+                'Spectra Vision',
+                'Spectra Athletic',
+                'Spectra Nexus',
+                'Spectra Horizon',
+                'Spectra Axis',
+                'Spectra Eclipse',
+                'Spectra Mirage'
+            )";
 
     $result = $con->query($sql);
 

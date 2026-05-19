@@ -8,54 +8,59 @@ main {
     .hero{
       width: 85%;
       margin: auto;
-      margin-top: 120px;
-      margin-bottom: 400px;
+      margin-top: clamp(4rem, 10vw, 7.5rem);
+      margin-bottom: clamp(10rem, 26vw, 25rem);
     }
       .hero img{
-        width: 40%;
+        width: min(40%, 28rem);
       }
       .hero h2{
-        font-size: 40px;
+        font-size: clamp(1.75rem, 4vw, 2.6rem);
+        line-height: 1.18;
       }
 
     .vetrina{
       width: 100%;
       background-color: rgba(255, 255, 255, 0.030);
-      margin-bottom: 250px;
-      padding: 80px 0;
+      margin-bottom: clamp(7rem, 16vw, 15rem);
+      padding: clamp(3rem, 7vw, 5rem) 0;
     }
       .vetrina-div{
         width: 85%;
         display: flex;
         margin: auto;
-        gap: 40px;
+        gap: clamp(1.5rem, 4vw, 3rem);
+        align-items: center;
       }
       .vetrina.reverse .vetrina-div{
         flex-direction: row-reverse;
       }
         .immagine{
-          width: 65%;
+          flex: 1 1 58%;
         }
           .immagine img{
             width: 100%;
             border-radius: 12px;
           }
         .info{
-          width: 35%;
+          flex: 1 1 20rem;
         }
           .info h1{
-            font-size: 60px;
+            font-size: clamp(2.4rem, 5.5vw, 4rem);
+            line-height: 1;
             margin-top: 0
           }
           .info h2{
-            font-size: 38px;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
           }
           .info p{
-            font-size: 20px;
-            margin-bottom: 80px;
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            line-height: 1.55;
+            margin-bottom: clamp(2.5rem, 6vw, 5rem);
           }
           .button{
-            padding: 15px;
+            display: inline-block;
+            padding: clamp(0.8rem, 2vw, 1rem) clamp(1rem, 3vw, 1.3rem);
             background-color: #2563eb;
             border-radius: 12px;
           }
@@ -65,22 +70,17 @@ main {
 
 @media (max-width: 900px) {
   .hero {
-    width: 90%;
-    margin-top: 80px;
-    margin-bottom: 180px;
+    margin-top: clamp(3.5rem, 12vw, 5rem);
+    margin-bottom: clamp(7rem, 20vw, 11rem);
   }
 
   .hero img {
-    width: 70%;
-  }
-
-  .hero h2 {
-    font-size: 28px;
+    width: min(70%, 20rem);
   }
 
   .vetrina {
-    margin-bottom: 140px;
-    padding: 50px 0;
+    margin-bottom: clamp(5rem, 18vw, 9rem);
+    padding: clamp(2.5rem, 8vw, 3.5rem) 0;
   }
 
   .vetrina-div,
@@ -95,14 +95,10 @@ main {
   }
 
   .info h1 {
-    font-size: 42px;
-  }
-
-  .info h2 {
-    font-size: 30px;
+    font-size: clamp(2.2rem, 10vw, 3rem);
   }
 
   .info p {
-    margin-bottom: 45px;
+    margin-bottom: clamp(2rem, 8vw, 3rem);
   }
 }
