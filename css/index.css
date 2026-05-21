@@ -47,10 +47,24 @@ header .nav {
 }
 
 .hero h1 {
-    max-width: 11ch;
+    --hero-title-size: 6.6rem;
+    --hero-title-leading: 0.92;
+    max-width: none;
     margin: 0;
-    font-size: clamp(3rem, 8vw, 6.8rem);
-    line-height: 0.92;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+}
+
+.hero h1::before {
+    content: "Occhiali\A smart per\A restare nel\A mondo.";
+    display: block;
+    color: var(--text);
+    font-size: var(--hero-title-size);
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: var(--hero-title-leading);
+    white-space: pre;
 }
 
 .hero h2 {
@@ -275,6 +289,12 @@ header .nav {
         rgba(255, 255, 255, 0.06);
 }
 
+@media (max-width: 1500px) {
+    .hero h1 {
+        --hero-title-size: 5.8rem;
+    }
+}
+
 @media (max-width: 1250px) {
     main {
         --content: 85%;
@@ -294,9 +314,8 @@ header .nav {
     }
 
     .hero h1 {
-        max-width: 12ch;
-        font-size: clamp(3.3rem, 6.4vw, 5.2rem);
-        line-height: 0.98;
+        --hero-title-size: 4.4rem;
+        --hero-title-leading: 0.98;
     }
 
     .hero h2 {
@@ -378,9 +397,8 @@ header .nav {
     }
 
     .hero h1 {
-        max-width: 12ch;
-        font-size: clamp(2.35rem, 12vw, 3.35rem);
-        line-height: 0.98;
+        --hero-title-size: 3.25rem;
+        --hero-title-leading: 1;
     }
 
     .hero h2 {
@@ -405,5 +423,11 @@ header .nav {
 
     .info h1 {
         max-width: none;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero h1 {
+        --hero-title-size: 2.85rem;
     }
 }
