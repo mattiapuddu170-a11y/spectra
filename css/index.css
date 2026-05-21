@@ -1,104 +1,343 @@
 main {
-        padding-top: 0;
-        text-align: left;
-        width: 100%;
-        margin: auto;
-    }
+    --content: 85%;
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+    text-align: left;
+}
 
-    .hero{
-      width: 85%;
-      margin: auto;
-      margin-top: clamp(4rem, 10vw, 7.5rem);
-      margin-bottom: clamp(10rem, 26vw, 25rem);
-    }
-      .hero img{
-        width: min(40%, 28rem);
-      }
-      .hero h2{
-        font-size: clamp(1.75rem, 4vw, 2.6rem);
-        line-height: 1.18;
-      }
+header .nav {
+    width: 85%;
+}
 
-    .vetrina{
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.030);
-      margin-bottom: clamp(7rem, 16vw, 15rem);
-      padding: clamp(3rem, 7vw, 5rem) 0;
-    }
-      .vetrina-div{
-        width: 85%;
-        display: flex;
-        margin: auto;
-        gap: clamp(1.5rem, 4vw, 3rem);
-        align-items: center;
-      }
-      .vetrina.reverse .vetrina-div{
-        flex-direction: row-reverse;
-      }
-        .immagine{
-          flex: 1 1 58%;
-        }
-          .immagine img{
-            width: 100%;
-            border-radius: 12px;
-          }
-        .info{
-          flex: 1 1 20rem;
-        }
-          .info h1{
-            font-size: clamp(2.4rem, 5.5vw, 4rem);
-            line-height: 1;
-            margin-top: 0
-          }
-          .info h2{
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
-          }
-          .info p{
-            font-size: clamp(1.05rem, 2vw, 1.25rem);
-            line-height: 1.55;
-            margin-bottom: clamp(2.5rem, 6vw, 5rem);
-          }
-          .button{
-            display: inline-block;
-            padding: clamp(0.8rem, 2vw, 1rem) clamp(1rem, 3vw, 1.3rem);
-            background-color: #2563eb;
-            border-radius: 12px;
-          }
-            .button:hover{
-              background-color: #1d4ed8;
-            }
+.hero {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    width: var(--content);
+    min-height: calc(100dvh - 5rem);
+    margin: 0 auto 7rem;
+    padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 8vw, 5rem);
+    grid-template-columns: minmax(0, 0.9fr) minmax(min(100%, 28rem), 1.1fr);
+    align-items: center;
+    gap: clamp(2rem, 6vw, 5rem);
+}
+
+.hero::before {
+    content: "SPECTRA";
+    position: absolute;
+    top: clamp(1.5rem, 5vw, 3rem);
+    right: min(-5vw, -1rem);
+    z-index: -1;
+    color: transparent;
+    font-size: clamp(4rem, 17vw, 14rem);
+    font-weight: 900;
+    line-height: 0.8;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.055);
+}
+
+.hero-copy {
+    position: relative;
+    max-width: 38rem;
+}
+
+.hero-copy img {
+    width: min(11.4rem, 52vw);
+    margin-bottom: 1.6rem;
+}
+
+.hero h1 {
+    max-width: 11ch;
+    margin: 0;
+    font-size: clamp(3rem, 8vw, 6.8rem);
+    line-height: 0.92;
+}
+
+.hero h2 {
+    max-width: 35rem;
+    margin: 1.25rem 0 0;
+    color: var(--muted);
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-weight: 500;
+    line-height: 1.55;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+
+.hero-actions .button:first-child {
+    box-shadow: 0 16px 34px rgba(22, 115, 247, 0.24);
+}
+
+.hero-visual {
+    position: relative;
+    min-height: clamp(20rem, 48vw, 38rem);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background:
+        linear-gradient(140deg, rgba(22, 115, 247, 0.20), transparent 40%),
+        linear-gradient(25deg, rgba(242, 111, 61, 0.10), transparent 46%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.035));
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.36);
+}
+
+.hero-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 4.5rem 4.5rem;
+    mask-image: linear-gradient(135deg, rgba(0, 0, 0, 0.75), transparent 70%);
+}
+
+.hero-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(115deg, transparent 0 48%, rgba(255, 255, 255, 0.08) 49%, transparent 58%);
+    opacity: 0.7;
+}
+
+.hero-visual img {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    width: min(116%, 47rem);
+    max-width: none;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 28px 42px rgba(0, 0, 0, 0.34));
+}
+
+.hero-stat {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    max-width: 14rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: rgba(5, 6, 7, 0.76);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+}
+
+.hero-stat strong {
+    display: block;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.hero-stat span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.vetrina {
+    position: relative;
+    width: 100%;
+    margin-bottom: 7rem;
+    padding: clamp(3rem, 7vw, 5rem) 0;
+    border-block: 1px solid var(--line);
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025)),
+        rgba(255, 255, 255, 0.028);
+}
+
+.vetrina.reverse {
+    background:
+        linear-gradient(270deg, rgba(22, 115, 247, 0.09), rgba(255, 255, 255, 0.022) 54%),
+        rgba(255, 255, 255, 0.026);
+}
+
+.vetrina-div {
+    display: grid;
+    width: var(--content);
+    margin: auto;
+    grid-template-columns: minmax(0, 1.15fr) minmax(min(100%, 22rem), 0.85fr);
+    align-items: center;
+    gap: clamp(2rem, 6vw, 5rem);
+}
+
+.vetrina.reverse .vetrina-div {
+    grid-template-columns: minmax(min(100%, 22rem), 0.85fr) minmax(0, 1.15fr);
+}
+
+.vetrina.reverse .immagine {
+    grid-column: 2;
+}
+
+.vetrina.reverse .info {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.immagine {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.035)),
+        var(--surface);
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.24);
+}
+
+.immagine::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: inherit;
+}
+
+.immagine img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.vetrina:hover .immagine img {
+    transform: scale(1.025);
+}
+
+.info {
+    max-width: 35rem;
+}
+
+.info h1 {
+    max-width: 10ch;
+    margin: 0 0 0.6rem;
+    font-size: clamp(2.4rem, 5.4vw, 4.7rem);
+    line-height: 0.95;
+}
+
+.info h2 {
+    display: inline-flex;
+    padding: 0.35rem 0.7rem;
+    margin: 0 0 1.4rem;
+    border: 1px solid rgba(242, 111, 61, 0.24);
+    border-radius: var(--radius);
+    background: rgba(242, 111, 61, 0.08);
+    color: var(--warm);
+    font-size: clamp(1.45rem, 3vw, 2.1rem);
+    line-height: 1;
+}
+
+.info p {
+    margin: 0 0 2rem;
+    color: var(--muted);
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    line-height: 1.7;
+}
+
+.features {
+    margin-top: -1rem;
+}
+
+.features-row {
+    align-items: stretch;
+}
+
+.features-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.features-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.09), transparent 38%);
+    opacity: 0;
+    transition: opacity 0.18s ease;
+}
+
+.features-box:hover::before {
+    opacity: 1;
+}
+
+.features-box:nth-child(2n) {
+    background:
+        linear-gradient(145deg, rgba(22, 115, 247, 0.12), transparent 44%),
+        rgba(255, 255, 255, 0.06);
+}
 
 @media (max-width: 900px) {
-  .hero {
-    margin-top: clamp(3.5rem, 12vw, 5rem);
-    margin-bottom: clamp(7rem, 20vw, 11rem);
-  }
+    .hero {
+        min-height: auto;
+        margin-bottom: 4.5rem;
+        padding-top: 3rem;
+        grid-template-columns: 1fr;
+    }
 
-  .hero img {
-    width: min(70%, 20rem);
-  }
+    .hero::before {
+        top: 1rem;
+        right: -8vw;
+    }
 
-  .vetrina {
-    margin-bottom: clamp(5rem, 18vw, 9rem);
-    padding: clamp(2.5rem, 8vw, 3.5rem) 0;
-  }
+    .hero-visual {
+        min-height: clamp(18rem, 72vw, 30rem);
+    }
 
-  .vetrina-div,
-  .vetrina.reverse .vetrina-div {
-    width: 90%;
-    flex-direction: column;
-  }
+    .vetrina {
+        margin-bottom: 4.5rem;
+    }
 
-  .immagine,
-  .info {
-    width: 100%;
-  }
+    .vetrina-div,
+    .vetrina.reverse .vetrina-div {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+    }
 
-  .info h1 {
-    font-size: clamp(2.2rem, 10vw, 3rem);
-  }
+    .vetrina.reverse .immagine,
+    .vetrina.reverse .info {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
 
-  .info p {
-    margin-bottom: clamp(2rem, 8vw, 3rem);
-  }
+@media (max-width: 560px) {
+    .hero {
+        padding-top: 2.5rem;
+    }
+
+    .hero-copy img {
+        width: min(9.5rem, 56vw);
+    }
+
+    .hero h1 {
+        font-size: clamp(2.55rem, 15vw, 4rem);
+    }
+
+    .hero h2 {
+        font-size: 1rem;
+    }
+
+    .hero-actions .button,
+    .hero-actions .linkdiv {
+        width: 100%;
+    }
+
+    .hero-stat {
+        right: 0.75rem;
+        bottom: 0.75rem;
+        max-width: calc(100% - 1.5rem);
+    }
+
+    .info h1 {
+        max-width: none;
+    }
 }

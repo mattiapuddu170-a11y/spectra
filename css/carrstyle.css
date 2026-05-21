@@ -1,161 +1,133 @@
-/* #region CARRELLO*/
 .carrello-container {
-    width: min(90%, 1100px);
-    margin: clamp(4rem, 10vw, 7rem) auto;
+    width: min(90%, 1080px);
+    margin: clamp(3rem, 8vw, 6rem) auto;
     padding: clamp(1.25rem, 4vw, 2rem);
-    background: rgba(209, 177, 177, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
 }
 
 .carrello-box {
     display: flex;
     flex-direction: column;
-    gap: clamp(1.1rem, 3vw, 1.6rem);
+    gap: clamp(1rem, 3vw, 1.5rem);
 }
 
 .page-heading h1 {
-    font-size: clamp(2rem, 5vw, 2.7rem);
-    margin-bottom: 0.4rem;
+    margin: 0 0 0.4rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1;
 }
 
 .page-heading p {
-    color: #d1d1d1;
-    font-size: clamp(0.95rem, 1.8vw, 1rem);
-    margin-top: 0;
+    margin: 0;
+    color: var(--muted);
 }
 
-.welcome-card {
-    padding: clamp(1rem, 3vw, 1.3rem);
-    border-radius: 16px;
+.welcome-card,
+.carrello-empty {
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
     background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.14);
     color: #f7f7f7;
-    font-size: clamp(0.95rem, 1.8vw, 1rem);
 }
 
 .welcome-card.empty {
-    color: #cfcfcf;
+    color: var(--muted);
 }
-    .welcome-card.empty a{
-        color: #0864c7;
-    }
+
+.welcome-card.empty a {
+    color: var(--accent);
+    font-weight: 800;
+}
 
 .carrello-table-wrapper {
     overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
 }
 
 .carrello-table {
     width: 100%;
+    min-width: 460px;
     border-collapse: collapse;
-    min-width: min(100%, 420px);
-    align-items: center;
 }
 
 .carrello-table th,
 .carrello-table td {
-    padding: clamp(0.8rem, 2.5vw, 1rem);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1rem;
+    border-bottom: 1px solid var(--line);
     text-align: left;
 }
 
+.carrello-table tr:last-child td {
+    border-bottom: 0;
+}
+
 .carrello-table th {
-    color: #dcdcdc;
-    font-weight: 700;
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
 }
 
 .carrello-table td {
-    color: #f4f4f4;
+    color: var(--text);
 }
 
-.carrello-table tr:hover {
-    background: rgba(255, 255, 255, 0.03);
+.carrello-table tbody tr {
+    transition: background-color 0.18s ease;
+}
+
+.carrello-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .carrello-empty {
-    padding: clamp(1.3rem, 4vw, 1.8rem);
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.04);
-    color: #c7c7c7;
     text-align: center;
+}
+
+.carrello-empty p {
+    margin: 0;
+    color: var(--muted);
 }
 
 .carrello-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: clamp(0.8rem, 2vw, 1rem);
-    margin-top: clamp(1.5rem, 4vw, 2rem);
+    gap: 0.85rem;
 }
 
 .carrello-actions .linkdiv {
-    display: inline-block;
     width: auto;
-    padding: clamp(0.75rem, 2vw, 0.9rem) clamp(1.2rem, 3vw, 1.6rem);
-    background-color: #0864c7;
-    color: white;
-    border-radius: 12px;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    margin-top: 0;
-}
-
-.carrello-actions .linkdiv:hover {
-    background-color: #054d9a;
-    transform: translateY(-1px);
-}
-
-.carrello-actions .linkdiv:active {
-    transform: scale(0.98);
-}
-
-.product-cell {
-    display: flex;
-    align-items: center;
-    gap: clamp(0.75rem, 2vw, 1rem);
-}
-
-.product-image {
-    width: clamp(3.5rem, 8vw, 4.5rem);
-    height: clamp(3.5rem, 8vw, 4.5rem);
-    object-fit: cover;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .remove-button {
-    width: 100%;
-    padding: 0.55rem 0.8rem;
-    background-color: #c41e3a;
-    border-radius: 10px;
-    border: none;
-    color: white;
-    font-weight: 700;
-    margin: auto;
+    min-height: 2.35rem;
+    padding: 0.65rem 0.9rem;
+    border: 0;
+    background: var(--danger);
 }
 
 .remove-button:hover {
-    background-color: #b23232;
+    background: var(--danger-hover);
+    box-shadow: 0 12px 28px rgba(201, 47, 72, 0.22);
 }
-
-.bottom-home {
-    margin-top: clamp(1.4rem, 4vw, 1.8rem);
-    text-align: center;
-}
-/* #endregion */
 
 .carrello-actions .payment-link {
-    background: #c41e3a;
+    background: var(--warm);
     color: white;
 }
 
-@media (max-width: 700px) {
-    .carrello-container {
-        width: 90%;
-        border-radius: 16px;
-    }
+.carrello-actions .payment-link:hover {
+    background: #d95525;
+    box-shadow: 0 12px 28px rgba(242, 111, 61, 0.24);
+}
 
+@media (max-width: 700px) {
     .carrello-actions {
         flex-direction: column;
     }
