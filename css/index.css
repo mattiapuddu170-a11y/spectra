@@ -277,26 +277,34 @@ header .nav {
 
 @media (max-width: 1250px) {
     main {
-        --content: 90%;
+        --content: 85%;
     }
 
     header .nav {
-        width: 90%;
+        width: 85%;
     }
 
     .hero {
-        grid-template-columns: minmax(0, 1fr) minmax(min(100%, 24rem), 0.9fr);
-        gap: clamp(1.6rem, 4vw, 3rem);
+        grid-template-columns: minmax(0, 0.85fr) minmax(min(100%, 28rem), 1.15fr);
+        gap: clamp(2rem, 3vw, 3.5rem);
+    }
+
+    .hero-copy {
+        max-width: 40rem;
     }
 
     .hero h1 {
-        max-width: 13ch;
-        font-size: clamp(3rem, 6.4vw, 5.2rem);
+        max-width: 12ch;
+        font-size: clamp(3.3rem, 6.4vw, 5.2rem);
         line-height: 0.98;
     }
 
     .hero h2 {
-        font-size: clamp(1rem, 1.5vw, 1.18rem);
+        font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    }
+
+    .hero-visual {
+        min-height: clamp(24rem, 46vw, 36rem);
     }
 
     .vetrina-div {
