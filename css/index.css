@@ -275,6 +275,40 @@ header .nav {
         rgba(255, 255, 255, 0.06);
 }
 
+@media (max-width: 1250px) {
+    main {
+        --content: 90%;
+    }
+
+    header .nav {
+        width: 90%;
+    }
+
+    .hero {
+        grid-template-columns: minmax(0, 1fr) minmax(min(100%, 24rem), 0.9fr);
+        gap: clamp(1.6rem, 4vw, 3rem);
+    }
+
+    .hero h1 {
+        max-width: 13ch;
+        font-size: clamp(3rem, 6.4vw, 5.2rem);
+        line-height: 0.98;
+    }
+
+    .hero h2 {
+        font-size: clamp(1rem, 1.5vw, 1.18rem);
+    }
+
+    .vetrina-div {
+        gap: clamp(1.6rem, 4vw, 3rem);
+    }
+
+    .info h1 {
+        font-size: clamp(2.35rem, 4.5vw, 3.8rem);
+        line-height: 1;
+    }
+}
+
 @media (max-width: 900px) {
     main {
         --content: 90%;
