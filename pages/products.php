@@ -31,7 +31,7 @@ $products = get_all_products_with_main_image($con);
 
             <div class="descdiv">
                 <h2><?php echo e($product['nome']); ?></h2>
-                <h3>€ <?php echo format_price($product['prezzo']); ?></h3>
+                <h3>&euro; <?php echo format_price($product['prezzo']); ?></h3>
                 <p><?php echo e($product['descrizione']); ?></p>
             </div>
 

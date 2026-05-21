@@ -44,7 +44,7 @@ $featuredIds = [
     <section class="vetrina">
         <div class="vetrina-div">
             <div class="immagine">
-                <img src="<?php echo e(app_url('Immagini/!vision.png')); ?>" alt="Spectra Vision">
+                <img src="<?php echo e(app_url('Immagini/!eclipse.png')); ?>" alt="Spectra Eclipse">
             </div>
 
             <div class="info">

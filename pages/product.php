@@ -82,7 +82,7 @@ $specs = [
                 <h1><?php echo e($product['nome']); ?></h1>
 
                 <p class="prezzo">
-                    € <?php echo format_price($product['prezzo']); ?>
+                    &euro; <?php echo format_price($product['prezzo']); ?>
                 </p>
 
                 <p>
@@ -118,7 +118,7 @@ $specs = [
                 </div>
             <?php else: ?>
                 <h1>Prodotto non trovato</h1>
-                <p>Il prodotto richiesto non è disponibile.</p>
+                <p>Il prodotto richiesto non &egrave; disponibile.</p>
             <?php endif; ?>
         </div>
 
@@ -139,7 +139,7 @@ $specs = [
 
     <div class="story-grid">
         <article>
-            <h3>Più libertà</h3>
+            <h3>Pi&ugrave; libert&agrave;</h3>
             <p>Ricevi informazioni utili mentre cammini, lavori o ti alleni.</p>
         </article>
         <article>

@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Homepage</title>
+    <title>Chi siamo</title>
     <link rel="stylesheet" href="<?php echo e(app_url('css/stile.css?v=7')); ?>">
     <link rel="stylesheet" href="<?php echo e(app_url('css/about.css?v=7')); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,9 +16,9 @@
     <div class="pres">
         <h2>Chi Siamo</h2>
         <p>
-            Crediamo in un modo nuovo di vivere la tecnologia: più naturale, più umano, più vicino alle persone.<br>
+            Crediamo in un modo nuovo di vivere la tecnologia: pi&ugrave; naturale, pi&ugrave; umano, pi&ugrave; vicino alle persone.<br>
             Spectra nasce con l'obiettivo di superare i limiti tra mondo reale e digitale, trasformando un oggetto<br>
-            quotidiano in uno strumento capace di ampliare ciò che puoi vedere e fare.<br>
+            quotidiano in uno strumento capace di ampliare ci&ograve; che puoi vedere e fare.<br>
             Non creiamo solo prodotti.<br>
             Creiamo esperienze pensate per accompagnarti ogni giorno.
         </p>
@@ -29,7 +29,7 @@
     <div class="pres">
         <h2>Tecnologia per tutti</h2>
         <p>
-            I nostri occhiali intelligenti integrano funzionalità avanzate in modo semplice e immediato.<br>
+            I nostri occhiali intelligenti integrano funzionalit&agrave; avanzate in modo semplice e immediato.<br>
             Traduzione in tempo reale, navigazione aumentata e assistenza vocale lavorano insieme per offrirti
             supporto continuo, senza distrazioni.<br>
             La tecnologia non deve complicare le cose.<br>
@@ -39,12 +39,12 @@
     </div>
 
     <div class="pres">
-        <h2>Più sicurezza</h2>
+        <h2>Pi&ugrave; sicurezza</h2>
         <p>
-            Controllare continuamente lo smartphone è diventato un rischio quotidiano.<br>
+            Controllare continuamente lo smartphone &egrave; diventato un rischio quotidiano.<br>
             Spectra nasce per cambiare questo.<br>
             Con informazioni sempre visibili e accessibili in modo immediato, puoi muoverti,<br>
-            orientarti e comunicare senza distogliere lo sguardo da ciò che conta davvero.<br>
+            orientarti e comunicare senza distogliere lo sguardo da ci&ograve; che conta davvero.<br>
             La tecnologia deve aiutarti, non distrarti.<br>
             E soprattutto, deve proteggerti.
         </p>
