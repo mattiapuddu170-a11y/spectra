@@ -643,6 +643,15 @@ footer {
         gap: clamp(1rem, 4vw, 1.6rem);
     }
 
+    .features-row {
+        gap: 0.85rem;
+    }
+
+    .features-box {
+        min-height: 10.5rem;
+        padding: 1.15rem;
+    }
+
     .prod {
         width: 100%;
         flex-basis: auto;

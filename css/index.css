@@ -276,6 +276,14 @@ header .nav {
 }
 
 @media (max-width: 900px) {
+    main {
+        --content: 90%;
+    }
+
+    header .nav {
+        width: 90%;
+    }
+
     .hero {
         min-height: auto;
         margin-bottom: 4.5rem;
@@ -310,8 +318,17 @@ header .nav {
 }
 
 @media (max-width: 560px) {
+    main {
+        --content: 92%;
+    }
+
+    header .nav {
+        width: 92%;
+    }
+
     .hero {
-        padding-top: 2.5rem;
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem;
     }
 
     .hero-copy img {
@@ -319,7 +336,9 @@ header .nav {
     }
 
     .hero h1 {
-        font-size: clamp(2.55rem, 15vw, 4rem);
+        max-width: 12ch;
+        font-size: clamp(2.35rem, 12vw, 3.35rem);
+        line-height: 0.98;
     }
 
     .hero h2 {
@@ -335,6 +354,11 @@ header .nav {
         right: 0.75rem;
         bottom: 0.75rem;
         max-width: calc(100% - 1.5rem);
+    }
+
+    .vetrina {
+        margin-bottom: 3.25rem;
+        padding: 2.5rem 0;
     }
 
     .info h1 {
