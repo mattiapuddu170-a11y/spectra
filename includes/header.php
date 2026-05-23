@@ -12,10 +12,18 @@
 
     <div class="right-side">
             <a href="<?php echo e(app_url('carrello.php')); ?>" aria-label="Carrello">
-                <img class="icons" src="<?php echo e(app_url('Immagini/icons/cart.png')); ?>" alt="Carrello">
+                <svg class="icons" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6.2 8.8h11.6l-.8 8.7a2 2 0 0 1-2 1.8H9a2 2 0 0 1-2-1.8L6.2 8.8Z"></path>
+                    <path d="M9 8.8V7a3 3 0 0 1 6 0v1.8"></path>
+                    <path d="M9.5 12.4h5"></path>
+                </svg>
             </a>
             <a href="<?php echo e(app_url('login.php')); ?>" aria-label="Account">
-                <img class="icons" src="<?php echo e(app_url('Immagini/icons/user.png')); ?>" alt="Account">
+                <svg class="icons" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="8.2" r="3.2"></circle>
+                    <path d="M5.6 19.2a6.6 6.6 0 0 1 12.8 0"></path>
+                    <circle cx="12" cy="12" r="9"></circle>
+                </svg>
             </a>
     </div>
   </nav>
@@ -29,8 +37,16 @@
   </div>
 
   <div class="sidebar-search">
-    <input type="text" id="searchSidebar" placeholder="Cerca prodotti..." autocomplete="off" data-search-url="<?php echo e(app_url('ajax/search.php')); ?>">
-    <div id="risultatiSidebar"></div>
+    <label for="searchSidebar">Cerca prodotto</label>
+    <div class="search-input-wrap">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.8" cy="10.8" r="5.8"></circle>
+            <path d="M15.1 15.1 20 20"></path>
+        </svg>
+        <input type="search" id="searchSidebar" placeholder="Modello, funzione, prezzo..." autocomplete="off" aria-controls="risultatiSidebar" aria-expanded="false" data-search-url="<?php echo e(app_url('ajax/search.php')); ?>">
+    </div>
+    <p class="search-hint">Seleziona un risultato o premi Invio.</p>
+    <div id="risultatiSidebar" role="listbox" aria-label="Risultati ricerca"></div>
   </div>
 
   <nav class="sidebar-links">

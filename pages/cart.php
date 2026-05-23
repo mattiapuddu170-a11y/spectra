@@ -6,7 +6,7 @@ $cartItems = $_SESSION['carrello'] ?? [];
 <head>
     <meta charset="UTF-8">
     <title>Carrello</title>
-    <link rel="stylesheet" href="<?php echo e(app_url('css/stile.css?v=7')); ?>">
+    <link rel="stylesheet" href="<?php echo e(app_url('css/stile.css?v=17')); ?>">
     <link rel="stylesheet" href="<?php echo e(app_url('css/carrstyle.css?v=7')); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>

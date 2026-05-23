@@ -6,10 +6,6 @@ main {
     text-align: left;
 }
 
-header .nav {
-    width: 85%;
-}
-
 .hero {
     position: relative;
     isolation: isolate;
@@ -300,10 +296,6 @@ header .nav {
         --content: 85%;
     }
 
-    header .nav {
-        width: 85%;
-    }
-
     .hero {
         grid-template-columns: minmax(0, 0.85fr) minmax(min(100%, 28rem), 1.15fr);
         gap: clamp(2rem, 3vw, 3.5rem);
@@ -339,10 +331,6 @@ header .nav {
 @media (max-width: 900px) {
     main {
         --content: 90%;
-    }
-
-    header .nav {
-        width: 90%;
     }
 
     .hero {
@@ -381,10 +369,6 @@ header .nav {
 @media (max-width: 560px) {
     main {
         --content: 92%;
-    }
-
-    header .nav {
-        width: 92%;
     }
 
     .hero {

@@ -6,6 +6,10 @@ const closeBtn = document.getElementById("closeSidebar");
 function openSidebar() {
   sidebar.classList.add("active");
   overlay.classList.add("active");
+
+  window.setTimeout(() => {
+    document.getElementById("searchSidebar")?.focus();
+  }, 180);
 }
 
 function closeSidebar() {
