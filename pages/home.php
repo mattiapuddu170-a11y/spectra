@@ -6,6 +6,37 @@ $featuredIds = [
     'athletic' => get_product_id_by_name($con, 'Spectra Athletic') ?? 2,
     'nexus' => get_product_id_by_name($con, 'Spectra Nexus') ?? 3,
 ];
+
+$carouselImages = [];
+$imageRoot = realpath(__DIR__ . '/../Immagini');
+
+if ($imageRoot !== false) {
+    $imageFiles = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($imageRoot, FilesystemIterator::SKIP_DOTS)
+    );
+
+    foreach ($imageFiles as $imageFile) {
+        if (!$imageFile->isFile()) {
+            continue;
+        }
+
+        $filename = $imageFile->getFilename();
+        $extension = strtolower($imageFile->getExtension());
+
+        if (strpos($filename, '!') !== 0 || !in_array($extension, ['jpg', 'jpeg', 'png', 'webp', 'gif', 'avif'], true)) {
+            continue;
+        }
+
+        $relativePath = substr($imageFile->getPathname(), strlen($imageRoot) + 1);
+        $carouselImages[] = 'Immagini/' . str_replace('\\', '/', $relativePath);
+    }
+}
+
+sort($carouselImages, SORT_NATURAL | SORT_FLAG_CASE);
+
+if (empty($carouselImages)) {
+    $carouselImages[] = 'Immagini/!nexus.png';
+}
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -13,7 +44,7 @@ $featuredIds = [
     <meta charset="UTF-8">
     <title>Spectra</title>
     <link rel="stylesheet" href="<?php echo e(app_url('css/stile.css?v=17')); ?>">
-    <link rel="stylesheet" href="<?php echo e(app_url('css/index.css?v=9')); ?>">
+    <link rel="stylesheet" href="<?php echo e(app_url('css/index.css?v=10')); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -32,8 +63,12 @@ $featuredIds = [
             </div>
         </div>
 
-        <div class="hero-visual">
-            <img src="<?php echo e(app_url('Immagini/!nexus2.png')); ?>" alt="Spectra Nexus">
+        <div class="hero-visual carosello home-carousel" data-autoplay="true" data-interval="3600" aria-label="Carosello Spectra">
+            <?php foreach ($carouselImages as $imagePath): ?>
+                <div class="mySlides fade">
+                    <img src="<?php echo e(app_url($imagePath)); ?>" alt="Spectra">
+                </div>
+            <?php endforeach; ?>
             <div class="hero-stat">
                 <strong>24h</strong>
                 <span>di autonomia con custodia e ricarica rapida.</span>

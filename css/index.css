@@ -127,10 +127,31 @@ main {
     filter: drop-shadow(0 28px 42px rgba(0, 0, 0, 0.34));
 }
 
+.home-carousel .mySlides {
+    position: absolute;
+    inset: 0;
+    display: none;
+}
+
+.home-carousel .fade {
+    animation: home-carousel-fade 0.75s ease;
+}
+
+@keyframes home-carousel-fade {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .hero-stat {
     position: absolute;
     right: 1rem;
     bottom: 1rem;
+    z-index: 2;
     max-width: 14rem;
     padding: 0.9rem 1rem;
     border: 1px solid var(--line);

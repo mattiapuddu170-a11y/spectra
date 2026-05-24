@@ -71,4 +71,4 @@
 
 <script src="<?php echo e(app_url('js/menu.js?v=2')); ?>" defer></script>
 <script src="<?php echo e(app_url('js/ricerca.js?v=2')); ?>" defer></script>
-<script src="<?php echo e(app_url('js/carosello.js')); ?>" defer></script>
+<script src="<?php echo e(app_url('js/carosello.js?v=2')); ?>" defer></script>
