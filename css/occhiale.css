@@ -355,26 +355,109 @@ main {
 }
 
 @media (max-width: 560px) {
+    .hero {
+        margin-bottom: 3rem;
+    }
+
+    .sinistra {
+        padding: 2rem 0 1.1rem;
+    }
+
     .carosello {
-        width: 78%;
+        width: 86%;
+    }
+
+    .carosello img {
+        max-height: 18rem;
     }
 
     .prev,
     .next {
-        width: 2.35rem;
-        height: 2.35rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1.1rem;
     }
 
     .prev {
-        left: -1.1rem;
+        left: -0.7rem;
     }
 
     .next {
-        right: -1.1rem;
+        right: -0.7rem;
+    }
+
+    .destra {
+        padding: 2rem 5.5% 2.7rem;
+    }
+
+    .product-label,
+    .section-label {
+        margin-bottom: 0.65rem;
+        font-size: 0.72rem;
+    }
+
+    .info-prodotto h1 {
+        font-size: clamp(2rem, 11vw, 2.65rem);
+        line-height: 1.02;
+    }
+
+    .prezzo {
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+    }
+
+    .info-prodotto p:not(.prezzo) {
+        margin-bottom: 1.2rem;
+        font-size: 0.98rem;
+        line-height: 1.62;
+    }
+
+    .quick-features {
+        gap: 0.45rem;
+        margin-bottom: 1.35rem;
+    }
+
+    .quick-features span {
+        flex: 1 1 calc(50% - 0.45rem);
+        padding: 0.55rem 0.5rem;
+        border-radius: var(--radius);
+        font-size: 0.8rem;
+        text-align: center;
     }
 
     .info-prodotto button {
         width: 100%;
+        min-height: 3rem;
+    }
+
+    .buy-notes {
+        gap: 0.75rem;
+        margin-top: 1.35rem;
+        padding-top: 1.25rem;
+    }
+
+    .product-story,
+    .details-section {
+        width: 92%;
+        margin-bottom: 3.25rem;
+    }
+
+    .story-text h2,
+    .details-block h2 {
+        font-size: clamp(1.8rem, 10vw, 2.35rem);
+    }
+
+    .story-text p {
+        font-size: 0.98rem;
+        line-height: 1.65;
+    }
+
+    .story-grid article {
+        padding: 1rem;
+    }
+
+    .details-block {
+        padding: 1.1rem;
     }
 
     .spec-list div {
@@ -384,5 +467,24 @@ main {
 
     .spec-list dd {
         text-align: left;
+    }
+
+    .package-list {
+        line-height: 1.75;
+    }
+
+    .hero-image-large {
+        height: clamp(15rem, 68vw, 22rem);
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .carosello {
+        width: 90%;
+    }
+
+    .quick-features span {
+        flex-basis: 100%;
     }
 }

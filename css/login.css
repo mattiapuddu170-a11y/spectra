@@ -139,15 +139,36 @@
 
 @media (max-width: 480px) {
     .login {
+        min-height: calc(100dvh - 4rem);
         padding: 1rem;
     }
 
     .login form,
     .login-success {
         width: 100%;
+        padding: 1.2rem;
+    }
+
+    .login input {
+        min-height: 2.9rem;
+    }
+
+    .input-group input {
+        padding-right: 4.7rem;
+    }
+
+    .toggle-password {
+        right: 0.35rem;
     }
 
     .login-note {
         white-space: normal;
+    }
+}
+
+@media (max-width: 360px) {
+    .login form,
+    .login-success {
+        padding: 1rem;
     }
 }
