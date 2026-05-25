@@ -775,6 +775,10 @@ footer {
     box-shadow: none;
 }
 
+.prodotti .prod img {
+    border-radius: 8px 8px 0 0;
+}
+
 .descdiv {
     padding: clamp(1rem, 2.4vw, 1.3rem);
 }
