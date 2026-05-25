@@ -8,20 +8,18 @@ $products = get_all_products_with_main_image($con);
 <head>
     <meta charset="UTF-8">
     <title>Prodotti</title>
-    <link rel="stylesheet" href="<?php echo e(app_url('css/stile.css?v=18')); ?>">
+    <link rel="stylesheet" href="<?php echo e(app_url('css/stile.css?v=19')); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="products-page">
 
 <?php include __DIR__ . '/../includes/header.php'; ?>
 
 <main>
 
-<?php foreach ($products as $index => $product): ?>
-    <?php if ($index % 3 === 0): ?>
-        <section class="prodotti">
-    <?php endif; ?>
+<section class="prodotti products-grid">
+<?php foreach ($products as $product): ?>
 
     <article class="prod">
 
@@ -49,10 +47,8 @@ $products = get_all_products_with_main_image($con);
 
     </article>
 
-    <?php if ($index % 3 === 2 || $index === count($products) - 1): ?>
-        </section>
-    <?php endif; ?>
 <?php endforeach; ?>
+</section>
 
 </main>
 
