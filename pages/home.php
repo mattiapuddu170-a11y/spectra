@@ -86,7 +86,7 @@ if (empty($carouselImages)) {
                 <h1>Spectra Vision</h1>
                 <h2>&euro; 250,00</h2>
                 <p>Gli Spectra Vision sono occhiali smart dal design moderno e raffinato, pensati per chi vive la citt&agrave; in movimento, offrendoti un'esperienza connessa e intuitiva mentre hai sempre lo sguardo sul mondo che ti circonda.</p>
-                <a href="<?php echo e(app_url('occhiale.php?id=' . $featuredIds['vision'])); ?>" class="button">Acquista ora</a>
+                <a href="<?php echo e(app_url('occhiale.php?id=' . $featuredIds['vision'])); ?>" class="button">Scopri di più</a>
             </div>
         </div>
     </section>
@@ -101,7 +101,7 @@ if (empty($carouselImages)) {
                 <h1>Spectra Athletic</h1>
                 <h2>&euro; 350,00</h2>
                 <p>La corsa, evoluta: informazioni essenziali davanti ai tuoi occhi, musica sempre con te e un'esperienza senza distrazioni che migliora ogni allenamento.</p>
-                <a href="<?php echo e(app_url('occhiale.php?id=' . $featuredIds['athletic'])); ?>" class="button">Acquista ora</a>
+                <a href="<?php echo e(app_url('occhiale.php?id=' . $featuredIds['athletic'])); ?>" class="button">Scopri di più</a>
             </div>
         </div>
     </section>
@@ -116,7 +116,7 @@ if (empty($carouselImages)) {
                 <h1>Spectra Nexus</h1>
                 <h2>&euro; 300,00</h2>
                 <p>Spectra Nexus sono occhiali smart dal design elegante e minimalista, con telecamera integrata, microfono, casse a conduzione ossea e lenti che mostrano informazioni direttamente nel campo visivo.</p>
-                <a href="<?php echo e(app_url('occhiale.php?id=' . $featuredIds['nexus'])); ?>" class="button">Acquista ora</a>
+                <a href="<?php echo e(app_url('occhiale.php?id=' . $featuredIds['nexus'])); ?>" class="button">Scopri di più</a>
             </div>
         </div>
     </section>
