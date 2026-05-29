@@ -310,6 +310,10 @@ function get_product_hero_file($productName)
         return null;
     }
 
+    if ($slug === 'vision' && image_file_exists('!eclipse.png')) {
+        return '!eclipse.png';
+    }
+
     foreach (['png', 'jpg', 'jpeg', 'webp'] as $extension) {
         $candidate = '!' . $slug . '2.' . $extension;
         if (image_file_exists($candidate)) {

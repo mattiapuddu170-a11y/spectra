@@ -30,7 +30,7 @@ $specs = [
     <meta charset="UTF-8">
     <title><?php echo $product ? e($product['nome']) : 'Prodotto'; ?></title>
     <link rel="stylesheet" href="<?php echo e(app_url('css/stile.css?v=17')); ?>">
-    <link rel="stylesheet" href="<?php echo e(app_url('css/occhiale.css?v=7')); ?>">
+    <link rel="stylesheet" href="<?php echo e(app_url('css/occhiale.css?v=21')); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -180,12 +180,17 @@ $specs = [
 <?php endif; ?>
 
 <?php if ($heroImage): ?>
-<div class="hero-image-large">
+<section class="product-showcase" aria-label="Immagine principale <?php echo e($product['nome']); ?>">
+    <div class="showcase-copy">
+        <h2><?php echo e($product['nome']); ?> in primo piano.</h2>
+        <p>La linea della montatura resta protagonista: pulita, riconoscibile e pronta da indossare ogni giorno.</p>
+    </div>
 
-    <img src="<?php echo e(app_url('Immagini/' . $heroImage)); ?>"
-         alt="<?php echo e($product['nome']); ?>">
-
-</div>
+    <div class="showcase-image">
+        <img src="<?php echo e(app_url('Immagini/' . $heroImage)); ?>"
+             alt="<?php echo e($product['nome']); ?>">
+    </div>
+</section>
 <?php endif; ?>
 
 </main>
